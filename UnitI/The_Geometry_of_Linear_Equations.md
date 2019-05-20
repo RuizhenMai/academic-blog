@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction 
+title: The Geometry of Linear Equations
 date: 2019-5-20
 ---
 

@@ -60,7 +60,7 @@ where I coined the new $$r2$$ as $$r2'$$. Then finally we have found the final u
 2\\
 6\\
 -10
-\end{matrix}\right]$$ and this final constant vector we call it $$\mathbf{c}$$.The new equation is then $$Ux=\mathbf{c}$$. In general, we want to *augment* the coefficient matrix $$A$$ in case we forgot the steps to obtain $$U$$, that is, to attach $$\mathbf{b}$$ into it
+\end{matrix}\right]$$ and this final constant vector we call it $$\mathbf{c}$$. The new equation is then $$Ux=\mathbf{c}$$. In general, we want to *augment* the coefficient matrix $$A$$ in case we forgot the steps to obtain $$U$$, that is, to attach $$\mathbf{b}$$ into it
 
 
 $$
@@ -68,7 +68,7 @@ A=\left. \left[\begin{matrix}
 1 & 2 & 1\\
 3 & 8 & 1\\
 0 & 4 & 1
-\end{matrix} \right| \begin{matrix}
+\end{matrix} \right\rvert \begin{matrix}
 2\\
 12\\
 2
@@ -89,4 +89,3 @@ x+2y+z=2,\ & x=2\\
 $$
 
 First we see $$z=-2$$ from the last row. And substitute $$z$$ into the second row we get $$y=1$$. And finally $$x=2$$. 
-

@@ -37,6 +37,7 @@ html, body { height: 100%; }
   clear: both;
 }
 
+
 // MathJax styling
 .mathblock, .MJXc-display {
   font-size: 1.5rem !important;
@@ -173,24 +174,25 @@ a { color: $contrast-color;
     text-decoration: none; }
 
 /* Links: replicate underline that clears descenders */
-p > a:link, p > a:visited { color: inherit; }
+// p > a:link, p > a:visited { color: inherit; }
 
 p > a:link { background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
              background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
              -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
              -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
              background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-             background-repeat: no-repeat, no-repeat, repeat-x;
+            //  background-repeat: no-repeat, no-repeat, repeat-x;
              text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-             background-position: 0% 93%, 100% 93%, 0% 93%; }
+             background-position: 0% 93%, 100% 93%, 0% 93%;}
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) { p > a:link { background-position-y: 87%, 87%, 87%; } }
+@media screen and (-webkit-min-device-pixel-ratio: 0) { p > a:link { background-position-y: 87%, 87%, 87%;} }
 
 p > a:link::selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-                        background: #b4d5fe; }
+                        background: #b4d5fe;}
 
 p > a:link::-moz-selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-                             background: #b4d5fe; }
+                             background: #b4d5fe;}
+
 
 /* --- End of Links --- */
 
@@ -450,3 +452,47 @@ hr.slender {
       display:none;
     }
 }
+
+// Added Border to Code Block
+
+pre.highlight, .highlight > pre, td.code pre {
+  background-color: #FAFAFA;
+  background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
+  background-repeat: repeat;
+  background-size: 3em 3em;
+  background-position: 0px 10px;
+  border: 0.5px solid #ccc;
+  border-left: 7px solid #999;
+  border-radius: 4px;
+}
+code table, code table td, code table th, code table tbody, code table tr,
+td.gutter pre {
+  padding: 0;
+  border: none;
+  background-color: #fff;
+}
+.highlight > pre {
+  padding: 0;
+}
+.highlight > pre.highlight {
+  padding: 9.5px;
+}
+
+td.code pre {
+  border-width: 0 0 0 2px;
+  border-style: solid;
+  border-color: #444;
+  border-radius: 0;
+}
+td.gutter {
+  padding-top: 3px;
+}
+
+// Tables
+
+
+/* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
+.highlight .lineno {color:rgba(0,0,0,0.3);padding: 0 10px;-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
+.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+.lineno::selection {background-color: transparent;} /* Other major browsers */
+

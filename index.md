@@ -11,3 +11,5 @@ title: Linear Algebra Study Notes
 1. [The Geometry of Linear Equations](UnitI/The_Geometry_of_Linear_Equations): A major application of linear algebra is to solving systems of linear equations. This lecture presents three ways of thinking about these systems. The "row method" focuses on the individual equations, the "column method" focuses on combining the columns, and the "matrix method" is an even more compact and powerful way of describing systems of linear equations.
 
 2. [Elimination with Matrices](UnitI/Elimination_of_Matrices): 	This session introduces the method of elimination, an essential tool for working with matrices. The method follows a simple algorithm. To help make sense of material presented later, we describe this algorithm in terms of matrix multiplication.
+
+3. [Multiplication and inverse matrices](UnitI/Multiplication_and_inverse_matrices): This lecture looks at matrix multiplication from five different points of view. We then learn how to find the inverse of a matrix using elimination, and why the Gauss-Jordan method works.

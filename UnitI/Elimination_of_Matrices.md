@@ -4,7 +4,7 @@ title: Elimination with Matrices
 date: 2019-5-20
 ---
 
-### Elimination
+## Elimination
 
 A *pivot* in a matrix is the first non-zero element in each row. And we want the column postiion of a pivot is equal to its row position, i.e., we want the pivot in row 1 in column 1, in row 2 in column 2 etc. If we cannot find a pivot for each row, then it's a failure. 
 
@@ -88,7 +88,7 @@ $$
 
 First we see $$z=-2$$ from the last row. And substitute $$z$$ into the second row we get $$y=1$$. And finally $$x=2$$. 
 
-### Matrix Operations 
+## Matrix Operations 
 
 Not stated clearly before, when we multiply matrix $$A$$ with the unknown vector $$\mathbf{x}$$ we expand the unknowns $$x, y, z$$ to each column of $$A$$. In fact, when we want to do operations on a matrix's column, we multiply a column on the *right*. 
 
@@ -217,7 +217,7 @@ $$
 
 
 
-### Inverse
+## Inverse
 In summary, to express the whole operations, it is 
 
 $$

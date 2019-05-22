@@ -13,3 +13,5 @@ title: Linear Algebra Study Notes
 2. [Elimination with Matrices](UnitI/Elimination_of_Matrices): 	This session introduces the method of elimination, an essential tool for working with matrices. The method follows a simple algorithm. To help make sense of material presented later, we describe this algorithm in terms of matrix multiplication.
 
 3. [Multiplication and inverse matrices](UnitI/Multiplication_and_inverse_matrices): This lecture looks at matrix multiplication from five different points of view. We then learn how to find the inverse of a matrix using elimination, and why the Gauss-Jordan method works.
+
+4. [Factorization into A = LU](UnitI/Factorization_into_A_eq_LU): This session explains inverses, transposes and permutation matrices. We also learn how elimination leads to a useful factorization A = LU and how hard a computer will work to invert a very large matrix.

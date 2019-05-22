@@ -20,3 +20,6 @@ transfer:
   command: rsync
   settings: -av
   source: _site/
+
+# Google Analytics
+google_analytics: UA-140681903-1

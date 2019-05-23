@@ -153,4 +153,4 @@ $$
 
 switch row 1 and row 2. There are total $$n!$$ permutation matrices for $$n\times n$$ matrix(including the one leaves all rows unchanged). And also note that for permutation matrices, $$P^{-1}=P^T$$. This means that to get back to the stage before being permutated is equal to doing a transposed permutation. 
 
-(In fact I thikn the notation $$P_{12}$$ is bad, $$P_{213}$$ is much better which refers to order of row 1 and 2 switched and row 3 unchanged)
+(In fact I think the notation $$P_{12}$$ is bad, $$P_{213}$$ is much better which refers to order of row 1 and 2 switched and row 3 unchanged)

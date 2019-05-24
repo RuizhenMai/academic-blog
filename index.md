@@ -17,3 +17,5 @@ title: Linear Algebra Study Notes
 4. [Factorization into A = LU](UnitI/Factorization_into_A_eq_LU): This session explains inverses, transposes and permutation matrices. We also learn how elimination leads to a useful factorization A = LU and how hard a computer will work to invert a very large matrix.
 
 5. [Transposes, Permutations, Vector Spaces](UnitI/Transposes,Permutation,Vector_Spaces): To account for row exchanges in Gaussian elimination, we include a permutation matrix P in the factorization PA = LU. Then we learn about vector spaces and subspaces; these are central to linear algebra.
+
+6. [Column Space and Nullspace](UnitI/Column_Space_and_Nullspace): The column space of a matrix A tells us when the equation Ax = b will have a solution x. The null space of A tells us which values of x solve the equation Ax = 0.

@@ -16,7 +16,7 @@ $$
 \begin{aligned}
 2x-y & =0\\
 -x+2y & =3
-\end{aligned}
+\end{aligned}\tag{1}
 $$
 
 writing in the form of a product of coefficient matrix and unknown vector, 
@@ -29,19 +29,23 @@ $$
 \left[\begin{matrix}
 x\\
 y
-\end{matrix}\right]=\left[\begin{matrix}\tag{1}
+\end{matrix}\right]=\left[\begin{matrix}
 0\\
 3
-\end{matrix}\right]
+\end{matrix}\right]\tag{2}
 $$
 
-in short, this matrix is in the form of:
+If you are not familiar with matrix multiplication for now, just remember that any systems of equations can be written in
 
 $$
 A\mathbf{x}=\mathbf{b}
 $$
 
+the unknown vector $$\mathbf x$$ always contains a list of unknowns vertically, so does the constant vector $$\mathbf b$$. The coefficient matrix $$A$$ is ordered same as the system of equations, the first row is 2 and -1, the second row is -1 and 2, which are exactly same as writing them at the very top.
+
 ## Row picture: 
+
+Draw the two equations in  $$(1)$$  into the coordinates:
 
 <p align="center" style="text-align: center;"><img align="center" src="https://tex.s2cms.ru/svg/%5Cbegin%7Btikzpicture%7D%5Bscale%3D1.0544%5D%5Csmall%0A%5Cbegin%7Baxis%7D%5Baxis%20line%20style%3Dgray%2C%0A%09samples%3D120%2C%0A%09width%3D6.0cm%2Cheight%3D6.4cm%2C%0A%09xmin%3D-2.5%2C%20xmax%3D2.5%2C%0A%09ymin%3D-2.5%2C%20ymax%3D2.5%2C%0A%09%25restrict%20y%20to%20domain%3D-2%3A2%2C%0A%09ytick%3D%7B-2%2C-1%2C0%2C1%2C2%7D%2C%0A%09xtick%3D%7B-2%2C-1%2C0%2C1%2C2%7D%2C%0A%09axis%20equal%2C%0A%09axis%20x%20line%3Dcenter%2C%0A%09axis%20y%20line%3Dcenter%2C%0A%09xlabel%3D%24x%24%2Cylabel%3D%24y%24%5D%0A%25%5Caddplot%5Bred%2Cdomain%3D-2%3A1%2Csemithick%5D%7Bexp(x)%7D%3B%0A%5Caddplot%5Bcolor%20%3D%20%7Brgb%3Ared%2C181%3Bgreen%2C23%3Bblue%2C23%7D%2Cline%20width%20%3D%201pt%5D%7Bx%2F2%2B3%2F2%7D%3B%0A%5Caddplot%5Bcolor%20%3D%20%7Brgb%3Ared%2C16%3Bgreen%2C133%3Bblue%2C152%7D%2C%20line%20width%20%3D%201pt%5D%7B2*x%7D%3B%0A%5Caddplot%5B%5D%20coordinates%20%7B(2%2C3)%7D%20node%7B%242x-y%3D0%24%7D%3B%0A%5Caddplot%5B%5D%20coordinates%20%7B(-1.5%2C1.5)%7D%20node%7B%24-x%2B2y%3D3%24%7D%3B%0A%5Caddplot%5Bcolor%20%3D%20%7Brgb%3Ared%2C146%3Bgreen%2C98%3Bblue%2C74%7D%2Cmark%3D*%5D%20coordinates%20%7B(1%2C2)%7D%3B%0A%25zero%20node%0A%5Cpath%20(axis%20cs%3A0%2C0)%20node%20%5Banchor%3Dnorth%20west%2Cyshift%3D-0.07cm%5D%20%7B0%7D%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D" alt="\begin{tikzpicture}[scale=1.0544]\small
 \begin{axis}[axis line style=gray,
@@ -71,7 +75,7 @@ By finding a line for the first equation and for second equation(two point metho
 
 ## Column Picture:
 
-Rewriting the equation $$(1)$$ to expand $$x$$ and $$y$$, 
+Rewriting the equation $$(2)$$ to expand $$x$$ and $$y$$, (@todo include notes)
 
 
 $$

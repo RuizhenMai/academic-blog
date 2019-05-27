@@ -22,3 +22,8 @@ title: Linear Algebra Study Notes
 5. [Transposes, Permutations, Vector Spaces](UnitI/Transposes,Permutation,Vector_Spaces): To account for row exchanges in Gaussian elimination, we include a permutation matrix P in the factorization PA = LU. Then we learn about vector spaces and subspaces; these are central to linear algebra.
 
 6. [Column Space and Nullspace](UnitI/Column_Space_and_Nullspace): The column space of a matrix A tells us when the equation Ax = b will have a solution x. The null space of A tells us which values of x solve the equation Ax = 0.
+
+7. [Solving Ax = 0: Pivot Variables, Special Solutions](UnitI/solving_ax_eq_0): We apply the method of elimination to all matrices, invertible or not. Counting the pivots gives us the rank of the matrix. Further simplifying the matrix puts it in reduced row echelon form R and improves our description of the null space.
+
+8. [Solving Ax = b: Row Reduced Form R](UnitI/solving_ax_eq_b): We describe all solutions to Ax = b based on the free variables and special solutions encoded in the reduced form R.
+

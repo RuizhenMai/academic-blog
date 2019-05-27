@@ -3,7 +3,7 @@ layout: post
 title: Linear Algebra Study Notes
 ---
 
-<span class="newthought">These notes</span>  are taken along with my review on linear algebra by MIT's online course. As I began my journey on Machine Learning, the problem of my unsturdy understanding of Linear Algbera and Matrices arised. Many of important concepts in Machine Learning require a solid comprehension of these knowledge, like column spaces, eigenvector and etc. There can be typos and misclear explanation. If you find any typos or want to contribute{% include sidenote.html note='The notes are still **under construction**! .'%}, please let me know by sending an email to mairuizhen1998@gmail.com including a [linear algebra] in the subject, or just submit a pull request with your fixes to the [GitHub repository](https://github.com/RuizhenMai/academic-blog) I really hope the notes can help out more people who find linear algbera boring or hard to grasp. {% include marginnote.html note=" Thanks for Stanford's CS228 notes on probabilistic models. They are very concise and insightful. And thanks for the modification on Tufte's template. If the usage of this template violates the copyright, please let me know and I will delete this template. "%} 
+<span class="newthought">These notes</span>  are taken along with my review on linear algebra by MIT's online course. As I began my journey on Machine Learning, the problem of my unsturdy understanding of Linear Algbera and Matrices arised. Many of important concepts in Machine Learning require a solid comprehension of these knowledge, like column spaces, eigenvector and etc. There can be typos and misclear explanation. If you find any typos or want to contribute{% include sidenote.html note='The notes are still **under construction**!'%}, please let me know by sending an email to mairuizhen1998@gmail.com including a [linear algebra] in the subject, or just submit a pull request with your fixes to the [GitHub repository](https://github.com/RuizhenMai/academic-blog) I really hope the notes can help out more people who find linear algbera boring or hard to grasp. {% include marginnote.html note=" Thanks for Stanford's CS228 notes on probabilistic models. They are very concise and insightful. And thanks for the modification on Tufte's template. If the usage of this template violates the copyright, please let me know and I will delete this template. "%} 
 
 ## Preliminaries
 
@@ -11,7 +11,7 @@ title: Linear Algebra Study Notes
 
 ## Unit I: Ax = B and Four Subspaces
 
-1. [The Geometry of Linear Equations](UnitI/The_Geometry_of_Linear_Equations): A major application of linear algebra is to solving systems of linear equations. This lecture presents three ways of thinking about these systems. The "row method" focuses on the individual equations, the "column method" focuses on combining the columns, and the "matrix method" is an even more compact and powerful way of describing systems of linear equations.
+1. [The Geometry of Linear Equations](UnitI/The_Geometry_of_Linear_Equations): A major application of linear algebra is to solving systems of linear equations. This lecture presents three ways of thinking about these systems. The "row method" focuses on the individual equations, the "column method" focuses on combining the columns, and the "matrix method" is an even more compact and powerful way of describing systems of linear equations.{% include sidenote.html note='These introductory decsriptions are copied from the course page'%}
 
 2. [Elimination with Matrices](UnitI/Elimination_of_Matrices): 	This session introduces the method of elimination, an essential tool for working with matrices. The method follows a simple algorithm. To help make sense of material presented later, we describe this algorithm in terms of matrix multiplication.
 
@@ -27,3 +27,4 @@ title: Linear Algebra Study Notes
 
 8. [Solving Ax = b: Row Reduced Form R](UnitI/solving_ax_eq_b): We describe all solutions to Ax = b based on the free variables and special solutions encoded in the reduced form R.
 
+9. [Independence, Basis and Dimension](UnitI/Independence_Basis_and_Dimension): A basis is a set of vectors, as few as possible, whose combinations produce all vectors in the space. The number of basis vectors for a space equals the dimension of that space.

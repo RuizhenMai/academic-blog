@@ -8,13 +8,13 @@ date: 2019-5-21
 
 ### A Row $$\times$$ A Column
 
-Let's have 
+The most basic way of multiplying two matrices. Let's have 
 
 $$
 AB=C
 $$
 
-where they are all matricies. If $$A$$ and $$B$$ are not square matricies, then let's assume $$A:M\times N$$ and $$B:N\times P$$. Then the dimenstion of $$C$$ will be $$M\times P$$.  Let $$c_{ij}$$ be the element at row $$i$$ and column $$j$$ in matrix $$C$$. Say we want to find $$c_{34}$$:
+where they are all matricies, $$A:M\times N$$ and $$B:N\times P$$. Then the dimenstion of $$C$$ will be $$M\times P$$.  Let $$c_{ij}$$ be the element at row $$i$$ and column $$j$$ in matrix $$C$$. Say we want to find $$c_{34}$$:
 
 $$
 \begin{aligned}
@@ -24,7 +24,6 @@ c_{34}&=(row\ 3\ of\ A)\cdot(column\ 4\ of\ B)\ \ Note:\ dot\ product\\
 \end{aligned}
 $$
 
-This is $$a\ Row\ of\ A\ \times\ a\ Column\ of\ B$$ 
 
 ### A Matrix $$\times$$ Columns
 
@@ -184,7 +183,7 @@ $$
 
 
 
-## Inverses(square matrices)
+## Inverse(square matrices)
 
 Not all matrices have inverses. For a square matrix $$A$$ that has an inverse,
 
@@ -200,41 +199,54 @@ $$
 A=\left[\begin{matrix}1 & 3\\2&6\end{matrix}\right]
 $$
 
-There are various way we can say why a matrix has no inverse. The professor think the best is to say if there's a non-zero vector $$\mathrm{x}$$ s.t.
+There are various way we can say why a matrix has no inverse. For now, The professor thinks the best is to say if there's a non-zero vector $$\mathbf{x}$$ s.t.
 
 $$
-A\mathrm{x}=\mathbf{0}
+A\mathbf{x}=\mathbf{0}
 $$
 
-here $$\mathrm{x}=\left[\begin{matrix}
+here $$\mathbf{x}=\left[\begin{matrix}
 3\\
 -1
-\end{matrix}\right]$$. The straightfoward reasoning is that if there's an $$A^{-1}$$ exists, 
+\end{matrix}\right]$$, then the matrix $$A$$ is singular. The straightfoward reasoning is that if there's an $$A^{-1}$$ exists, we have a contradiction:
+
 $$
 \begin{aligned}
-A^{-1}A\mathrm{x}&=A^{-1}\mathbf{0}\\
-I\mathrm{x}&=0\\
-\mathrm{x}&=0
+A^{-1}A\mathbf{x}&=A^{-1}\mathbf{0}\\
+I\mathbf{x}&=0\\
+\mathbf{x}&=0
 \end{aligned}
 $$
 
-but that's not true, we have assumed that $$\mathrm{x}$$ is not zero. 
+but that's not true, we have assumed that $$\mathbf{x}$$ is not zero. 
 
 ### Gaussian-Jordan(solve 2 euqations at once)
 
 $$
 \begin{aligned}
-\left[\begin{matrix}
+\begin{matrix}
+\begin{bmatrix}
 1 & 3\\
 2 & 7
-\end{matrix}\right]\left[\begin{matrix}
+\end{bmatrix}\\
+A
+\end{matrix}
+\begin{matrix}
+\begin{bmatrix}
 a & b\\
 c & d
-\end{matrix}\right] & =\left[\begin{matrix}
+\end{bmatrix}\\
+A^{-1}
+\end{matrix}
+& =
+\begin{matrix}
+\begin{bmatrix}
 1 & 0\\
 0 & 1
-\end{matrix}\right]\\
-A\ \ \ \ \ \ \ \ \ \ \ A^{-1}\ \  & =I
+\end{bmatrix}\\
+I
+\end{matrix}
+\\
 \end{aligned}
 $$
 

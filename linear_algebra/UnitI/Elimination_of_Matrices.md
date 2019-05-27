@@ -6,9 +6,9 @@ date: 2019-5-20
 
 ## Elimination
 
-A *pivot* in a matrix is the first non-zero element in each row. And we want the column postiion of a pivot is equal to its row position, i.e., we want the pivot in row 1 in column 1, in row 2 in column 2 etc. If we cannot find a pivot for each row, then it's a failure. 
+A *pivot* in a matrix is the first non-zero element in each row. Later we have pivot row and pivot column and row echelon form. But let's just assume this simple definition for now. We want the column position of a pivot is equal to its row position, i.e., we want the pivot in row 1 in column 1, in row 2 in column 2 etc. If we cannot find a pivot for each row, then it's not a good sign.
 
-So our task it to do operations between or among rows to achieve the ideal stage where the pivots are in their positions. 
+So our task it to do operations between or among rows to achieve the ideal situation where the pivots are in their positions. 
 
 Exmaple:
 
@@ -60,7 +60,8 @@ where I coined the new $$r2$$ as $$r2'$$. Then finally we have found the final u
 2\\
 6\\
 -10
-\end{matrix}\right]$$ and this final constant vector we call it $$\mathbf{c}$$. The new equation is then $$Ux=\mathbf{c}$$. In general, we want to *augment* the coefficient matrix $$A$$ in case we forgot the steps to obtain $$U$$, that is, to attach $$\mathbf{b}$$ into it
+\end{matrix}\right]$$ and this final constant vector we call it $$\mathbf{c}$$. The new equation is then $$U\mathbf x=\mathbf{c}$$. In general, we want to *augment* the coefficient matrix $$A$$ in case we forgot the steps to obtain $$U$$, that is, to attach $$\mathbf{b}$$ into it
+
 $$
 A=\left. \left[\begin{matrix}
 1 & 2 & 1\\
@@ -90,9 +91,7 @@ First we see $$z=-2$$ from the last row. And substitute $$z$$ into the second ro
 
 ## Matrix Operations 
 
-Not stated clearly before, when we multiply matrix $$A$$ with the unknown vector $$\mathbf{x}$$ we expand the unknowns $$x, y, z$$ to each column of $$A$$. In fact, when we want to do operations on a matrix's column, we multiply a column on the *right*. 
-
-Oh, before we start, note that multiplying a constant with any matrices:
+Before we start, note that multiplying a constant with any matrices is equal to multiply a diagonal matrix(one with only non-zero values in the diagonal line) with the constant lies on the diagonal:
 
 $$
 \lambda \left[\begin{matrix}
@@ -110,11 +109,11 @@ $$
 \end{matrix}\right]
 $$
 
-where $$I$$ is the identity matrix. This is true when we put lambda on the right side of the matrix. 
+where $$I$$ is the identity matrix. This is also true when we put $$\lambda$$ on the right side of the matrix. 
 
 ### Column
 
-When multiplying a vector on the right of a matrix, we are manipulating its columns:
+This was mentioned on the preliminaries. When multiplying a vector on the right of a matrix, we are manipulating its columns:
 
 $$
 \left[\begin{matrix}
@@ -128,7 +127,7 @@ $$
 \end{matrix}\right]=\Biggr[3*Col\ 1+4*Col\ 2+5*Col\ 3\Biggr]
 $$
 
-Note each column is 3 x 1 so the final answer is a vector of 3 x 1. Similarly, if it's a matrix not a vector:
+Note each column is 3 x 1 so the final answer is a vector of 3 x 1. If it's a matrix not a vector:
 
 $$
 \left[\begin{matrix}
@@ -137,18 +136,20 @@ $$
 - & - & -
 \end{matrix}\right] *\left[\begin{matrix}
 3 & 0 & 0\\
-4 & 1 & 0\\
+4 & 8 & 0\\
 5 & 0 & 1
 \end{matrix}\right] =\left[\begin{matrix}
  &  & \\
-3*Col\ 1+4*Col\ 2+5*Col\ 3 & Col\ 2 & Col\ 3\\
+3*Col\ 1+4*Col\ 2+5*Col\ 3 & 8Col\ 2 & Col\ 3\\
  &  & 
 \end{matrix}\right]
 $$
 
-only the first column of the new matrix changes, the second and the third one remain because we put one in the middle and the lower right. 
+each column on the matrix to the right of multiplication is controlling the column in the product matrix.
 
 ### Row
+
+Row operations are similar:
 
 $$
 \left[\begin{matrix}
@@ -164,7 +165,7 @@ $$
 
 Note the output vector is 1 x 3.
 
-Thus if we want to reproduce the elimination on $$(2)$$, we can do 
+Thus if we want to reproduce the *elimination* on $$(2)$$, we can do 
 
 $$
 \left[\begin{matrix}
@@ -182,7 +183,7 @@ $$
 \end{matrix}\right]
 $$
 
-on the second row of the leftmost matrix we are producing same effect of $$r2-3*r1$$ on row exchange on the original matrix. Let's call this matrix $$E_{21}$$ because it anchors the r2c1 element(though I prefer to call it $$E_{22}$$). And then we can add another matrix $$E_{32}$$ to simulate $$(2)$$
+the second row of the left matrix is producing the same effect of $$r2-3*r1$$ on row exchange on the original matrix. Let's call this matrix $$E_{21}$$ because it anchors the r2c1 element(though I prefer to call it $$E_{22}$$). Learning from this, we can add another matrix $$E_{32}$$ to simulate the second elimination step in $$(2)$$
 
 $$
 \left[\begin{matrix}
@@ -217,7 +218,7 @@ $$
 
 
 
-## Inverse
+## Inverse Preview
 In summary, to express the whole operations, it is 
 
 $$

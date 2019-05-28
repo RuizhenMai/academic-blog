@@ -59,7 +59,7 @@ A=\begin{bmatrix}
 \end{bmatrix}
 $$
 
-c4 is the same as c1, and c3 is equal to c1+c2 in this matrix. So we only need the first two vectors to form the basis of $$C(A)$$.
+c4 is the same as c1, and c3 is equal to c1+c2 in this matrix. So we only need the first two vectors to form the basis of $$C(A)$$. In other words, the *pivot* columns in the matrix $$A$$ (not the reduced matrix $$R$$ or $$U$$) are the basis for the column space. 
 
 One more thing is that we have discussed
 
@@ -84,3 +84,6 @@ what's left after we subsract from the dimension of column space forms the null 
 $$
 n-rank(A)=\#\ of\ free\ variables=dim\ N(A)
 $$
+
+The basis for the nullspace is then the free columns (where the free variables are). 
+

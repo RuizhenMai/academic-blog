@@ -30,3 +30,7 @@ title: Linear Algebra Study Notes
 9. [Independence, Basis and Dimension](UnitI/Independence_Basis_and_Dimension): A basis is a set of vectors, as few as possible, whose combinations produce all vectors in the space. The number of basis vectors for a space equals the dimension of that space.
 
 10. [The Four Fundamental Subspaces](UnitI/The_four_fundamental_subspaces): For some vectors b the equation Ax = b has solutions and for others it does not. Some vectors x are solutions to the equation Ax = 0 and some are not. To understand these equations we study the column space, nullspace, row space and left nullspace of the matrix A.
+
+11. [Matrix Spaces; Rank 1; Small World Graphs](UnitI/matrix_spaces): As we learned last session, vectors don't have to be lists of numbers. In this session we explore important new vector spaces while practicing the skills we learned in the old ones. Then we begin the application of matrices to the study of networks.
+
+ 

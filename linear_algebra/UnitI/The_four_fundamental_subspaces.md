@@ -107,7 +107,9 @@ And the last row of $$R$$ is all zeros! So from $$E$$ we see we produced an all-
 
 ## New Vector Space
 
-We can make the collection of all $$3\times 3$$ matrices a vector space, call it $$M$$. A space is a vector space because we can have linear combinations of vector in it. So does we can do it in a matrix. We can add, substract and multiply by constant to a matrix. Some subspaces of $$M$$ includes:
+We can make the collection of all $$3\times 3$$ matrices a vector space, call it $$M$$. A space is a vector space because we can have linear combinations of vectors in it. So does we can do it in a $$3\times 3$$ matrix. We can add, substract and multiply by constant to a matrix. 
+
+Some subspaces of $$M$$ includes:
 
 * all upper triangular matrices
 * all symmetric matrices

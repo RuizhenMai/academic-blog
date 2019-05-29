@@ -70,7 +70,7 @@ $$
 \end{bmatrix}
 $$
 
-For upper triangular $3\times 3$ matrix it's still 6, one 1 for each location in the upper triangular. What about diagonal matrix? Diagonal matrix is just infact $$S\cap U$$, and $$\dim (S\cap U)=3$$, one 1 in each position on diagonal line. Remember we've talked about union is not a subspace([Lecture 6](UnitI/Column_Space_and_Nullspace)). So $$S\cup U$$ is not a subspace. But we can define a new opetaion $$S+U$$ that takes all possible *sums* of this two spaces{%include sidenote.html note="I think it's useful to imagine taking the sum of their bases"%}, and 
+For upper triangular $$3\times 3$$ matrix it's still 6, one 1 for each location in the upper triangular. What about diagonal matrix? Diagonal matrix is just infact $$S\cap U$$, and $$\dim (S\cap U)=3$$, one 1 in each position on diagonal line. Remember we've talked about union is not a subspace([Lecture 6](UnitI/Column_Space_and_Nullspace)). So $$S\cup U$$ is not a subspace. But we can define a new opetaion $$S+U$$ that takes all possible *sums* of this two spaces{%include sidenote.html note="I think it's useful to imagine taking the sum of their bases"%}, and 
 
 $$
 S+U=M

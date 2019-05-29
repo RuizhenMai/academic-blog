@@ -20,71 +20,97 @@ $$
 Transposes:
 
 $$
-\begin{align}
-AA^{-1}&=I\\
-(AA^{-1})^{T}&=I^{T}\\
-(A^{-1})^{T}A^{T}&=I\tag{1}\\
-\end{align}
+(AB)^T=B^TA^T
 $$
 
-to see the lefthand side of $$(1)$$ is true, it's important to note the ordering of transposed matrix
+because
 
 $$
 ((AB)^{T})_{ij}=(AB)_{ji}=\sum_{k=1}^{n}a_{jk}b_{ki}
 $$
 
-and
+when we transpose a matrix the row and column are switched, and
 
 $$
 (B^{T}A^{T})_{ij}=\sum_{k=1}^n B^T_{ik} A^T_{kj}=\sum_{k=1}^n b_{ki} a_{jk}
 $$
 
+Therefore we have
+
+$$
+\begin{align}
+AA^{-1}&=I\\
+(AA^{-1})^{T}&=I^{T}\\
+(A^{-1})^{T}A^{T}&=I\\
+\end{align}
+$$
 
 ## Factorization into A = LU
 
-$$U$$ is same as previously defined as the upper trianular matrix obtained after row eliminations on $$A$$, that is
+$$U$$ is same as previously defined as the upper trianular matrix([lecture 2](./Elimination_of_Matrices)) obtained after row eliminations on $$A$$, that is
 
 $$
 EA=U
 $$
 
-where $$E$$ is the elimination matrix. And $$L=E^{-1}$$. A simple example
+where $$E$$ is the elimination matrix. Multiply both side of $$(1)$$ to theft by $$E^{-1}$$. We will have $$A=E^{-1}U$$. $$E^{-1}$$ is the $$L$$ we are looking for today. A simple example:
 
 $$
 \begin{aligned}
-E_{21} \ \ \ \ \ \ \ \ \ \ A\ \ \ \  & \ \ \ \ \ \ \ \ \ \ U\\
-\left[\begin{matrix}
+\begin{matrix}
+E_{21}\\
+\begin{bmatrix}
 1 & 0\\
 -4 & 1
-\end{matrix}\right]\left[\begin{matrix}
+\end{bmatrix}
+\end{matrix}
+\begin{matrix}
+A\\
+\begin{bmatrix}
 2 & 1\\
 8 & 7
-\end{matrix}\right] & =\left[\begin{matrix}
+\end{bmatrix}
+\end{matrix}
+& =
+\begin{matrix}
+U\\
+\begin{bmatrix}
 2 & 1\\
 0 & 3
-\end{matrix}\right]
+\end{bmatrix}
+\end{matrix}
 \end{aligned}
 $$
 
-In this $$2\times2$$ case, $$L$$ is easily obtained by "canceling" the matrix $$E_{21}$$
+In this $$2\times2$$ case, $$L$$ is easily obtained by "canceling" the matrix $$E_{21}$$ ([lecture 2](./Elimination_of_Matrices)). And we will see it's called $$L$$ because all of its items are in the lower triangular part, as opposed to $$U$$.
 
 $$
 \begin{aligned}
-\ \ \ A\ \ \ \  & \ \ \ \ \ \ \ \ \ \ L\ \ \ \ \ \ \ \ \ \ U\\
-\left[\begin{matrix}
+\begin{matrix}
+A\\
+\begin{bmatrix}
 2 & 1\\
 8 & 7
-\end{matrix}\right] & =\left[\begin{matrix}
+\end{bmatrix}
+\end{matrix}
+& =
+\begin{matrix}
+L\\
+\begin{bmatrix}
 1 & 0\\
 4 & 1
-\end{matrix}\right]\left[\begin{matrix}
+\end{bmatrix}
+\end{matrix}\begin{matrix}U\\\begin{bmatrix}
 2 & 1\\
 0 & 3
-\end{matrix}\right]
+\end{bmatrix}
+\end{matrix}
 \end{aligned}
 $$
 
-sometimes $$U$$ is further reduced into a diagonal matrix $$D$$ with a $$U'$$. To see why $$U$$ is preferred to $$E$$, we need a $$3\times3$$ example. Suppose 
+Sometimes $$U$$ is further reduced into a diagonal matrix $$D$$ with a $$U'$$(not important). 
+
+To see why $$U$$ is preferred to $$E$$, we need a $$3\times3$$ example. Suppose 
 
 $$
 \begin{aligned}
@@ -141,7 +167,7 @@ operations to eliminate $$A$$ to obtain $$U$$. And we can store the operations d
 
 ## Row Exchanges
 
-As mentioned in previouly lectures, permutation matrices are matrices that just change the order of rows. For e.g.
+As mentioned in [lecture 2](./Elimination_of_Matrices), permutation matrices are matrices that just change the order of rows. For e.g.
 
 $$
 P_{12}=\left[\begin{matrix}

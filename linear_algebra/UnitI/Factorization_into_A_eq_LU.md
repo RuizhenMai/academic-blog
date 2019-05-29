@@ -40,7 +40,7 @@ $$
 $$
 
 
-#### Factorization into A = LU
+## Factorization into A = LU
 
 $$U$$ is same as previously defined as the upper trianular matrix obtained after row eliminations on $$A$$, that is
 

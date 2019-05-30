@@ -126,7 +126,7 @@ rank 1 matrices are building blocks for more complex matrices.
 
 ## Graph
 
-This is the discrete graph that CS-background students are familiar with
+This is the directed/undirected graph that CS-background students are familiar with
 
 $$
 G=\{nodes,edges\}
@@ -140,4 +140,4 @@ margin-right: auto;
 display: block;" src="http://mathworld.wolfram.com/images/eps-gif/GraphNodesEdges_1000.gif">
 
 
-
+This will be further discussed in the next notes.

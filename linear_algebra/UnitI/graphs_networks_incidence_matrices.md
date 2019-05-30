@@ -8,7 +8,7 @@ date: 2019-5-30
 
 Let's have a directed graph{%include sidenote.html note="directed graphs are with arrows; undirected graphs are without"%}
 
-<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph1.png">
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../../assets/graph1.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Example Graph with 5 edges labeled black and four nodes labeled black</figcaption>
 </figure>
 
@@ -80,7 +80,7 @@ $$
 
 This is saying potential difference is zero on each edge if each node has the same potential. So $$\dim N(A)=1$$ and rank $$r=4-1=3$$. From another perspective, we can check how many rows are independent by looking at loops. Note here we refer to loops in the undirected version of Figure 1. 
 
-<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph2.png">
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../../assets/graph2.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 2. Undirected version of Figure 1.</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ We can also see column dependencies from this. For instance, edge 2 is a linear 
 
 ### Left Null Space for Incidence Matrices
 
-{%include sidenote.html note='this part of notes may include unclear meanings, I'm not familiar with Phyisics. Please refer to the original video if you're interested%}To find $$N(A^T)$$, we solve $$A^T\mathbf y=\mathbf 0$$:
+{%include sidenote.html note="this part of notes may include unclear meanings, I'm not familiar with Phyisics. Please refer to the original video if you're interested" %}To find $$N(A^T)$$, we solve $$A^T\mathbf y=\mathbf 0$$:
 
 $$
 \begin{bmatrix}

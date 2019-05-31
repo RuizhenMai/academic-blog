@@ -50,7 +50,7 @@ $$
 A\mathbf{x}=\mathbf{b}
 $$
 
-which is a common expression for a system of equations. $$A$$ is the coefficient matrix, $$\mathbf x$$ is the unknown vector, and $$\mathbf b$$ is the constant vector. If you fonud confusing on matrix multiplication, checkout the <a href="../preliminaries/vector_and_matrix" style="color: black;text-decoration: underline;">preliminary note<a>. 
+which is a common expression for a system of equations. $$A$$ is the coefficient matrix, $$\mathbf x$$ is the unknown vector, and $$\mathbf b$$ is the constant vector. If you fonud confusing on matrix multiplication, checkout the [preliminary note](../preliminaries/vector_and_matrix)
 
 ## Row picture: 
 

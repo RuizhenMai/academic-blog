@@ -488,7 +488,13 @@ td.gutter {
   padding-top: 3px;
 }
 
-// Tables
+p > a{
+  transition:0.18s;
+}
+p > a:hover{
+  color:#c15d1b;
+}
+
 
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */

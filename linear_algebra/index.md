@@ -34,3 +34,5 @@ title: Linear Algebra Study Notes
 11. [Matrix Spaces; Rank 1; Small World Graphs](UnitI/matrix_spaces): As we learned last session, vectors don't have to be lists of numbers. In this session we explore important new vector spaces while practicing the skills we learned in the old ones. Then we begin the application of matrices to the study of networks.
 
 12. [Graphs, Networks, Incidence Matrices](UnitI/graphs_networks_incidence_matrices):This session explores the linear algebra of electrical networks and the Internet, and sheds light on important results in graph theory.
+
+13. [Review](UnitI/review): The [video](https://youtu.be/l88D4r74gtM?list=PLE7DDD91010BC51F8) goes through the review question thoroughly. I will write down a few that I think the prof. did not explain quite clearly and those that might be insightful

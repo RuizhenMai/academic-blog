@@ -94,7 +94,7 @@ $$
 
 Their dimensions are complementary and add up to $$n$$. In $$\mathbb R^3$$, if row space is just a line, then the nullspace is the plane that contains all vectors perpendicular to this line, not just some vectors.
 
-## $A^\top A$
+## $$A^\top A$$
 
 Due to measurement error, $$A\mathbf x=\mathbf b$$ is often unsolvable if $$m>n$$ (check if there's one by elimination). The next challenge will be to find a best possible solution for this kind of equations. The matrix $$A^\top A$$ will be crucial in them. What's good about $$A^\top A$$? It is square,  symmetric. And 
 
@@ -123,6 +123,6 @@ $$
 
 What we know from these are the next proposition:
 
-#### Prop. 4: $$A^\top A$$ is invertible if $$A$$ has independent columns, i.e., $r=n$, full column rank
+#### Prop. 4: $$A^\top A$$ is invertible if $$A$$ has independent columns, i.e., $$r=n$$, full column rank
 
 This will be explained in the next lecture

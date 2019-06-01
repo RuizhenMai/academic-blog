@@ -36,3 +36,10 @@ title: Linear Algebra Study Notes
 12. [Graphs, Networks, Incidence Matrices](UnitI/graphs_networks_incidence_matrices):This session explores the linear algebra of electrical networks and the Internet, and sheds light on important results in graph theory.
 
 13. [Review](UnitI/review): The [video](https://youtu.be/l88D4r74gtM?list=PLE7DDD91010BC51F8) goes through the review question thoroughly. I will write down a few that I think the prof. did not explain quite clearly and those that might be insightful
+
+## Unit II: Least Squares, Determinants and Eigenvalues
+
+<!-- <ol start="14"></ol> -->
+14. [Orthogonal Vectors and Subspaces](UnitII/orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
+    
+15. [Projections onto Subspaces](UnitII/projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace

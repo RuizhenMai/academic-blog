@@ -10,7 +10,7 @@ To extend and finish the factorization of $$A=LU$$. As matrix $$A$$ may not be i
 
 ## Transposes and Symmetry
 
-We know that transposing a matrix switch its columns with rows, that is, $$A_{ij}^T$$  is $$A_{ji}$$. A symmetry matrix is first a square matrix and $$S_{ij}=S_{ji}$$. For example,
+We know that transposing a matrix is switching its columns with rows, that is, $$A_{ij}^T$$  is $$A_{ji}$$. A <u>symmetric matrix</u> is first a square matrix and $$S_{ij}=S_{ji}, \forall i,j$$ or equivalently $$S^\top =S$$. For example,
 
 $$
 S=\left[\begin{matrix}
@@ -20,11 +20,14 @@ S=\left[\begin{matrix}
 \end{matrix}\right]
 $$
 
-And $$S^T=S$$. Then for any given rectangular matrix $$R$$, $$R^TR$$ is always symmetric. Let $$R=\left[\begin{matrix}
+is a symmetric matrix. 
+
+**Prop 1.** *For any given rectangular matrix $$R$$, $$R^TR$$ is always symmetric.* 
+
+Let $$R=\left[\begin{matrix}
 1 & 2 & 4\\
 3 & 3 & 1
 \end{matrix}\right]$$, then 
-
 $$
 R^TR=\left[\begin{matrix}
 1 & 3\\
@@ -40,7 +43,7 @@ R^TR=\left[\begin{matrix}
 \end{matrix}\right]
 $$
 
-We can test if $$(R^TR)^T=R^TR$$, and obviously they are equal. More formally, we can use the lemma that $$(AB)^T=B^TA^T$$ from previous lecture and $$(R^TR)^T=R^T(R^T)^T=R^TR$$ and we can conclude $$R^TR$$ is always symmetric.
+We see for this particular $$R$$, $$(R^TR)^T=R^TR$$. More formally, we can use the lemma that $$(AB)^T=B^TA^T$$ from [lecture 4](./Factorization_into_A_eq_LU) and $$(R^TR)^T=R^T(R^T)^T=R^TR$$ and we can conclude $$R^TR$$ is always symmetric.
 
 ## Vector Spaces
 

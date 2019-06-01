@@ -21,3 +21,6 @@ title: Differential Equations
 1. [Geometric Methods](UnitI/geometric_methods): In this session we will look at graphical methods for visualizing DE's and their solutions. The primary tool for doing this will be the direction field. We will learn techniques to sketch this by hand and also learn to use direction fields drawn by the computer.
 
 2. [Numerical Methods](UnitI/numerical_methods): Many differential equations cannot be solved exactly. For these DE's we can use numerical methods to get approximate solutions. In the previous session the computer used numerical methods to draw the integral curves. We will start with Euler's method. This is the simplest numerical method, akin to approximating integrals using rectangles, but it contains the basic idea common to all the numerical methods we will look at. We will also discuss more sophisticated methods that give better approximations.
+
+3. [First Order Linear ODE's](UnitI/first_order_linear_odes): In this session we will start our study of linear equations, which is probably the most important class of differential equations. We will introduce the ideas and terminology of superposition, systems, input and response which will be used for the rest of the course.
+

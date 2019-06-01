@@ -495,7 +495,9 @@ p > a:hover{
   color:#c15d1b;
 }
 
-
+h4 {
+  font-size:1.5rem;
+}
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
 .highlight .lineno {color:rgba(0,0,0,0.3);padding: 0 10px;-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}

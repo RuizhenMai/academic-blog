@@ -123,6 +123,6 @@ $$
 
 What we know from these are the next proposition:
 
-#### Prop. 4: $A^\top A$ is invertible if $A$ has independent columns, i.e., $r=n$, full column rank
+#### Prop. 4: $$A^\top A$$ is invertible if $$A$$ has independent columns, i.e., $r=n$, full column rank
 
 This will be explained in the next lecture

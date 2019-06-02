@@ -6,8 +6,7 @@ date: 2019-5-31
 
 ## Standard Linear Form
 
-First order linear ODE is in the following form:
-
+<u>First order linear ODE</u> is in the following form:
 $$
 y'+p(x)y=q(x)
 $$
@@ -18,7 +17,7 @@ $$
 y'+p(t)y=q(t)
 $$
 
-This is linear because $$y$$'s exponential is 1. In this course, we shall notice that $$y$$ is written in the left-hand side. In some books $$y$$ is written on the right of the equal signs. This type of DE is solvable and has many applications such as temperature concentration modeling, bank interests, exponential decay and etc. When $$q(t)=0$$, the DE is called *homogeneous*.The prof. introduced the temperature model in this class.
+This is linear because $$y$$'s exponential is 1. And we shall pay attention the coefficient of $$y'$$ is one. In this course, we shall notice that $$y$$ is written in the left-hand side. In some books $$y$$ is written on the right of the equal signs. This is the first inseparable DE we learn to solve. This type of DE has explicit solution and has many applications such as temperature concentration modeling, bank interests, exponential decay and etc. The prof. introduced the temperature model in this class.
 
 ### Temp - Concentration / Conduction - Diffusion Model
 

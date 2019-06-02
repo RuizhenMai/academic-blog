@@ -22,7 +22,7 @@ $$
 
 is a symmetric matrix. 
 
-**Prop 1.** *For any given rectangular matrix $$R$$, $$R^TR$$ is always symmetric.* 
+#### Prop 1. For any given rectangular matrix $$R$$, $$R^TR$$ is always symmetric.
 
 Let $$R=\left[\begin{matrix}
 1 & 2 & 4\\

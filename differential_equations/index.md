@@ -24,3 +24,5 @@ title: Differential Equations
 
 3. [First Order Linear ODE's](UnitI/first_order_linear_odes): In this session we will start our study of linear equations, which is probably the most important class of differential equations. We will introduce the ideas and terminology of superposition, systems, input and response which will be used for the rest of the course.
 
+4. [Complex Arithmetic and Exponentials](UnitI/complex_arithmetric_and_exponentials): In this session we will learn complex arithmetic and Euler's formula. These are important algebraic tools used throughout the course.
+

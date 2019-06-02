@@ -28,6 +28,7 @@ Let $$R=\left[\begin{matrix}
 1 & 2 & 4\\
 3 & 3 & 1
 \end{matrix}\right]$$, then 
+
 $$
 R^TR=\left[\begin{matrix}
 1 & 3\\
@@ -43,7 +44,7 @@ R^TR=\left[\begin{matrix}
 \end{matrix}\right]
 $$
 
-We see for this particular $$R$$, $$(R^TR)^T=R^TR$$. More formally, we can use the lemma that $$(AB)^T=B^TA^T$$ from [lecture 4](./Factorization_into_A_eq_LU) and $$(R^TR)^T=R^T(R^T)^T=R^TR$$ and we can conclude $$R^TR$$ is always symmetric.
+We see for this particular $$R$$, $$(R^TR)^T=R^TR$$. More formally, we can use the lemma that $$(AB)^T=B^TA^T$$ from [lecture 4](./Factorization_into_A_eq_LU) and $$(R^TR)^T=R^T(R^T)^T=R^TR$$ and we can conclude $$R^TR$$ is always symmetric. Same for $$RR^T$$. 
 
 ## Vector Spaces
 

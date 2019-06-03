@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Complex Arithmetic and Exponentials
+title: "First-order Substitution Methods: Bernouilli and Homogeneous ODE's."
 date: 2019-6-1
 ---
 

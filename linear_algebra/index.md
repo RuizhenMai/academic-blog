@@ -43,3 +43,5 @@ title: Linear Algebra Study Notes
 14. [Orthogonal Vectors and Subspaces](UnitII/orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
     
 15. [Projections onto Subspaces](UnitII/projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace
+
+16. [Projection Matrices and Least Squares](UnitII/projection_matrices_and_least_squares): Linear regression is commonly used to fit a line to a collection of data. The method of least squares can be viewed as finding the projection of a vector. Linear algebra provides a powerful and efficient description of linear regression in terms of the matrix ATA.

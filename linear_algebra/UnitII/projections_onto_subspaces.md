@@ -122,7 +122,7 @@ $$
 P=A(A^\top A)^{-1}A^\top 
 $$
 
-<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. But $$A^\top A$$ is square. 
+<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. $$A^\top A$$ is square. But still, $$A^\top A$$ is invertible if only if $$A$$ is full column rank.
 
 ### Least Square preview
 

@@ -12,10 +12,6 @@ title: Differential Equations
 
 [Formal Course Video Playlist](https://www.youtube.com/playlist?list=PLEC88901EBADDD980)
 
-## Preliminaries
-
-1. [Overview of Differential Equations](preliminaries/overview_of_differential_equations)
-
 ## Unit I: First Order Differential Equations
 
 1. [Geometric Methods](UnitI/geometric_methods): In this session we will look at graphical methods for visualizing DE's and their solutions. The primary tool for doing this will be the direction field. We will learn techniques to sketch this by hand and also learn to use direction fields drawn by the computer.
@@ -24,5 +20,8 @@ title: Differential Equations
 
 3. [First Order Linear ODE's](UnitI/first_order_linear_odes): In this session we will start our study of linear equations, which is probably the most important class of differential equations. We will introduce the ideas and terminology of superposition, systems, input and response which will be used for the rest of the course.
 
-4. [Complex Arithmetic and Exponentials](UnitI/complex_arithmetric_and_exponentials): In this session we will learn complex arithmetic and Euler's formula. These are important algebraic tools used throughout the course.
+4. [First-order Substitution Methods: Bernouilli and Homogeneous ODE's.](UnitI/first_order_substitution_methods): ...
 
+5. [First-order Autonomous ODE's: Qualitative Methods](UnitI/autonomous_ode):...
+
+6. [Complex Numbers and Complex Exponentials.](UnitI/complex_numbers_and_complex_exponentials):...

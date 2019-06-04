@@ -45,3 +45,5 @@ title: Linear Algebra Study Notes
 15. [Projections onto Subspaces](UnitII/projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace
 
 16. [Projection Matrices and Least Squares](UnitII/projection_matrices_and_least_squares): Linear regression is commonly used to fit a line to a collection of data. The method of least squares can be viewed as finding the projection of a vector. Linear algebra provides a powerful and efficient description of linear regression in terms of the matrix ATA.
+
+17. [Orthogonal Matrices and Gram-Schmidt](UnitII/orthogoonal_marices_and_gram_schmidt): Many calculations become simpler when performed using orthonormal vectors or othogonal matrices. In this session, we learn a procedure for converting any basis to an orthonormal one.

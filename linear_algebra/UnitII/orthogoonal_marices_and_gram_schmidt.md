@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orthogonal Matrices and Gram-Schmidt
-date: 2019-6-3
+date: 2019-6-4
 ---
 
 <u>Orthonormal vector</u>: Vectors $$q_1,q_2…,q_n$$ are orthonormal iff 

@@ -47,3 +47,5 @@ title: Linear Algebra Study Notes
 16. [Projection Matrices and Least Squares](UnitII/projection_matrices_and_least_squares): Linear regression is commonly used to fit a line to a collection of data. The method of least squares can be viewed as finding the projection of a vector. Linear algebra provides a powerful and efficient description of linear regression in terms of the matrix ATA.
 
 17. [Orthogonal Matrices and Gram-Schmidt](UnitII/orthogoonal_marices_and_gram_schmidt): Many calculations become simpler when performed using orthonormal vectors or othogonal matrices. In this session, we learn a procedure for converting any basis to an orthonormal one.
+
+18. [Properties of Determinants](UnitII/properties_of_determinants): The determinant of a matrix is a single number which encodes a lot of information about the matrix. Three simple properties completely describe the determinant. In this lecture we also list seven more properties like detAB = (detA)(detB) that can be derived from the first three.

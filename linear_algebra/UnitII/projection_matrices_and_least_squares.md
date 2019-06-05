@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projection Matrices and Least Squares
-date: 2019-6-2
+date: 2019-6-3
 ---
 
 Remember our projection matrix $$P$$ is 

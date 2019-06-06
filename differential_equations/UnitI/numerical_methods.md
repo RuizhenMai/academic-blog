@@ -12,3 +12,4 @@ We can know if a curve is convex or concave(at least at that point) by finding t
 ### Pitfalls
 
 ...
+

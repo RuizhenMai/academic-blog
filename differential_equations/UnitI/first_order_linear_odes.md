@@ -77,7 +77,7 @@ u&=e^{\int pdx}
 \end{align}
 $$
 
-We don't need $$+C$$ here since only one $$u$$ is needed. Let's take an example and summarize the steps:
+And remember $$p(x)$$ depending on input $$x$$, $$u=e^{\int p(x)dx}$$.Note we don't need $$+C$$ here since only one $$u$$ is needed. Let's take an example and summarize the steps:
 
 $$
 xy'-y=x^3

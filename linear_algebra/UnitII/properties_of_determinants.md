@@ -9,7 +9,7 @@ Every square matrix has a determinant associated with it. The determinant will b
 
 There're three properties of a determinant, and we can infer another seven from the basic ones:
 
-1. $$\det I=1$$
+1. $$\det I=1$$. 
 
 2. Exchanging rows reverse the sign of determinant. Therefore $$\det P= 1/-1$$ if the number of exchanges is even/if odd
 

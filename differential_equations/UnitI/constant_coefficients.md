@@ -190,4 +190,4 @@ $$
 
 $$\phi=\tan^{-1}(\omega/k)$$ is called the phase lag, the shift of the trigonometry function.  And $$r$$ is the amplitude. $$k$$ is the conductivity. When $$k$$ goes up, $$\phi$$ goes down. Then the phase lag is smaller, it means we can get the response sooner(??? Not sure).  
 
-The Cartesion solution will be in the next note.
+The Cartesian solution will be in the next note.

@@ -9,7 +9,8 @@ title: Linear Algebra Study Notes
 
 1. [Vector and Matrix](preliminaries/vector_and_matrix)
 
-## Unit I: Ax = B and Four Subspaces
+
+## I: Ax = B and Four Subspaces
 
 1. [The Geometry of Linear Equations](UnitI/The_Geometry_of_Linear_Equations): A major application of linear algebra is to solving systems of linear equations. This lecture presents three ways of thinking about these systems. The "row method" focuses on the individual equations, the "column method" focuses on combining the columns, and the "matrix method" is an even more compact and powerful way of describing systems of linear equations.{% include sidenote.html note='These introductory decsriptions are copied from the course page'%}
 
@@ -37,9 +38,9 @@ title: Linear Algebra Study Notes
 
 13. [Review](UnitI/review): The [video](https://youtu.be/l88D4r74gtM?list=PLE7DDD91010BC51F8) goes through the review question thoroughly. I will write down a few that I think the prof. did not explain quite clearly and those that might be insightful
 
-## Unit II: Least Squares, Determinants and Eigenvalues
+    ## II: Least Squares, Determinants and Eigenvalues
+<br/>
 
-<!-- <ol start="14"></ol> -->
 14. [Orthogonal Vectors and Subspaces](UnitII/orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
     
 15. [Projections onto Subspaces](UnitII/projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace

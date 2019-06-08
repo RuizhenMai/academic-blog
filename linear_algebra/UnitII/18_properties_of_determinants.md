@@ -85,4 +85,5 @@ There're three properties of a determinant, and we can infer another seven from 
     \end{vmatrix}\begin{vmatrix}
     U
     \end{vmatrix}
-    \end{aligned}$$ and both triangular, tranposed determinants are the same'%}. 
+    \end{aligned}$$ and both triangular, tranposed determinants are the same'%}. One implication is that from property 6, any column is zero will lead to determinant as 0. 
+

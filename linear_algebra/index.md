@@ -49,4 +49,10 @@ title: Linear Algebra Study Notes
 
 17. [Orthogonal Matrices and Gram-Schmidt](UnitII/orthogoonal_marices_and_gram_schmidt): Many calculations become simpler when performed using orthonormal vectors or othogonal matrices. In this session, we learn a procedure for converting any basis to an orthonormal one.
 
-18. [Properties of Determinants](UnitII/properties_of_determinants): The determinant of a matrix is a single number which encodes a lot of information about the matrix. Three simple properties completely describe the determinant. In this lecture we also list seven more properties like detAB = (detA)(detB) that can be derived from the first three.
+18. [Properties of Determinants](UnitII/18_properties_of_determinants): The determinant of a matrix is a single number which encodes a lot of information about the matrix. Three simple properties completely describe the determinant. In this lecture we also list seven more properties like detAB = (detA)(detB) that can be derived from the first three.
+
+19. [Determinant Formulas and Cofactors](UnitII/19_determinant_formulas_and_cofactors): One way to compute the determinant is by elimination. In this lecture we derive two related formulas for the determinant using the properties from last lecture. 
+
+20. [Cramer's Rule, Inverse Matrix and Volume](UnitII/20_cramers_rule_inverse_matrix_and_volume): Now we start to use the determinant. Understanding the cofactor formula allows us to show that A-1 = (1/detA)CT, where C is the matrix of cofactors of A. Combining this formula with the equation x = A-1b gives us Cramer's rule for solving Ax = b. Also, the absolute value of the determinant gives the volume of a box.
+
+21. [Diagonalization and Powers of A](UnitII/21_diagonalization): If A has n independent eigenvectors, we can write A = SΛS−1, where Λ is a diagonal matrix containing the eigenvalues of A. This allows us to easily compute powers of A which in turn allows us to solve difference equations uk+1 = Auk. 

@@ -70,21 +70,32 @@ $$
 
 ## Gram-Schmidt
 
-Let's try to make a matrix's columns orthonormal. For two arbitrary vectors $$a,b$$, we want to find $$A,B$$ s.t. $$A\perp B$$ and their unit vectors $$q_1,q_2$$ . To do so we need projections. Remember projected vector $$\mathbf p$$ is onto the space of $$A$$, and there's an error/difference $$\mathbf e=\mathbf b -\mathbf p$$. This error is in the $$N(A^\top)$$, and it is perpendicular to the projected vector. This is what we want. 
+Let's try to make a matrix's columns orthonormal. For two arbitrary vectors $$\mathbf {a,b}$$, we want to find $$a',b'$$ s.t. $$a'\perp b'$$.  And $$a', b'$$'s unit vectors are $$q_1,q_2$$ . To do so we need projections. Remember projected vector $$\mathbf p$$ is onto the space of $$A$$, and there's an error/difference $$\mathbf e=\mathbf b -\mathbf p$$. This error is in the $$N(\mathbf a^\top)$$, and it is perpendicular to the projected vector. This is what we want. (In this case $$a=a'$$)
+
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../../assets/graph9.png">
+  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Gram-Schmidt Illustration</figcaption>
+</figure>
 
 $$
-B=\mathbf b-A(A^\top A)^{-1}A^\top \mathbf b
+\begin{align}
+b'&=\mathbf b-\mathbf p\\
+&=\mathbf b - \frac{aa^\top}{a^\top a}\mathbf b
+\end{align}
 $$
 
-To verify, $$A^\top B$$ should be equal to 0:
+To verify, $$a^\top b'$$ should be equal to 0:
 
 $$
-A^\top B=A\top \mathbf b-A^\top A(...)^{-1}A^\top \mathbf b=0
+\begin{align}
+a^\top b'&=a^\top \mathbf b-a^\top\frac{aa^\top}{a^\top a}\mathbf b\\
+&=a^\top \mathbf b-\not{a^\top}\frac{\not{a}a^\top}{\not{a^\top} \not{a}}\mathbf b\\
+&=0
+\end{align}
 $$
 
 
-When we convert $$a,b$$ into $$A,B$$, the column space does not change, because we are doing combinations on columns. 
+This can be generalized from vectors $$\mathbf{a,b}$$ to a plane or a space. 
 
-### A=QR
+### A =QR
 
 ...

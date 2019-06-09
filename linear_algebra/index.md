@@ -55,4 +55,6 @@ title: Linear Algebra Study Notes
 
 20. [Cramer's Rule, Inverse Matrix and Volume](UnitII/20_cramers_rule_inverse_matrix_and_volume): Now we start to use the determinant. Understanding the cofactor formula allows us to show that A-1 = (1/detA)CT, where C is the matrix of cofactors of A. Combining this formula with the equation x = A-1b gives us Cramer's rule for solving Ax = b. Also, the absolute value of the determinant gives the volume of a box.
 
-21. [Diagonalization and Powers of A](UnitII/21_diagonalization): If A has n independent eigenvectors, we can write A = SΛS−1, where Λ is a diagonal matrix containing the eigenvalues of A. This allows us to easily compute powers of A which in turn allows us to solve difference equations uk+1 = Auk. 
+21. [Eigenvalues and Eigenvectors](UnitII/21_eigenvalues_and_eigenvectors): If the product Ax points in the same direction as the vector x, we say that x is an eigenvector of A. Eigenvalues and eigenvectors describe what happens when a matrix is multiplied by a vector. In this session we learn how to find the eigenvalues and eigenvectors of a matrix.
+
+22. [Diagonalization and Powers of A](UnitII/22_diagonalization): If A has n independent eigenvectors, we can write A = SΛS−1, where Λ is a diagonal matrix containing the eigenvalues of A. This allows us to easily compute powers of A which in turn allows us to solve difference equations uk+1 = Auk. 

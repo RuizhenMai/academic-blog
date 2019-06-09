@@ -14,7 +14,7 @@ $$
 or nowadays the input variable $$t$$ representing time is more widely used:
 
 $$
-y'+p(t)y=q(t)
+y'+p(t)y=q(t)\tag{1}
 $$
 
 This is linear because $$y$$'s exponential is 1. And we shall pay attention the coefficient of $$y'$$ is one. In this course, we shall notice that $$y$$ is written in the left-hand side. In some books $$y$$ is written on the right of the equal signs. This is the first inseparable DE we learn to solve. This type of DE has explicit solution and has many applications such as temperature concentration modeling, bank interests, exponential decay and etc. The prof. introduced the temperature model in this class.
@@ -92,12 +92,23 @@ Given a first order linear DE that may not be in standard form, we need to:
 
 ### Definite Integral
 
-When there's an initial condition $$y_0$$, we want to do definite integral from 0 to $$t$$ when integrating the right-hand side of standard first order linear ODE:
-
+Let's get the general solution for (1) when it has constant coefficients by integrating factors. For constant coefficients $$p(t)=k$$, The integrating factor is $$e^{\int kdt}=e^{kt}$$
 $$
-\int_0^t uq\ dt
+\begin{align}
+y'+p(t)y&=q(t)\\
+(ye^{kt})'&=e^{kt}q(t)\\
+ye^{kt}&=\int e^{kt}q(t)+C\\
+y&=e^{-kt}\int e^{kt}q(t)+Ce^{-kt}\\
+\end{align}
 $$
-
-
-(to be supplement in the future)
-
+This is solved with indefinite integral. Sometimes people prefer definite integral because it is convenient for initial value substitution. Let's see it. 
+$$
+\begin{align}
+y'+p(t)y&=q(t)\\
+(ye^{kt})'&=e^{kt}q(t)\\
+y(t)e^{kt}-y(0)e^{0t}&=\int_0^t e^{kt}q(t)\\
+y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y(0)e^{-kt}\\
+y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y_0e^{-kt}\\
+\end{align}
+$$
+You see that in this case we have $$y_0=y(0)$$ in the right hand side. This is the value when the function is at time 0, which is often known. 

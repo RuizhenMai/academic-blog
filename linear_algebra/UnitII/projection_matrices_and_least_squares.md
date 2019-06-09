@@ -9,9 +9,9 @@ $$
 P=A(A^\top A)^{-1}A^\top
 $$
 
-#### Prop. 1 If $$\mathbf b$$ in column space, $$P\mathbf b=\mathbf b$$;
+#### Prop. 1 If $\mathbf b$ in column space, $P\mathbf b=\mathbf b$;
 
-#### Prop. 2 If $$\mathbf b$$ perpendicular to column space, $$P\mathbf b=0$$.
+#### Prop. 2 If $\mathbf b$ perpendicular to column space, $P\mathbf b=0$.
 
 Let's solve **Prop. 2** First. What vectors are in perpendicular to the null space of $$A$$? From [lecture 14](./orthogonal_vectors_and_subspaces), we knew that $$R(A)\perp N(A)$$. One shall easily infer from that $$C(A)\perp N(A^\top)$$. Therefore the vectors in the left nullspace of $$A$$ are perpendicular to its column space. If $$\mathbf b$$ in $$N(A^\top)$$, then $$A^\top \mathbf b=0$$ immediately, and 
 $$

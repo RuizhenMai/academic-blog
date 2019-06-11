@@ -4,7 +4,7 @@ title: Diagonalization and Powers of A
 date: 2019-6-9
 ---
 
-## A=$$S^{-1}\Lambda S$$
+## A=$S^{-1}\Lambda S$
 
 Diagonalize a matrix is, (or the other way around)
 
@@ -34,17 +34,15 @@ $$
 AS=S\Lambda
 $$
 
-Since we have $$n$$ independent eigenvalues, we can invert the matrix, 
-
-$$
-S^{-1}AS=\Lambda
-$$
-
-Still there're some small number of matrices that do not have independent eigenvalues, as mentioned in the end of the [last note](./21_eigenvalues_and_eigenvectors.md). The other way to write this is just 
+Since we have $$n$$ independent eigenvalues, we can invert the matrix $$S$$, writing it to the right hand side 
 
 $$
 A=S\Lambda S^{-1}
 $$
+
+Still, it's possible that there're some small number of matrices that do not have independent eigenvalues, as mentioned in the end of the [last note](./21_eigenvalues_and_eigenvectors.md). 
+
+
 
 ### Square eigenvalues
 
@@ -66,7 +64,7 @@ Right now we can say $$A$$ is sure to be diagonalizable if it has all the $$\lam
 
 
 
-### Difference Equation $$u_{k+1}=Au_k$$
+### Difference Equation $u_{k+1}=Au_k$
 
 Let's have a difference equation $$u_{k+1}=Au_k$$, and rewrite it into
 
@@ -79,7 +77,7 @@ $$
 If we can, somehow, write $$u_0$$ into a combinations of $$A$$'s eigenvectors, then 
 
 $$
-u_0=c_1\mathbf x_1+c_2\mathbf x_2+...+c_n\mathbf x_n
+u_0=c_1\mathbf x_1+c_2\mathbf x_2+...+c_n\mathbf x_n\tag{2}
 $$
 
 And:
@@ -145,8 +143,7 @@ Thus $$A=\begin{bmatrix}
 \end{bmatrix} $$.  And we know $$\mathbf u_0=\begin{bmatrix}
 1 \\
 0
-\end{bmatrix}$$. What's left is 
-
+\end{bmatrix}$$. What's left is to find out the right combination $$c_1,\ c_2$$. Note we only have $$\lambda_1,\ \lambda_2$$ two eigenvalues, so we only have two terms from (2). 
 $$
 c_1\mathbf x_1+c_2\mathbf x_2=\begin{bmatrix}
 1 \\
@@ -154,5 +151,5 @@ c_1\mathbf x_1+c_2\mathbf x_2=\begin{bmatrix}
 \end{bmatrix}
 $$
 
-The important idea here is that eigenvalues are dominating the growth. 
+The important idea here is that eigenvalues are dominating the growth. (Note that because $$\mathbf x_1,\mathbf x_2$$ are independent, they span the space, we can always find such combination $$c_1,c_2$$)
 

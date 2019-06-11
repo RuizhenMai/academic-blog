@@ -5,6 +5,18 @@ title: Causal Inference
 
 These notes do not tend to be read in order (Causal Inference is just not a field that they manage to order the concepts step by step to be taught easily). But they are in order under its own section. 
 
+[Directed Acyclic Graphs](./directed_graph)
+
+Randomized trials are experiments we design and conduct. They can be expensive. If people know it's randomized they will refuse to participate because they just don't won't to be bothered. And it can take a lot of time to wait for the data.
+
+<u>Matching</u>: Match individuals in the treated group $$W_i=1$$ to individuals in the control group $$W_i=0$$ with similar or same values of covariates $$\mathbf Z$$. This is on the basis that $$\mathbf Z$$ is confounding. Take the outcome $$Y_i$$ as how good/bad of a disease. And $$W_i$$ is taking or not a medicine, $$Z_i$$ is age. By matching we want to find people with same age but with different values of $$W_i$$. This is good.
+
+But note that there will be cases that there's *no* overlaps between these distributions. This is saying in this observational dataset, it's possible that, for example, very young (20-30) people never take the medicine, very old (60-80) people take the medicine. Then we have no way of measuring the causal effect of this medicine by matching. 
+
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph14.png">
+  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Matching</figcaption>
+</figure>
+
 ## Notations and General Definitions
 
 Some notations for observed data:
@@ -73,6 +85,7 @@ $$
 Intuitively speaking, they are different because conditioning on $$W_i=1$$ or the other way around is restricting to the population receives the treatment. But the population receiving the treatment are, possibly, *more likely* to have higher potentials. For example, people at higher risk for flu (outcome) are more likely to choose to get a flu shot (treatment, meant to reduce the risk for flu). Also, this is comparing two different populations of people, whereas the true ATE is on same population. 
 
 They are equal if and only if 
+
 $$
 (Y_i^1,Y_i^0)\perp W_i\tag{1}
 $$
@@ -116,31 +129,38 @@ SUTVA allows us to write potential outcome for the ith person in terms of only t
 ### Ignorability
 
 This is (2). I will elaborate it more intuitively here. The notation $$Z$$ is a bit confusing. First off, it should be a vector
+
 $$
 \mathbf Z=[Z_1,Z_2,...,Z_n]
 $$
+
 They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of $$\mathbf Z=\mathbf z$$, we can think of treatment $$W_i$$ are randomly are assigned.</u>  The following example helps:
 
 <figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph10.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Ignorability</figcaption>
 </figure>
 
+
 And we need to figure it out what $$\mathbf Z$$ we need to collect in order to make that assumption satisfied. 
 
 So we can more formally define the following:
+
 $$
 \begin{align}
 \mathbb E[Y_i|W_i=w, \mathbf Z=\mathbf z]&=\mathbb E[Y_i^w|W_i=w, \mathbf Z=\mathbf z](by\ consistancy)\\
 &=\mathbb E[Y_i^w|\mathbf Z=\mathbf z](by\ ignorability)
 \end{align}
 $$
+
 If we want *marginal causal effect*, we can average over all $$\mathbf Z=\mathbf z$$, 
+
 $$
 \begin{align}
 \mathbb E[Y_i^w]&=\mathbb E_{\mathbf z}[\mathbb E[Y_i^w|\mathbf Z=\mathbf z]]\\
 &=\sum_\mathbf z\mathbb E[Y_i^w|\mathbf Z=\mathbf z]P(\mathbf Z=\mathbf z)\\
 \end{align}
 $$
+
 This is called *standardization* in causal inference. But in practice, it's very probable that we have some combinations of $$\mathbf z$$ that we do not have data. For instance, ??!!!…!!! So  we need an alternative to this. Common ones are mating, inverse probability weighting and propensity scores.
 
 
@@ -163,7 +183,16 @@ In turns let's have a confounder example:
 
 - If older people are at higher risk of cardiovascular(the outcome) and are more likely to receive statins(the treatment), then *age* is a confounder
 
-For now, include, record the confounder variables in our dataset is sufficient to control them.
+Note that a set of confounders should *not* include any descendants of treatment. That is, it shall not block the front door path. A set of variables X is sufficient to control for confounding if:
+
+- It blocks all backdoor paths from treatment to the outcome
+- It does not block the front door paths 
+
+Also this set of variables is not necessarily unique. For example: 
+
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph11.png">
+  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 2. Exmaple of backdoor path</figcaption>
+</figure>
 
 
 

@@ -58,3 +58,6 @@ title: Linear Algebra Study Notes
 21. [Eigenvalues and Eigenvectors](UnitII/21_eigenvalues_and_eigenvectors): If the product Ax points in the same direction as the vector x, we say that x is an eigenvector of A. Eigenvalues and eigenvectors describe what happens when a matrix is multiplied by a vector. In this session we learn how to find the eigenvalues and eigenvectors of a matrix.
 
 22. [Diagonalization and Powers of A](UnitII/22_diagonalization): If A has n independent eigenvectors, we can write A = SΛS−1, where Λ is a diagonal matrix containing the eigenvalues of A. This allows us to easily compute powers of A which in turn allows us to solve difference equations uk+1 = Auk. 
+
+23. [Differential Equations and exp(At)](UnitII/23_differential_equations): We can copy Taylor's series for ex to define eAt for a matrix A. If A is diagonalizable, we can use Λ to find the exact value of eAt. This allows us to solve systems of differential equations du / dt = Au the same way we solved equations like dy / dt = ky.
+

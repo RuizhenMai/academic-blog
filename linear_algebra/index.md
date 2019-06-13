@@ -66,3 +66,5 @@ title: Linear Algebra Study Notes
     ## UNIT III: POSITIVE DEFINITE MATRICES AND APPLICATIONS
 
 25. [Symmetric Matrices and Positive Definiteness](UnitIII/25_symmetric_matrices_and_positive_definiteness)
+
+26. [Complex Matrices; Fast Fourier Transform (FFT)](UnitIII/26_complex_matrices_fft)

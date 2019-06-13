@@ -33,9 +33,9 @@ Ar^2+Br+C&=0\tag{2}\\
 \end{align}
 $$
 
-The e.q. (2) is called *characteristic equation* for the linear DE. To make $$y=e^{rt}$$ work (in fact it works), there're three cases for the equation:
+The e.q. (2) is called <u>characteristic equation</u> for the linear DE. To make $$y=e^{rt}$$ work (in fact it works), there're three cases for the equation:
 
-- Case 1 .Real Roots $$r_1\neq r_2$$ 	
+- Case 1. Real Roots $$r_1\neq r_2$$ 	
 
 - Case 2. Real Roots $$r_1=r2$$ 
 
@@ -105,7 +105,7 @@ $$
 
 ### Case 3:
 
-If the root to the characteristic equation is complex conjugate $$r=a\pm bi$$, then $$Re(e^{rt})$$ and coefficient of $$Im(e^{rt})$$ are the basis for general solutions. This can have a quick proof.
+If the root to the characteristic equation is complex conjugate $$r=a\pm bi$$, then $$Re(e^{rt})$$ and *coefficient* of $$Im(e^{rt})$$ are the basis for general solutions. This can have a quick proof.
 
 *Proof*: expand $$y=e^{rt}$$ where $$r=a\pm bi$$
 

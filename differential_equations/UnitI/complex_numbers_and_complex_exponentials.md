@@ -47,7 +47,7 @@ $$
 Writing a complex number in polar form is not just nice-looking but good for multiplication:
 
 $$
-r_1e^{i\theta_1}+r_2e^{i\theta_2}=r_1r_2e^{i(\theta_1+\theta_2)}
+r_1e^{i\theta_1}\cdot r_2e^{i\theta_2}=r_1r_2e^{i(\theta_1+\theta_2)}
 $$
 
 The modulus will be multiplied and the argument (angle) will be summed. 

@@ -20,7 +20,7 @@ title: Differential Equations
    
    ## II: First Order Differential Equations
 
-3. [First Order Linear ODE's](UnitI/first_order_linear_odes)
+3. [First Order Linear ODE's](UnitI/3_first_order_linear_odes)
 
 4. [First-order Substitution Methods: Bernouilli and Homogeneous ODE's.](UnitI/first_order_substitution_methods)
 
@@ -36,7 +36,7 @@ title: Differential Equations
 
 9.  [Linear Second Order ODE Constant Coefficients](UnitI/9_second_order_ode_constant_coefficients)
 
-10. [Application: Spring-Mass-Dashpot System](UnitI/10_continued_second_order_ode_constant_coefficients)
+10. [Application: Spring-Mass-Dashpot System](UnitI/10_spring_mass_dashpot)
 
 11. [Theory of General Second-order Linear Homogeneous ODE's](UnitI/11_theory_of_second_order_ode)
 

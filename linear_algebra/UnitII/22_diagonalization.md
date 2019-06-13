@@ -4,7 +4,7 @@ title: Diagonalization and Powers of A
 date: 2019-6-9
 ---
 
-## A=$S^{-1}\Lambda S$
+## A=$$S^{-1}\Lambda S$$
 
 Diagonalize a matrix is, (or the other way around)
 
@@ -64,7 +64,7 @@ Right now we can say $$A$$ is sure to be diagonalizable if it has all the $$\lam
 
 
 
-### Difference Equation $u_{k+1}=Au_k$
+### Difference Equation $$u_{k+1}=Au_k$$
 
 Let's have a difference equation $$u_{k+1}=Au_k$$, and rewrite it into
 
@@ -144,6 +144,7 @@ Thus $$A=\begin{bmatrix}
 1 \\
 0
 \end{bmatrix}$$. What's left is to find out the right combination $$c_1,\ c_2$$. Note we only have $$\lambda_1,\ \lambda_2$$ two eigenvalues, so we only have two terms from (2). 
+
 $$
 c_1\mathbf x_1+c_2\mathbf x_2=\begin{bmatrix}
 1 \\

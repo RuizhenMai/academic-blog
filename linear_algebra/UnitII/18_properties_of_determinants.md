@@ -59,11 +59,11 @@ There're three properties of a determinant, and we can infer another seven from 
 
 6. If any rows of a matrix is zero, then the determinant will be 0. We can use $$t=0$$ from 3a to obtain this.
 
-7. Determinant of an upper triangular matrix $$U$$ is the product of all its diagonal items $$d_1*d_2*…*d_n$$. Suppose all $$d_i$$ are non-zeros. Then we can get a symmetric matrix by subtracting all numbers above the diagonal line. Note this does not affect the determinant by property 5. And we can use 3a to factor out each row's $d_i$ one by one, and what's left in the matrix is identity $$I$$. If there's any zero $$d_i$$,  we can make the whole row to zero by elimination, and get $$\det=0$$. 
+7. Determinant of an upper triangular matrix $$U$$ is the product of all its diagonal items $$d_1*d_2*…*d_n$$. Suppose all $$d_i$$ are non-zeros. Then we can get a symmetric matrix by subtracting all numbers above the diagonal line. Note this does not affect the determinant by property 5. And we can use 3a to factor out each row's $$d_i$$ one by one, and what's left in the matrix is identity $$I$$. If there's any zero $$d_i$$,  we can make the whole row to zero by elimination, and get $$\det=0$$. 
 
 8. $$\det A=0$$ iff $$A$$ is singular. For <-, If A is singular, we can get a row of zero. If A is non-singular, we get D and what's happened in property 7. 
 
-9. $$\det{AB}=\det A *\det B$${%include sidenote.html note='proof?'%}. From this we can get $$\det I=\det {A^{-1}A}=\det A*\det A^{-1}=1$$, then $$\det A^{-1}=\frac{1}{\det A}$$. Similar things happen for $$A^2$$ and etc. But note that $$\det 2A=2^n\det A$$ because we have 2 on every row. By property 3a we can get this, where $$n$$ is the number of rows.
+9. $$\det{AB}=\det A *\det B$${%include sidenote.html note='This can be proved when later we know eigenvalues. We are just multiplying the eigenvalues of these two matrices'%}. From this we can get $$\det I=\det {A^{-1}A}=\det A*\det A^{-1}=1$$, then $$\det A^{-1}=\frac{1}{\det A}$$. Similar things happen for $$A^2$$ and etc. But note that $$\det 2A=2^n\det A$$ because we have 2 on every row. By property 3a we can get this, where $$n$$ is the number of rows.
 
 10. $$\det A^\top=\det A$$ {%include sidenote.html note='$$\begin{aligned}
     \begin{vmatrix}

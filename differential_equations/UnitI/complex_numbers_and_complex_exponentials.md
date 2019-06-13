@@ -30,7 +30,7 @@ $$
 \alpha=r(\cos\theta+i\sin\theta)
 $$
 
-The angle of $$\alpha$$ is called its argument, and the tangent line is called its modulus. And Euler discovered that 
+The angle $$\theta$$ is called its ($$\alpha$$'s) <u>argument</u>, and the tangent line $$r$$ is called its <u>modulus</u>. And Euler discovered that 
 
 $$
 e^{i\theta}=\cos\theta+i\sin\theta

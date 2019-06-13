@@ -51,7 +51,7 @@ $$
 \end{align}
 $$
 
-Solving it we get $$\displaystyle x=\frac{\mathbf a^\top \mathbf b}{\mathbf a^\top \mathbf a}$$, and thus
+Solving it we get $$\displaystyle x=\frac{\mathbf a^\top \mathbf b}{\mathbf a^\top \mathbf a}$$, and thus (x is constant so we can put it left or right)
 
 $$
 \mathbf p=\mathbf a \frac{\mathbf a^\top \mathbf b}{\mathbf a^\top \mathbf a}\tag{2}
@@ -122,7 +122,7 @@ $$
 P=A(A^\top A)^{-1}A^\top 
 $$
 
-<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. $$A^\top A$$ is square. But still, $$A^\top A$$ is invertible if only if $$A$$ is full column rank.
+<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. $$A^\top A$$ is square. But still, $$A^\top A$$ is invertible if only if $$A$$ is full column rank or square. 
 
 ### Least Square preview
 

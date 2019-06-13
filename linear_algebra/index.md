@@ -61,3 +61,8 @@ title: Linear Algebra Study Notes
 
 23. [Differential Equations and exp(At)](UnitII/23_differential_equations): We can copy Taylor's series for ex to define eAt for a matrix A. If A is diagonalizable, we can use Λ to find the exact value of eAt. This allows us to solve systems of differential equations du / dt = Au the same way we solved equations like dy / dt = ky.
 
+24. [Markov Matrices; Fourier Series](UnitII/24_markov_matrices_fourier_series): Like differential equations, Markov matrices describe changes over time. Once again, the eigenvalues and eigenvectors describe the long term behavior of the system. In this session we also learn about Fourier series, which describe periodic functions as points in an infinite dimensional vector space.
+    
+    ## UNIT III: POSITIVE DEFINITE MATRICES AND APPLICATIONS
+
+25. [Symmetric Matrices and Positive Definiteness](UnitIII/25_symmetric_matrices_and_positive_definiteness)

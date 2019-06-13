@@ -4,7 +4,34 @@ title: "First-order Linear with Constant Coefficients: Behavior of Solutions, Us
 date: 2019-6-4
 ---
 
+(video 7-8)
 
+## Definite Integral
+
+Let's get the general solution for first order linear ODE with constant coefficients by integrating factors. For constant coefficients $$p(t)=k$$, The integrating factor is $$e^{\int kdt}=e^{kt}$$
+
+$$
+\begin{align}
+y'+p(t)y&=q(t)\\
+(ye^{kt})'&=e^{kt}q(t)\\
+ye^{kt}&=\int e^{kt}q(t)+C\\
+y&=e^{-kt}\int e^{kt}q(t)+Ce^{-kt}\\
+\end{align}
+$$
+
+This is solved with indefinite integral. Sometimes people prefer definite integral because it is convenient for initial value substitution. Let's see it. 
+
+$$
+\begin{align}
+y'+p(t)y&=q(t)\\
+(ye^{kt})'&=e^{kt}q(t)\\
+y(t)e^{kt}-y(0)e^{0t}&=\int_0^t e^{kt}q(t)\\
+y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y(0)e^{-kt}\\
+y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y_0e^{-kt}\\
+\end{align}
+$$
+
+You see that in this case we have $$y_0=y(0)$$ in the right hand side. This is the value when the function is at time 0, which is often known. 
 
 ## Steady-state Solution
 
@@ -190,4 +217,65 @@ $$
 
 $$\phi=\tan^{-1}(\omega/k)$$ is called the phase lag, the shift of the trigonometry function.  And $$r$$ is the amplitude. $$k$$ is the conductivity. When $$k$$ goes up, $$\phi$$ goes down. Then the phase lag is smaller, it means we can get the response sooner(??? Not sure).  
 
-The Cartesian solution will be in the next note.
+### Cartesian Form
+
+Let's continue our problem. And we're going to use the Cartesian form. 
+
+$$
+\begin{align}
+\tilde y&=\frac{1}{1+\frac{i\omega}{k}}e^{(i\omega )t}\\
+&=\frac{1-\frac{\omega}{k}i}{1+(\frac{\omega}{k})^2}(\cos\omega t+i\sin\omega t)\\
+&\Rightarrow\frac{1}{1+(\omega/k)^2}(\cos\omega t+\frac{\omega}{k}\sin\omega t)\\
+\end{align}\tag{1}
+$$
+
+This solution does not seem to correspond to our previous one, let's work it out. One trick is that
+
+#### Prop. 1
+
+$$
+a\cos\theta+b\sin\theta=C\cos(\theta-\phi)\tag{2}
+$$
+
+where $$\phi=\tan^{-1}(\frac{b}{a})$$ is the angle between $$b$$ and $$a$$, and $$C=\sqrt{a^2+b^2}$$. 
+
+<u>Proof 1</u>: First we can prove it by vectors. Remember $$\phi$$ is the angle between $$b$$ and $$a$$. Then we have the following picture 
+
+<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../../assets/graph8.png">
+  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Vector of [a,b] and [cos,sin] </figcaption>
+</figure>
+
+Let 
+
+$$
+\begin{align}
+a\cos\theta+b\sin\theta&=<a,b>\cdot<\cos\theta,\sin\theta>\\
+&=||<a,b>||*||<\cos\theta,\sin\theta>||*\cos(\theta-\phi)\\
+&=C\cos(\theta-\phi)
+\end{align}
+$$
+
+We can also prove this by going into the complex domain. Still using Figure 1 to view the angles and modulus. 
+
+<u>Proof 2</u>:
+
+$$
+\begin{align}
+a\cos\theta+b\sin\theta&=Re((a-bi)(\cos\theta+i\sin\theta))\\
+&=Re(\sqrt{a^2+b^2}e^{-i\phi}*e^{i\theta})\\
+&=Re(Ce^{i(\theta-\phi)})\\
+&=C\cos(\theta-\phi)
+\end{align}
+$$
+
+Then we can use the property right now. 
+
+$$
+\begin{align}
+\tilde y&=\frac{1}{1+(\omega/k)^2}(\cos\omega t+\frac{\omega}{k}\sin\omega t)\\
+&=\frac{1}{1+(\omega/k)^2}*\sqrt{1+(\omega/k)^2}\cos(\omega t-\phi)\\
+&\Rightarrow\frac{1}{\sqrt{1+(\omega/k)^2}}\cos(\omega t-\phi)
+\end{align}
+$$
+
+where $$\phi=\tan^{-1}(\omega/k)$$. Then we have the same solution as we did using polar form.

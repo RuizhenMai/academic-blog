@@ -61,7 +61,7 @@ $$
 P=Q(Q^\top Q)^{-1}Q^\top=QIQ^\top=QQ^\top
 $$
 
-And recall when a matrix $$A$$ is full rank, $$A^\top A$$'s inverses can be factored out and we got identity matrix on $$P$$. This is saying we are projecting into nowhere, the vector is staying at the original space. $$Q^\top Q$$ is by definition equal to $$I$$, and when $$Q$$ is square, that is, $$Q$$ is an orthogonal matrix $$QQ^\top=I$$ . And remember $$A^\top A\hat{\mathbf x}=A^\top \mathbf b$$,  when $$Q$$ is *not* orthogonal, 
+And recall when a matrix $$A$$ is full rank, $$A^\top A$$'s inverses can be factored out and we got identity matrix on $$P$$. This is saying we are projecting into nowhere, the vector is staying at the original space. $$Q^\top Q$$ is by definition equal to $$I$$; and when $$Q$$ is square/$$Q$$ is an orthogonal matrix, $$Q(Q^\top Q)^{-1}Q^\top=QQ^{-1}Q^{\top-1}Q^\top=I$$ . And remember $$A^\top A\hat{\mathbf x}=A^\top \mathbf b$$,  when $$Q$$ is *not* orthogonal, 
 
 $$
 \hat{\mathbf x}=Q^\top\mathbf b\\

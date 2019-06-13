@@ -7,6 +7,7 @@ date: 2019-5-31
 ## Standard Linear Form
 
 <u>First order linear ODE</u> is in the following form:
+
 $$
 y'+p(x)y=q(x)
 $$
@@ -93,6 +94,7 @@ Given a first order linear DE that may not be in standard form, we need to:
 ### Definite Integral
 
 Let's get the general solution for (1) when it has constant coefficients by integrating factors. For constant coefficients $$p(t)=k$$, The integrating factor is $$e^{\int kdt}=e^{kt}$$
+
 $$
 \begin{align}
 y'+p(t)y&=q(t)\\
@@ -101,7 +103,9 @@ ye^{kt}&=\int e^{kt}q(t)+C\\
 y&=e^{-kt}\int e^{kt}q(t)+Ce^{-kt}\\
 \end{align}
 $$
+
 This is solved with indefinite integral. Sometimes people prefer definite integral because it is convenient for initial value substitution. Let's see it. 
+
 $$
 \begin{align}
 y'+p(t)y&=q(t)\\
@@ -111,4 +115,5 @@ y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y(0)e^{-kt}\\
 y(t)&=e^{-kt}\int_0^t e^{kt}q(t)+y_0e^{-kt}\\
 \end{align}
 $$
+
 You see that in this case we have $$y_0=y(0)$$ in the right hand side. This is the value when the function is at time 0, which is often known. 

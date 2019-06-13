@@ -12,13 +12,13 @@ title: Differential Equations
 
 [Formal Course Video Playlist](https://www.youtube.com/playlist?list=PLEC88901EBADDD980)
 
-## I: Unanalytic Methods 
+## O: Unanalytic Methods 
 
 1. [Geometric Methods](UnitI/geometric_methods)
 
 2. [Numerical Methods](UnitI/numerical_methods)
    
-   ## II: First Order Differential Equations
+   ## I: First Order Differential Equations
 
 3. [First Order Linear ODE's](UnitI/3_first_order_linear_odes)
 
@@ -32,7 +32,7 @@ title: Differential Equations
 
 8. [Applciation: Mixing Problem](UnitI/continuation)
 
-   ## III: Second Order Differential Equations
+   ## II: Second Order Differential Equations
 
 9.  [Linear Second Order ODE Constant Coefficients](UnitI/9_second_order_ode_constant_coefficients)
 
@@ -46,6 +46,10 @@ title: Differential Equations
 
 14. [Application: Resonance](UnitI/14_Resonance)
     
-    ## IV: Fourier Series
+    ## III: Fourier Series
 
-15. [Introduction to Fourier Series](UnitIV/15_intro_to_fourier_series)
+15. [Introduction to Fourier Series](UnitIII/15_intro_to_fourier_series)
+    
+    ## IV: First Order Systems
+
+24. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)

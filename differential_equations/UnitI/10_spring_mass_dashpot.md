@@ -55,7 +55,7 @@ This non-homogeneous equation governs the <u>forced vibrations</u> of the mass u
 
 We've discussed three cases of solutions to a second order linear DE with constant coefficients. In fact, the three cases, in this system, correspond to three physical phenomenon that is important to the DE. 
 
-### Case 1: Distinct Real Roots~Overly Damped
+### Case 1: Distinct Real Roots---Overly Damped
 
 Example:
 
@@ -120,12 +120,14 @@ Note that we are not pushing the mass at the beginning. Imagine, if we push it t
 </figure>
 The red line is what we have on (6) where $$x'(0)=0$$. If we exert a force at $$t=0$$, to the right is the blue curve, to the left is the green curve. 
 
-### Case 3:Complex Roots~Under Damped
+### Case 3: Complex Roots---Under Damped
 
 Example:
+
 $$
 x''+4x'+5x=0
 $$
+
 Here $$c=4,k=5$$ and $$c<k$$. We have a stronger spring, or equivalently weaker dashpot. This will lead to the spring dominates the movement and the mass moves back and forth. Solving this equation will give us $$r=-2\pm i$$. This leads to
 
 $$
@@ -147,7 +149,7 @@ x&=e^{-2t}(\cos t+2\sin t)\\
 \end{align}\tag{7}
 $$
 
-Here for the cosine function we have <u>Amplitude</u> $C=\sqrt 5$, <u>Circular frequency</u> $$\omega=1$$ and <u>Phase lag</u> $$\alpha=\tan^{-1}2$$. Amplitude is how wide the cosine curve will be, and phase lag is how much the curve will shift to the right, or how delayed it cosine will start equal 1. $$\displaystyle T=\frac{2\pi}{\omega}$$ is the period/time required for the object to complete one full oscillation. $$\delta=\displaystyle\frac{\alpha}{\omega}$$ is the time lag. 
+Here for the cosine function we have <u>Amplitude</u> $$C=\sqrt 5$$, <u>Circular frequency</u> $$\omega=1$$ and <u>Phase lag</u> $$\alpha=\tan^{-1}2$$. Amplitude is how wide the cosine curve will be, and phase lag is how much the curve will shift to the right, or how delayed it cosine will start equal 1. $$\displaystyle T=\frac{2\pi}{\omega}$$ is the period/time required for the object to complete one full oscillation. $$\delta=\displaystyle\frac{\alpha}{\omega}$$ is the time lag. 
 
 Multiplying  $$e^{-2t}$$ means we have <u>time-varying</u> amplitude. Since $$\cos\in[-1,1]$$. Then  (7) will never exceed $$\sqrt5e^{-2t}$$. 
 
@@ -189,7 +191,7 @@ The mass will oscillates forever.
 
 
 
-### Case 2. Critically Damped
+### Case 2: Critically Damped
 
 This means the damping offset the spring force equally. And we only have one root for the differential equations. This has similar graphs and physical situation as the overdamped case. They pass through the equilibrium position at most once.
 

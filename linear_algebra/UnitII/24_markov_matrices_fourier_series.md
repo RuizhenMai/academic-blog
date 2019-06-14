@@ -50,7 +50,7 @@ $$
 
 So their *rows* are dependent. And $$[1,1,1]$$ is in the left null space $$N(A^\top)$$. Thus the dimension of $$N(A^\top)$$ is not zero, and we must have at least one eigenvector $$\mathbf x_1$$ corresponds to $$\lambda_1=1$$. 
 
-### Eigenvalues of $$A$$ same as Eigenvalues of  $$A^\top$$ 
+### Eigenvalues of $A$ same as Eigenvalues of  $A^\top$
 
 This is true because of our property 10 of determinant [(link)](./18_properties_of_determinants). 
 
@@ -100,13 +100,76 @@ Since it's $$2\times 2$$, we can use tricks to find eigenvalues. It's a Markov M
 
 ## Fourier Series
 
-Fourier series is based upon orthonormal (orthogonal) basis (matrix).  An orthogonal matrix is a square matrix where its columns $$q_1, …,q_n$$ are orthogonal, that is 
+Fourier series for a function $$f(t)$$ is:
 
 $$
-q_i^\top q_j=0,\forall i,j\in[1,n],i\neq j
+f(t)=\frac{a_0}{2}+\sum_{n=1}^\infty(a_n\cos nt+b_n\sin nt)\tag{1}
 $$
 
-If $$i=j$$, then $$q_i^\top q_j=1$$. If we have a vector $$\mathbf v=Q\mathbf c$$, where $$\mathbf c$$ is a vector with constants, Q is a orthogonal matrix:
+Any functions $$f(t)$$ with period $$2\pi$$ can be approximated by Fourier series with their corresponding coefficients $$a_n$$ and $$b_n$$. 
+
+
+
+We say a vector $$\mathbf v$$ or a function $$f$$ is in infinite dimensional ***Hilbert Space***, if and only if it has, of course, infinite items, and has finite lengths $$\lVert\mathbf v\rVert$$ and $$\lVert f\rVert$$:
+
+$$
+\begin{align}
+\lVert\mathbf v\rVert^2&=\mathbf v\cdot\mathbf v=v_1^2+v_2^2+...<\infty\\
+\lVert f\rVert^2&=(f,f)=\int_0^{2\pi}(f(t))^2\:dt<\infty
+\end{align}
+$$
+
+You've seen how the length of a vector defined. The *length* of a function is defined that way because 
+
+- For convenience, it's just integrated in $$[0,2\pi]$$ because we will only care about periodic functions that's piecewise continuous with period $$2\pi$$, it can also be in $$[-\pi,\pi]$$, but the integrations for these two intervals are the same.
+- Length squared is squaring each bit in the element and sum it up, the integration is doing the same thing for each infinitely small bit in the function
+
+One good thing about Fourier series is it has each element/trig function in the series are <u>orthogonal</u> to each other, that is, the inner products: $$(\sin(t),\cos(t))=0$$, $$(\sin(t),\sin(2t))=0$$ except the inner product of the trig function itself. 
+
+Two functions $$u(t),v(t)$$ continuous on $$I$$ are said to be orthogonal if and only if
+
+$$
+\int_Iu(t)v(t)\:dt=0
+$$
+
+With this, we can calculate the coefficients for the Fourier series for specific function $$f(t)$$, because, integrating both sides of (1):
+
+$$
+\begin{align}
+f(t)&=\frac{a_0}{2}+\sum_{n=1}^\infty(a_n\cos nt+b_n\sin nt)\\
+\int_0^{2\pi}f(t)\:dt&=\int_0^{2\pi}\frac{a_0}{2}+\sum_{n=1}^\infty(a_n\cos nt+b_n\sin nt)\:dt\\
+\int_0^{2\pi}f(t)\:dt&=\int_0^{2\pi}\frac{a_0}{2}\:dt\\
+\int_0^{2\pi}f(t)\:dt&=a_0\pi
+\end{align}
+$$
+
+Therefore,
+
+$$
+a_0=\frac{1}{\pi}\int_0^{2\pi}f(t)\:dt
+$$
+
+Similar things can be done, after we first multiply both sides of (1) by either $$\cos kt$$ or $$\sin kt$$, this gives us:
+
+$$
+\begin{align}
+a_k&=\frac{1}{\pi}\int_0^{2\pi}f(t)\cos kt\:dt\\
+b_k&=\frac{1}{\pi}\int_0^{2\pi}f(t)\sin kt\:dt\\
+\end{align}
+$$
+
+
+How this correlates with Linear Algebra? First is the orthogonal trig functions in the series. They are not an *orthogonal basis* because it requires the they have length 1. But as long as we divide the length it would be. And you see the squared length is also just summing together. Hilbert space is a vector space as well. It's easy to prove with the property of integration. 
+
+Remember an orthogonal matrix is a square matrix where its columns $$q_1, …,q_n$$ are orthonormal, that is 
+$$
+q^\top_iq_j=\begin{cases}
+0 & if\ i\neq j\\
+1 & if\ i=j
+\end{cases}
+$$
+
+If we have a vector $$\mathbf v=Q\mathbf c$$, where $$\mathbf c$$ is a vector with constants, Q is a orthogonal matrix:
 
 $$
 \mathbf v=\begin{bmatrix}
@@ -119,31 +182,4 @@ c_n
 $$
 
 , then $$\mathbf c=Q^{-1}\mathbf v=Q^\top\mathbf v$$ since $$Q$$ is orthogonal. And $$c_1=q_1^\top\mathbf v$$. 
-
-Now Fourier series itself is an infinite orthonormal matrix where its $$q_1,…,q_n$$ are $$a_0*1, a_1cos(x), b_1sin(x), a_2cos(2x), b_2\sin(2x) … $$and etc (it's not a $$\mathbf v$$ bc its column inner product needs to be 1).
-
-$$
-f(x)=a_0+a_1\cos x+b_1\sin x+a_2\cos 2x+b_2\sin 2x+...
-$$
-
-This is also a vector, though it has infinitely many elements/dimensions. Since it's a vector, we can a dot product is similar to $$\mathbf v^\top \mathbf w=v_1w_1+v_2w_2+…$$ each element of these two vectors are multiplied and summed. So it is:
-
-$$
-f^\top g=\int_0^{2\pi}f(x)g(x)\ dx
-$$
-
-It is integrated from 0 to $$2\pi$$ because all $$\sin,\cos$$ are periodic functions and its one period does not exceed $$2\pi$$. And to check its bases are orthogonal, we can pick any columns/elements of it, like $$a_1\cos(x)\ \mathrm{and}\ b_1\sin(x), a_2\cos(2x)\ \mathrm{and}\  b_2\sin(2x)$$, their inner product (integration) will all be zero. If they are the same element, then the inner product shall be 1. To find a *Fourier Coefficient*:
-
-$$
-\begin{align}
-1&=q^\top_iq_i\\
-&=\int_0^{2\pi} \cos x\ f(x)dx\\
-&=\int_0^{2\pi} \cos x\ a_1\cos(x)dx\\
-&=a_1\pi
-\end{align}
-$$
-
-Therefore, $$\displaystyle a_1=\frac{1}{\pi}\int_0^{2\pi} \cos x\ f(x)dx\\$$
-
- 
 

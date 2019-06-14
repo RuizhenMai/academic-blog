@@ -72,6 +72,13 @@ $$
 
 Let's bring up the definition for pivots again. It's the first non-zero value in each row in the *row-echelon* form, not the reduced one (require the pivots to be 1 and entries above the pivots should be 0). 
 
+Also, from [note 21](../UnitII/21_eigenvalues_and_eigenvectors), 
+
+$$
+\mathrm{number\ of\ free\ variables=number\ of\ zero\ eigenvalues}
+$$
+
+
 ## Positive Definite Matrices
 
 Positive Definite Matrices is technically Positive Definite symmetric Matrices. Symmetric matrices are good. A <u>positive definite matrix</u> is a matrix for which all of its eigenvalues are positive. A good way to check this is to see if all of its pivots are positive. 

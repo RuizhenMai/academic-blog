@@ -75,10 +75,20 @@ $$
 We've talked last time that $$A\mathbf x=\mathbf b$$ may not have solutions. $$A\mathbf x$$ is in the column space but $$\mathbf b$$ may not. What can we do is to solve the closest equation to $$A\mathbf x=\mathbf b$$, which is 
 
 $$
-A\mathbf x=\mathbf p\tag{3}
+A\mathbf{\hat x}=\mathbf p\tag{3}
 $$
 
-where $$\mathbf p$$ is the projection of $$\mathbf b$$ into the column space of $$A$$. And we can name this $$\mathbf x$$ as $$\hat{\mathbf x}$$ since it's not the original $$\mathbf x$$. So how to do this projection? Similar to above, but this time we want a general formula rather than when $$\mathbf a$$ is a line. So imagine $$C(A)$$ is a plane, constituted by the linear combinations of column vectors in $$A$$ which are $$\mathbf a_1,\mathbf a_2,…\mathbf a_n$$. What projection can project $$\mathbf b$$ into $$C(A)$$ and the distance between $$\mathbf b$$ and $$\mathbf p$$, which is $$\mathbf e$$ is perpendicular to the plane $$C(A)$$ ? That is, first $$\mathbf a_1^\top \mathbf e=0$$. The vectors on the plane of $$C(A)$$ is perpendicular to $$\mathbf e$$, so are other vectors $$\mathbf a_2^\top \mathbf e=0,…,\mathbf a_n^\top \mathbf e=0$$. Therefore,
+where $$\mathbf p$$ is the projection of $$\mathbf b$$ into the column space of $$A$$ (you will see why). And we can name this $$\mathbf x$$ as $$\hat{\mathbf x}$$ since it's not the original $$\mathbf x$$. So how to do this projection? Similar to above, but this time we want a general formula when $$\mathbf a$$ is no longer a line. So imagine $$C(A)$$ is a plane, constituted by the linear combinations of column vectors in $$A$$ which are $$\mathbf a_1,\mathbf a_2,…\mathbf a_n$$. 
+$$
+A=\begin{bmatrix}
+\vert & \vert &...&\vert&\vert\\
+\mathbf a_1&\mathbf a_2 & ... & \mathbf a_{n-1} & \mathbf a_n\\
+\vert & \vert &...&\vert&\vert\\
+\end{bmatrix}
+$$
+
+
+Since there're many vectors in $$C(A)$$, we need to pick the $$\mathbf p$$ so that it can give us the closest approximations to $$\mathbf b$$. This happens when we have a perpendicular projection from $$\mathbf b$$ to $$\mathbf p$$. That is, $$\mathbf e=\mathbf b-\mathbf p$$, and $$\mathbf e$$ is perpendicular to $$C(A)$$. Being perpendicular to a whole matrix means it is perpendicular to every column in it.  First $$\mathbf a_1^\top \mathbf e=0$$. The vectors on the plane of $$C(A)$$ is perpendicular to $$\mathbf e$$, so are other vectors $$\mathbf a_2^\top \mathbf e=0,…,\mathbf a_n^\top \mathbf e=0$$. Therefore,
 
 $$
 \begin{align}
@@ -90,7 +100,7 @@ A^\top \mathbf e&=0\\
 \end{align}
 $$
 
-What's $$\mathbf e$$? It's same as before $$\mathbf e=\mathbf b-\mathbf p$$. $$\mathbf p$$ is on eq. (3), we just change $$\mathbf x$$ into $$\hat{\mathbf x}$$:
+From this we can solve for $$\mathbf {\hat x}$$ in terms of original $$\mathbf b$$:
 
 $$
 \begin{align}
@@ -122,9 +132,5 @@ $$
 P=A(A^\top A)^{-1}A^\top 
 $$
 
-<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. $$A^\top A$$ is square. But still, $$A^\top A$$ is invertible if only if $$A$$ is full column rank or square. 
-
-### Least Square preview
-
-@todo
+<u>Warning</u>: since $$A$$ is not required to be a square matrix, we cannot do $$(A^\top A)^{-1}=A^{-1}A^{\top -1}$$. $$A^\top A$$ is square. But still, $$A^\top A$$ is invertible if only if $$A$$ is full column rank.
 

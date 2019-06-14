@@ -43,11 +43,11 @@ title: Linear Algebra Study Notes
 
 14. [Orthogonal Vectors and Subspaces](UnitII/orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
     
-15. [Projections onto Subspaces](UnitII/projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace
+15. [Projections onto Subspaces](UnitII/15_projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace
 
-16. [Projection Matrices and Least Squares](UnitII/projection_matrices_and_least_squares): Linear regression is commonly used to fit a line to a collection of data. The method of least squares can be viewed as finding the projection of a vector. Linear algebra provides a powerful and efficient description of linear regression in terms of the matrix ATA.
+16. [Projection Matrices and Least Squares](UnitII/16_projection_matrices_and_least_squares): Linear regression is commonly used to fit a line to a collection of data. The method of least squares can be viewed as finding the projection of a vector. Linear algebra provides a powerful and efficient description of linear regression in terms of the matrix ATA.
 
-17. [Orthogonal Matrices and Gram-Schmidt](UnitII/orthogoonal_marices_and_gram_schmidt): Many calculations become simpler when performed using orthonormal vectors or othogonal matrices. In this session, we learn a procedure for converting any basis to an orthonormal one.
+17. [Orthogonal Matrices and Gram-Schmidt](UnitII/17_orthogoonal_marices_and_gram_schmidt): Many calculations become simpler when performed using orthonormal vectors or othogonal matrices. In this session, we learn a procedure for converting any basis to an orthonormal one.
 
 18. [Properties of Determinants](UnitII/18_properties_of_determinants): The determinant of a matrix is a single number which encodes a lot of information about the matrix. Three simple properties completely describe the determinant. In this lecture we also list seven more properties like detAB = (detA)(detB) that can be derived from the first three.
 
@@ -68,3 +68,5 @@ title: Linear Algebra Study Notes
 25. [Symmetric Matrices and Positive Definiteness](UnitIII/25_symmetric_matrices_and_positive_definiteness)
 
 26. [Complex Matrices; Fast Fourier Transform (FFT)](UnitIII/26_complex_matrices_fft)
+
+27. [Positive Definite Matrices and Minima](UnitIII/27_positive_definite_matrices_and_minima)

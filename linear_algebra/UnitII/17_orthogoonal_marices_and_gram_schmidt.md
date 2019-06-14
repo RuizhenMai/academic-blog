@@ -30,7 +30,7 @@ q_n^\top
 \end{bmatrix}\begin{bmatrix}q_1&...&q_n\end{bmatrix}=I
 $$
 
-You can call the matrix $$Q$$ orthonormal matrix, which is a less known name. But when $$Q$$ is *square*, it's an <u>Orthogonal Matrix</u>.  The orthogonal matrix has one following property
+You can call the matrix $$Q$$ orthonormal matrix, which is a less known name. But when $$Q$$ is <u>square</u>, it's an <u>Orthogonal Matrix</u>.  The orthogonal matrix has the following property
 
 $$
 Q^\top Q=Q^{-1}Q=I\\
@@ -55,13 +55,13 @@ $$
 
 ### Projection into C(Q)
 
-As long as we use the notation $$Q$$, it implies that the columns of $$Q$$ are orthonormal. Recall from our projection matrix formula:
+As long as we use the notation $$Q$$, it implies that the columns of $$Q$$ are orthonormal, but not necessary unit vectors. Recall from our projection matrix formula:
 
 $$
 P=Q(Q^\top Q)^{-1}Q^\top=QIQ^\top=QQ^\top
 $$
 
-And recall when a matrix $$A$$ is full rank, $$A^\top A$$'s inverses can be factored out and we got identity matrix on $$P$$. This is saying we are projecting into nowhere, the vector is staying at the original space. $$Q^\top Q$$ is by definition equal to $$I$$; and when $$Q$$ is square/$$Q$$ is an orthogonal matrix, $$Q(Q^\top Q)^{-1}Q^\top=QQ^{-1}Q^{\top-1}Q^\top=I$$ . And remember $$A^\top A\hat{\mathbf x}=A^\top \mathbf b$$,  when $$Q$$ is *not* orthogonal, 
+And recall when a matrix $$A$$ is full rank, $$A^\top A$$'s inverses can be factored out and we got identity matrix on $$P$$. This is saying we are projecting into nowhere, the vector is staying at the original space. $$Q^\top Q$$ is by definition equal to $$I$$; and when $$Q$$ is square/$$Q$$ is an orthogonal matrix, $$Q(Q^\top Q)^{-1}Q^\top=QQ^{-1}Q^{\top-1}Q^\top=I$$ . And remember $$A^\top A\hat{\mathbf x}=A^\top \mathbf b$$,  
 
 $$
 \hat{\mathbf x}=Q^\top\mathbf b\\

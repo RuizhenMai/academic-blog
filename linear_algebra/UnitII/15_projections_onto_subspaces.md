@@ -79,6 +79,7 @@ A\mathbf{\hat x}=\mathbf p\tag{3}
 $$
 
 where $$\mathbf p$$ is the projection of $$\mathbf b$$ into the column space of $$A$$ (you will see why). And we can name this $$\mathbf x$$ as $$\hat{\mathbf x}$$ since it's not the original $$\mathbf x$$. So how to do this projection? Similar to above, but this time we want a general formula when $$\mathbf a$$ is no longer a line. So imagine $$C(A)$$ is a plane, constituted by the linear combinations of column vectors in $$A$$ which are $$\mathbf a_1,\mathbf a_2,…\mathbf a_n$$. 
+
 $$
 A=\begin{bmatrix}
 \vert & \vert &...&\vert&\vert\\
@@ -86,7 +87,6 @@ A=\begin{bmatrix}
 \vert & \vert &...&\vert&\vert\\
 \end{bmatrix}
 $$
-
 
 Since there're many vectors in $$C(A)$$, we need to pick the $$\mathbf p$$ so that it can give us the closest approximations to $$\mathbf b$$. This happens when we have a perpendicular projection from $$\mathbf b$$ to $$\mathbf p$$. That is, $$\mathbf e=\mathbf b-\mathbf p$$, and $$\mathbf e$$ is perpendicular to $$C(A)$$. Being perpendicular to a whole matrix means it is perpendicular to every column in it.  First $$\mathbf a_1^\top \mathbf e=0$$. The vectors on the plane of $$C(A)$$ is perpendicular to $$\mathbf e$$, so are other vectors $$\mathbf a_2^\top \mathbf e=0,…,\mathbf a_n^\top \mathbf e=0$$. Therefore,
 

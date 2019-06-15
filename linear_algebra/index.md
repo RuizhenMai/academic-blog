@@ -70,3 +70,5 @@ title: Linear Algebra Study Notes
 26. [Complex Matrices; Fast Fourier Transform (FFT)](UnitIII/26_complex_matrices_fft)
 
 27. [Positive Definite Matrices and Minima](UnitIII/27_positive_definite_matrices_and_minima)
+
+28. [Similar Matrices and Jordan Form](UnitIII/28_similar_matrices_and_jordan_form) 

@@ -92,10 +92,11 @@ $$
 Let's have initial conditions: $$T_1(0)=40,\:T_2(0)=45$$. And we shall not forget the relations between $$T_1$$ and $$T_2$$ above. 
 
 $$
-T_2=-2c_1e^{-6t}+-\frac{1}{2}c_2e^{-t}
+T_2=-2c_1e^{-6t}+\frac{1}{2}c_2e^{-t}
 $$
 
 And we get $$c_1=-10,c_2=50$$. 
 
 ## Geometric Significance
 
+…..

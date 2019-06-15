@@ -16,7 +16,7 @@ $$
 \#\ of\ \lambda=0=n-r
 $$
 
-The number of zero eigenvalues are equal to the dimension of the null space $$N(A)$$, i.e., # of free variables. Remember null space is all $$\mathbf x$$ s.t.
+The number of zero eigenvalues are equal to (at least, because there're can be equal eigenvalues, but the number of eigenvectors are) the dimension of the null space $$N(A)$$, i.e., # of free variables. Remember null space is all $$\mathbf x$$ s.t.
 
 $$
 A\mathbf x=0

@@ -31,7 +31,7 @@ $$
 1 & 2 & 2 & 2\\
 0 & 0 & 2 & 4\\
 3 & 6 & 8 & 10\ 
-\end{bmatrix}\rightarrow \begin{bmatrix}
+\end{bmatrix}\rightarrow\\ \begin{bmatrix}
 1 & 2 & 2 & 2\\
 0 & 0 & 2 & 4\\
 0 & 0 & 2 & 4\ 
@@ -128,7 +128,7 @@ U=\begin{bmatrix}
 1 & 2 & 0 & -2\\
 0 & 0 & 2 & 4\\
 0 & 0 & 0 & 0\ 
-\end{bmatrix}\rightarrow \begin{bmatrix}
+\end{bmatrix}\rightarrow\\ \begin{bmatrix}
 1 & 2 & 0 & -2\\
 0 & 0 & 1 & 2\\
 0 & 0 & 0 & 0\ 

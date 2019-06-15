@@ -53,3 +53,5 @@ title: Differential Equations
     ## IV: First Order Systems
 
 24. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
+
+25. [First-order Systems continued](UnitIV/25_first_order_system_continued)

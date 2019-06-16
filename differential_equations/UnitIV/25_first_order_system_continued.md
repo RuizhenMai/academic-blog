@@ -123,7 +123,7 @@ $$
 \end{align}
 $$
 
-The equation $$\lambda^2+7\lambda+6=0\\$$ is also called the characteristic equation. Then after finding the $$\lambda$$, for corresponding $$\lambda_1$$ and $$\lambda_2$$, we need to find the corresponding eigenvectors (basis) $$\mathbf x_1=\begin{bmatrix}
+The equation $$\lambda^2+7\lambda+6=0$$ is also called the characteristic equation. Then after finding the $$\lambda$$, for corresponding $$\lambda_1$$ and $$\lambda_2$$, we need to find the corresponding eigenvectors (basis) $$\mathbf x_1=\begin{bmatrix}
  a_1\\
  a_2
 \end{bmatrix}$$ and another $$\mathbf x_2$$ with different $$a_1,a_2$$ (they have nothing to do with the dependent variables). So

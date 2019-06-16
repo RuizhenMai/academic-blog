@@ -2,7 +2,7 @@
 layout: post
 title: Differential Equations
 ---
-<span class="newthought">These notes</span> are under test
+<span class="newthought">These notes</span> are under construction
 
 [Youtube Video Playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oTpyxCMLKt_JmB0WtSZfG)
 
@@ -55,3 +55,5 @@ title: Differential Equations
 24. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
 
 25. [First-order Systems continued](UnitIV/25_first_order_system_continued)
+
+25. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)

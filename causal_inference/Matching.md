@@ -3,7 +3,7 @@ layout: post
 title: Matching
 ---
 
-<u>Matching</u>: Match individuals in the treated group $$W_i=1$$ to individuals in the control group $$W_i=0$$ with similar or same values of covariates $$\mathbf Z$$. This is on the basis that $$\mathbf Z$$ is confounding. Take the outcome $$Y_i$$ as how good/bad of a disease. And $$W_i$$ is taking or not a medicine, $$Z_i$$ is age. By matching we want to find people with same age but with different values of $$W_i$$. This is good.
+<u>Matching</u>: Match individuals in the treated group $$W_i=1$$ to individuals in the control group $$W_i=0$$ with similar or same values of covariates $$\mathbf Z_i$$. This is on the basis that $$\mathbf Z$$ is confounding. Let the outcome $$Y_i$$ be how good/bad of a disease. And $$W_i$$ is taking or not a medicine, $$Z_i$$ (one covariate so it's not vector) is just age. By matching we want to find people with same age but with different values of $$W_i$$. This is good.
 
 But note that there will be cases that there's *no* overlaps between these distributions. This is saying in this observational dataset, it's possible that, for example, very young (20-30) people never take the medicine, very old (60-80) people take the medicine. Then we have no way of measuring the causal effect of this medicine by matching. 
 
@@ -26,5 +26,35 @@ Note when we are doing matching we are matching one part of the population to an
 Because we typically cannot match exactly, we need to choose some metrics of closeness. 
 
 - Mahalanobis distance
-- Robust mahalanobis distance 
+- Robust Mahalanobis distance 
+
+Let's use $$\mathbf X_i$$ instead of $$\mathbf Z_i$$ to represent the covariates for subject/item i . $$\mathbf X_i=[x_1,x_2,…,x_n]^\top$$. And the Mahalanobis distance between covariates $$\mathbf X_i$$ and $$\mathbf X_j$$ is 
+$$
+d(\mathbf X_i,\mathbf X_j)=\sqrt{\underbrace{(\mathbf X_i-\mathbf X_j)^\top}_{\mathbb R^{1\times n}} \underbrace{S^{-1}}_{\mathbb R^{n\times n}}\underbrace{(\mathbf X_i-\mathbf X_j)}_{\mathbb R^{n\times 1}}}
+$$
+let $$\mathbf Z=\mathbf X_i-\mathbf X_j$$ where $$S=Cov(\mathbf Z,\mathbf Z)$$  the covariance matrix. and $$S_{ij}=Cov(Z_i,Z_j)$$. Intuitively, this is a square root of the distance between each covariate scaled by the covariance matrix (it's like the distance between two scalar random variable scaled by the summed variance). 
+
+The robust Mahalanobis distance is motivated to control the outliers Outliers can create a large unnecessary distance. A robust Mahalanobis just replaces the original covariate values with its rank. And the diagonal will be constant because rank typed values have same variance (scale)?
+
+Other ways are if we have some very important variables we need it to have an exact match, then we can change its distance to infinity if they do not match in two data item. And we can match propensity scores as well. 
+
+## Greedy nearest neighbor matching
+
+Greedy matching is an algorithm for one-to-one matching. Assume we have more control subjects than treated subjects. 
+
+Steps:
+
+1. Randomly order the list of treated and control subjects
+2. Start with the first treated subject, match it to the control with smallest distance (this is greedy)
+3. Remove the matched control from the list of available matches
+4. Move on to the next treated subject. Match to the control with the smallest distance
+5. Repeated steps 3 and 4 until we match all treated subjects.
+
+A caliper is maximum acceptable distance. We can get rid of the treated subject if the best match is greater than the caliper. If no matches within caliper, it may be a sign that positivity assumption would be violated. 
+
+## Optimal Matching
+
+Apparently greedy matching is not optimal. 1 million treatment-control pair (for e.g. 100 treated and 1,000 controls) are feasible but not fast. 
+
+## Assessing Balance
 

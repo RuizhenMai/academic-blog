@@ -6,7 +6,7 @@ date: 2019-5-21
 
 ## Review of Matrix Multiplication
 
-### A Row $$\times$$ A Column
+### A Row $\times$ A Column
 
 The most basic way of multiplying two matrices. Let's have 
 
@@ -25,7 +25,7 @@ c_{34}&=(row\ 3\ of\ A)\cdot(column\ 4\ of\ B)\ \ Note:\ dot\ product\\
 $$
 
 
-### A Matrix $$\times$$ Columns
+### A Matrix $\times$ Columns
 
 To build on this, let's think of multiplying two matricies. Each column in $$C$$ is equal to matrix $$A$$ times each column in $$B$$
 
@@ -74,7 +74,7 @@ $$
 
 where $$A_i,\ i\in N$$ are columns of $$A$$.  This tells us that *columns* of $$C$$ are combinations of  columns of $$A$$
 
-### Rows $$\times$$ A Matrix
+### Rows $\times$ A Matrix
 
 Similarly, *rows* of $$C$$ are combinations of rows of $$B$$
 
@@ -111,7 +111,7 @@ $$
 
 
 
-### A Column $$\times$$ A Row
+### A Column $\times$ A Row
 
 A column of $$A$$ will be dimension $$M\times 1$$ and a row of $$B$$ will be $$1\times P$$. For example, let's have 
 
@@ -264,6 +264,7 @@ b
 1\\
 0
 \end{matrix}\right]\\
+\\
 \left[\begin{matrix}
 1 & 3\\
 2 & 7
@@ -326,5 +327,6 @@ $$
 And obviously $$E=A^{-1}$$, then 
 
 $$
-E\begin{bmatrix}A\rvert I\end{bmatrix}=E\begin{bmatrix}I|A^{-1}\end{bmatrix}
+E\begin{bmatrix}A\rvert I\end{bmatrix}=\begin{bmatrix}I|A^{-1}\end{bmatrix}
 $$
+

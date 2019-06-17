@@ -81,6 +81,6 @@ $$
 
 ## Positive Definite Matrices
 
-Positive Definite Matrices is technically Positive Definite symmetric Matrices. Symmetric matrices are good. <u>A positive definite matrix is a matrix for which all of its eigenvalues are positive</u>. A good way to check this is to see if all of its pivots are positive. 
+Positive Definite Matrices is technically Positive Definite symmetric Matrices. Symmetric matrices are good. <u>A positive definite matrix is a symmetric matrix for which all of its eigenvalues are positive</u>. A good way to check this is to see if all of its pivots are positive. 
 
 One consequence from all eigenvalues are positive is the determinant must also be positive. But the reverse is not true. Positive determinant does not bring to all positive eigenvalues. 

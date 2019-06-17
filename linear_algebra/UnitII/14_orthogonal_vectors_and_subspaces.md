@@ -64,22 +64,23 @@ $$
 Use the traditional matrix multiplication perspective, every row of $$A$$ is multiplying the whole $$\mathbf x$$ column vector:
 
 $$
-(row\ 1)^\top \mathbf x=0\\
-(row\ 2)^\top \mathbf x=0\\
+(row\ 1)\mathbf x=0\\
+(row\ 2) \mathbf x=0\\
 ...\\
-(row\ m)^\top \mathbf x=0\\
+(row\ m)\mathbf x=0\\
 $$
 
 From these we can easily obtain any combination of the row vectors times $$\mathbf x$$ is still 0:
 
 $$
-c_1(row\ 1)^\top \mathbf x=0\\
-c_2(row\ 2)^\top \mathbf x=0\\
+c_1(row\ 1)\mathbf x=0\\
+c_2(row\ 2) \mathbf x=0\\
 ...\\
-c_m(row\ m)^\top \mathbf x=0\\
-[c_1(row\ 1)^\top+
-c_2(row\ 2)^\top+...+
-c_m(row\ m)^\top ]\mathbf x=0\\
+c_m(row\ m) \mathbf x=0\\
+[c_1(row\ 1)+
+c_2(row\ 2)+...+
+c_m(row\ m)]\mathbf x=0\\
+(A^\top \mathbf c)^\top\mathbf x=0
 $$
 
 This finishes proving that the solution space $$\mathbf x$$ to 0 is orthogonal to any combination of row vectors, i.e., nullspace is orthogonal to the row space.
@@ -123,6 +124,6 @@ $$
 
 What we know from these are the next proposition:
 
-#### Prop. 4: $$A^\top A$$ is invertible if $$A$$ has independent columns, i.e., $$r=n$$, full column rank
+#### Prop. 4: $A^\top A$ is invertible if $A$ has independent columns, i.e., $r=n$, full column rank
 
 This will be explained in the next lecture

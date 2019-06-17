@@ -44,9 +44,8 @@ title: Linear Algebra Study Notes
 13. [Review](UnitI/review): The [video](https://youtu.be/l88D4r74gtM?list=PLE7DDD91010BC51F8) goes through the review question thoroughly. I will write down a few that I think the prof. did not explain quite clearly and those that might be insightful
 
     ## II: Least Squares, Determinants and Eigenvalues
-<br/>
 
-14. [Orthogonal Vectors and Subspaces](UnitII/orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
+14. [Orthogonal Vectors and Subspaces](UnitII/14_orthogonal_vectors_and_subspaces): Vectors are easier to understand when they're described in terms of orthogonal bases. In addition, the Four Fundamental Subspaces are orthogonal to each other in pairs. If A is a rectangular matrix, Ax = b is often unsolvable. The matrix ATA will help us find a vector x̂ that comes as close as possible to solving Ax = b.
     
 15. [Projections onto Subspaces](UnitII/15_projections_onto_subspaces): We often want to find the line (or plane, or hyperplane) that best fits our data. This amounts to finding the best possible approximation to some unsolvable system of linear equations Ax = b. The algebra of finding these best fit solutions begins with the projection of a vector onto a subspace
 
@@ -68,7 +67,7 @@ title: Linear Algebra Study Notes
 
 24. [Markov Matrices; Fourier Series](UnitII/24_markov_matrices_fourier_series): Like differential equations, Markov matrices describe changes over time. Once again, the eigenvalues and eigenvectors describe the long term behavior of the system. In this session we also learn about Fourier series, which describe periodic functions as points in an infinite dimensional vector space.
     
-    ## UNIT III: POSITIVE DEFINITE MATRICES AND APPLICATIONS
+    ## III: POSITIVE DEFINITE MATRICES AND APPLICATIONS
 
 25. [Symmetric Matrices and Positive Definiteness](UnitIII/25_symmetric_matrices_and_positive_definiteness)
 
@@ -77,3 +76,5 @@ title: Linear Algebra Study Notes
 27. [Positive Definite Matrices and Minima](UnitIII/27_positive_definite_matrices_and_minima)
 
 28. [Similar Matrices and Jordan Form](UnitIII/28_similar_matrices_and_jordan_form) 
+
+29. [Singular Value Decomposition](UnitIII/29_svd) 

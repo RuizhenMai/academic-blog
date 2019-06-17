@@ -87,7 +87,7 @@ $$
 \end{align}
 $$
 
-Since the equation is unsolvable, the only possible situation is that we solve the solvable ones, where $$\mathbf y$$ is projected into $$C(\mathbf X)$$. When $$\mathbf y$$ is projected into $$C(\mathbf X)$$ in the perfect way, vertically, then the projected $$\mathbf y$$ is 
+Since the equation is unsolvable, the only possible situation is that we solve the solvable ones, where $$\mathbf y$$ is projected into $$C(\mathbf X)$$. When $$\mathbf y$$ is projected into $$C(\mathbf X)$$: 
 
 $$
 \begin{align}
@@ -101,7 +101,7 @@ $$
 \mathbf e=\mathbf y-\mathbf X\boldsymbol{\hat\beta}
 $$
 
-This matches exactly (if you don't know it's ok) the square error statistician trying to solve:
+The error is minimized when $$\mathbf p=\mathbf X\boldsymbol{\hat \beta}\\$$ is a vertical projection of $$\mathbf y$$. This matches exactly (if you don't know it's ok) the square error statistician trying to solve:
 
 $$
 \begin{align}
@@ -109,7 +109,7 @@ $$
 \end{align}
 $$
 
-Thus the square error is minimized exactly when the error vector $$\mathbf e$$ is the vertical distance between the original and the projected into the column: $$\mathbf e=\mathbf y-\mathbf X\boldsymbol{\hat\beta}$$. Now let's solve for $$\mathbf p$$, i.e., $$\boldsymbol{\hat \beta}$$:
+Now let's solve for $$\mathbf p$$, i.e., $$\boldsymbol{\hat \beta}$$:
 
 $$
 \begin{align}

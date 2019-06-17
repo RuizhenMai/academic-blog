@@ -88,7 +88,7 @@ You may notice that any constant times $$\mathbf x_1$$ or $$\mathbf x_2$$ will a
 
 One neat fact is that sum of eigenvalues $$\lambda$$'s is equal to the matrix's sum of diagonals. So on the $$A$$ as permutation matrix above, the sum of eigenvalues are equal to 0. 
 
-## How to solve Ax=$$\lambda x$$
+## How to solve Ax=$\lambda x$
 
 Rewrite it into
 
@@ -248,3 +248,4 @@ $$
 0
 \end{bmatrix}
 $$
+

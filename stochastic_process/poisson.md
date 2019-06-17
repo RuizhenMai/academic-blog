@@ -10,7 +10,7 @@ Therefore, for <u>an independent trial</u> $$X_i$$, at each trial, let $$\lambda
 - $$P(X_i=k;\lambda)=\lim_{n\rightarrow\infty}\begin{pmatrix}n\\k\end{pmatrix}\displaystyle \left(\frac{\lambda}{n}\right)^k\left(1-\frac{\lambda}{n}\right)^{n-k}=e^{-\lambda}\frac{\lambda^k}{k!}$$ <u></u>
 
 - $$\mathbb E[X_i]=\lambda$$ <u></u>
-- $$\mathbb V(X_i)=\lambda$$
+- $$\mathbb V(X_i)=\lambda$$ <u></u>
 
 where $$\lambda$$ <u>is the arrival rate, measuring how frequent, in a very short period of time, how many arrivals should there be</u>. Given these, let's try to answer the same important questions for Bernoulli trials last time. 
 
@@ -47,7 +47,7 @@ Exponential (special case of erlang). <u>Note that these distribution are all go
 
 Erlang, which is also a special case of Gamma distribution 
 
-- $$P(Y_1=y;k)=\displaystyle \frac{\lambda^ky^{k-1}e^{-\lambda y}}{(k-1)!}$$
+- $$P(Y_1=y;k)=\displaystyle \frac{\lambda^ky^{k-1}e^{-\lambda y}}{(k-1)!}$$ <u></u>
 
 
 

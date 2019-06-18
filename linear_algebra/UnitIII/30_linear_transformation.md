@@ -35,7 +35,7 @@ In fact, all the things we need to write a transformation with matrix is
 - Basis for the input $$v_1,…v_n$$
 - Basis for the output $$w_1,…w_m$$
 
-Then a matrix with size $$m\times n$$, its numbers are, in fact $$T(v_1)=a_{11}w_1+a_{21}w_2+…+a_{m1}w_m$$ the a's are the elements in the matrix. Picking the right basis is important. The linear combination of the basis gives the <u>coordinates</u> $$(c_1,c_2,…,c_n)$$. But different bases give different coordinates. 
+Then a matrix with size $$m\times n$$, its numbers are, in fact $$T(v_1)=a_{11}w_1+a_{21}w_2+…+a_{m1}w_m$$ the a's are the elements in the matrix (more details in next lectures). Picking the right basis is important. The linear combination of the basis gives the <u>coordinates</u> $$(c_1,c_2,…,c_n)$$. But different bases give different coordinates. 
 
 ### Pick the good basis
 

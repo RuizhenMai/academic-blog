@@ -16,13 +16,16 @@ $$
 \vert A^{-1}\vert=\frac{1}{\vert A\vert}=\frac{1}{\lambda_1*\lambda_2*...}=\frac{1}{\lambda_1}*\frac{1}{\lambda_2}*...
 $$
 
-What comes from this is <u>if I know the matrix $$A$$ is positive definite then $$A^{-1}$$ will also be positive definite.</u> 
+What comes from this is <u>if I know the matrix </u>$$A$$ <u>is positive definite then </u>$$A^{-1}$$ <u>will also be positive definite.</u>
 
-Another useful property is <u>if $$A,B$$ are positive definite, then $$A+B$$ is also positive definite.</u> We can use the property learned last note to prove this $$\mathbf x^\top A\mathbf x>0$$, we have:
+Another useful property is if $$A,B$$ <u>are positive definite, then $$A+B$$ is also positive definite.</u> We can use the property learned last note to prove this $$\mathbf x^\top A\mathbf x>0$$, we have:
 
 $$
+\begin{align}
 \mathbf x^\top A\mathbf x>0\\
 \mathbf x^\top B\mathbf x>0
+\end{align}
+\tag{except x at 0}
 $$
 
 Then clearly
@@ -37,7 +40,7 @@ $$
 \mathbf x^\top A^\top A\mathbf x=(A\mathbf x)^\top(A\mathbf x)=\Vert A\mathbf x\Vert^2\geq0
 $$
 
-If we want it to be positive definite, to get rid of the possibility that the length of vector $$A\mathbf x$$ is zero, we just need to get rid of the possibility that except $$\mathbf x$$ is length zero. So we need full column rank fo $$A$$. That's the requirement how $$A^\top A$$ is invertible. 
+If we want it to be positive definite, to get rid of the possibility that the length of vector $$A\mathbf x$$ is zero, we just need to get rid of the possibility that except $$\mathbf x$$ is length zero ($$Ax$$ has length zero only if x in null space, we exclude the 0 vector in the definition of this test, what's left is to exclude others with free variables). So we need full column rank fo $$A$$. That's the requirement how $$A^\top A$$ is invertible. 
 
 
 
@@ -55,7 +58,7 @@ $$
 \Lambda=S^{-1}AS
 $$
 
-What's special about similar matrices? They have same eigenvalues. Why?
+<u>What's special about similar matrices? They have same eigenvalues.</u> Why?
 
 $$
 \begin{align}

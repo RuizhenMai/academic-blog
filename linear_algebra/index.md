@@ -78,3 +78,7 @@ title: Linear Algebra Study Notes
 28. [Similar Matrices and Jordan Form](UnitIII/28_similar_matrices_and_jordan_form) 
 
 29. [Singular Value Decomposition](UnitIII/29_svd) 
+
+30. [Linear Transformations](UnitIII/30_linear_transformation)
+
+31. [Chang of Basis](UnitIII/31_change_of_basis)

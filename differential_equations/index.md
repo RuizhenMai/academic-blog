@@ -49,11 +49,17 @@ title: Differential Equations
     ## III: Fourier Series
 
 15. [Introduction to Fourier Series](UnitIII/15_intro_to_fourier_series)
+
+16. [Fourier Series w/ General Periods](UnitIII/16_fourier_general_period)
+
+17. [Finding Particular Solutions via Fourier Series](UnitIII/17_particular_sol_via_fs)
     
     ## IV: First Order Systems
 
-24. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
+18. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
 
-25. [First-order Systems continued](UnitIV/25_first_order_system_continued)
+19. [First-order Systems continued](UnitIV/25_first_order_system_continued)
 
-25. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
+20. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
+
+21. [Sketching for first order system](UnitIV/27_sketch.md)

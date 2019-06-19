@@ -76,9 +76,9 @@ Since it is not continuous from $$-\pi$$ to $$\pi$$ nor from 0 to $$2\pi$$, we n
 
 $$
 \begin{align}
-a_k&=\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\cos kt\:dt\\
-&=\frac{1}{\pi}\int_{-\pi}^{0}-\cos kt\:dt+\frac{1}{\pi}\int_{0}^{\pi}\cos kt\:dt\\
-&=\frac{1}{\pi}\left[\frac{1}{k}-\sin kt\right]_{-\pi}^0+\frac{1}{\pi}\left[\frac{1}{k}\sin kt\right]_0^{\pi}\\
+a_n&=\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\cos nt\:dt\\
+&=\frac{1}{\pi}\int_{-\pi}^{0}-\cos nt\:dt+\frac{1}{\pi}\int_{0}^{\pi}\cos nt\:dt\\
+&=\frac{1}{\pi}\left[\frac{1}{n}-\sin nt\right]_{-\pi}^0+\frac{1}{\pi}\left[\frac{1}{n}\sin nt\right]_0^{\pi}\\
 &=0
 \end{align}
 $$
@@ -87,32 +87,33 @@ And
 
 $$
 \begin{align}
-b_k&=\frac{1}{\pi}\int_0^{2\pi}f(t)\sin kt\:dt\\
-&=\frac{1}{\pi}\int_{-\pi}^{0}-\sin kt\:dt+\frac{1}{\pi}\int_{0}^{\pi}\sin kt\:dt\\
-&=\frac{1}{\pi}\left[\frac{1}{k}\cos kt\right]_{-\pi}^0+\frac{1}{\pi}\left[\frac{1}{k}-\cos kt\right]_0^{\pi}\\
-&=\frac{1}{\pi k}(1-\cos k\pi)-\frac{1}{\pi k}(\cos\pi k-1)\\
-&=\frac{2}{\pi k}(1-\cos k\pi)\\
-&=\frac{2}{\pi k}(1-(-1)^k)
+b_n&=\frac{1}{\pi}\int_0^{2\pi}f(t)\sin nt\:dt\\
+&=\frac{1}{\pi}\int_{-\pi}^{0}-\sin nt\:dt+\frac{1}{\pi}\int_{0}^{\pi}\sin nt\:dt\\
+&=\frac{1}{\pi}\left[\frac{1}{n}\cos nt\right]_{-\pi}^0+\frac{1}{\pi}\left[\frac{1}{n}-\cos nt\right]_0^{\pi}\\
+&=\frac{1}{\pi n}(1-\cos n\pi)-\frac{1}{\pi n}(\cos\pi n-1)\\
+&=\frac{2}{\pi n}(1-\cos n\pi)\\
+&=\frac{2}{\pi n}(1-(-1)^n)
 \end{align}
 $$
 
 Therefore
 
 $$
-b_k=\cases{\begin{align}
-\frac{4}{\pi k}&\quad if\ k \ is\ odd\\
-0&\quad if\ k\ is\ even
+b_n=\cases{\begin{align}
+\frac{4}{\pi n}&\quad if\ n \ is\ odd\\
+0&\quad if\ n\ is\ even
 \end{align}}
 $$
 
 Remember $$b_k$$ is coefficients for $$\sin kt$$, so the Fourier series for the square-wave function is
 
 $$
-f(t)=\frac{4}{\pi}\sum_{k\ odd}\frac{\sin kt}{k}
+f(t)=\frac{4}{\pi}\sum_{n\ odd}\frac{\sin nt}{n}
 $$
 
-We can write this $$k$$ into natural number:
+We can write this $n$ into natural number and rename it into $k$ which I think look better:
 
 $$
 f(t)=\frac{4}{\pi}\sum_{k=1}\frac{\sin (2k-1)t}{2k-1}
 $$
+

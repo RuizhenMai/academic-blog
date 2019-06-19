@@ -149,12 +149,12 @@ $$
 a_0=\frac{1}{\pi}\int_0^{2\pi}f(t)\:dt
 $$
 
-Similar things can be done, after we first multiply both sides of (1) by either $$\cos kt$$ or $$\sin kt$$, this gives us:
+Similar things can be done, after we first multiply both sides of (1) by either $\cos nt$ or $\sin nt$, this gives us:
 
 $$
 \begin{align}
-a_k&=\frac{1}{\pi}\int_0^{2\pi}f(t)\cos kt\:dt\\
-b_k&=\frac{1}{\pi}\int_0^{2\pi}f(t)\sin kt\:dt\\
+a_n&=\frac{1}{\pi}\int_0^{2\pi}f(t)\cos nt\:dt\\
+b_n&=\frac{1}{\pi}\int_0^{2\pi}f(t)\sin nt\:dt\\
 \end{align}
 $$
 

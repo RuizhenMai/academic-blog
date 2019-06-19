@@ -52,7 +52,7 @@ A family of distribution $$\{P_\theta:\theta\in\Theta\}, \Theta\subset\mathbb R^
 - A vector of $$T_i(·)$$ of $$x$$, $$T:\mathbb R^q\rightarrow\mathbb R^k$$ that make sure x has same dimension with the parameter 
 
 $$
-p_\theta(x)=\exp[\eta(\theta)^\top T(\mathbf x)-B(\theta)]h(x)
+p_\theta(x)=\exp[\eta(\theta)^\top T(\mathbf x)-B(\theta)]h(x)\tag{*}
 $$
 
 $$B(\cdot)$$ is a normalizing factor so it doesn't matter if we put it inside or outside the exponential. $$h(\cdot)$$ is a change of measure, depending our choice, it will often be 1. 
@@ -104,7 +104,7 @@ $$
 p_\theta(x)=\exp(\frac{x\theta-b(\theta)}{\phi}+c(x,\phi))\tag{*}
 $$
 
-The $$\phi$$ is the dispersion parameter that's always assume known. 
+The $$\phi$$ <u>is the dispersion parameter that's always assumed known</u>. And we assume it's <u>always non-negative</u>. 
 
 ### One Parameter Gaussian
 
@@ -121,11 +121,9 @@ $$
 
 Therefore $$\phi=\sigma^2,b(\theta)=\mu^2/2$$
 
-
-
 ### Likelihood Property and First two moments
 
-Two important likelihood properties for finding expectation and variance for canonical family are: (let $$\ell(\theta,…)=\log p_\theta(x)$$ be the log probability function)
+Two important likelihood properties for finding expectation and variance for canonical family are: (WLOG, assuming we have only scalar $x$, let $$\ell(\theta,…)=\log p_\theta(x)$$ be the log probability function)
 
 $$
 \mathbb E_x[\frac{\partial \ell(\theta)}{\partial\theta}]=0\\
@@ -213,7 +211,7 @@ p_\theta(x;p)&=p	^x(1-p)^{1-x}\\
 &=\exp[x\ln \frac{p}{1-p}+\ln(1-p)]
 \end{align}
 $$
-In order to make canonical family true, need to let $$\theta=\displaystyle\ln\frac{p}{1-p}$$, then $$p=\displaystyle\frac{e^\theta}{1+e^\theta} $$. And $$\ln(1-p)=\displaystyle \ln(\frac{1}{1+e^\theta})=-\ln(1+e^\theta)$$.  This leads up to:
+In order to make canonical family true, need to let $\theta=\displaystyle\ln\frac{p}{1-p}$, then $p=\displaystyle\frac{e^\theta}{1+e^\theta} $. And $\ln(1-p)=\displaystyle \ln(\frac{1}{1+e^\theta})=-\ln(1+e^\theta)$.  This leads up to:
 $$
 \begin{align}
 p_\theta(x;p)
@@ -237,19 +235,56 @@ And clearly we have a table for this
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. a graph for link functions </figcaption>
 </figure>
 
-## Log Likelihood
+## MLE
 
-With all these, we start to be interested in given log likelihood, how to compute the derivative of it with respect to the weight parameter $$\displaystyle \frac{\partial \ell}{\partial\boldsymbol\beta}$$. First we need to clear out the relations between variables. 
+With all these, we start to be interested in given log likelihood, how to compute the derivative of it with respect to the weight parameter $\displaystyle \frac{\partial \ell}{\partial\boldsymbol\beta}$. 
 
-We have 
+### With data
+
+Assume we have data $\mathcal D=(\mathbf x_1,y),…,(\mathbf x_n,y_n)$, and compose all the independent variables into $\mathbf X=\begin{bmatrix} \mathbf x_1^\top\\\vdots\\\mathbf x_n^\top\end{bmatrix}$ , and $Y=\begin{bmatrix}  y_1\\\vdots\\y_n\end{bmatrix}$. 
+
+### From $\theta$ to $\beta$ 
+
+Given the data, I can start using $Y$ as the random variable s.t. $p_\theta(y)=Pr(Y=y;\theta)$.  This aligns with the assumption at the beginning that in GLM, the dependent variable $Y$ is in exponential family. Therefore we have
 $$
-p_\theta(x)=\exp(\frac{x\theta-b(\theta)}{\phi}+c(x,\phi))\tag{*}
+p_\theta(y)=\exp(\frac{y\theta-b(\theta)}{\phi}+c(y,\phi))\tag{*}
 $$
-as the [probability density function] and at the same time the log likelihood function. In the section of likelihood property, we have $$b'(\theta)=\mu(\mathbf x)$$. And if we have canonical link $$g(\mu(\mathbf x))=\theta$$,
+as the [probability density function] and at the same time the log likelihood function of a single $y$. In the section of likelihood property, we have $b'(\theta)=\mu(\mathbf x)$. And from as the fundamental assumption of GLM, we have $g(\mu(\mathbf x))=\mathbf x^\top\boldsymbol\beta$. Then:
 $$
 \begin{align}
 \theta&=b'^{-1}(\mu(\mathbf x))\\
-&=g^{-1}(b'^{-1}(\mu(\mathbf x))):=h(\mu(\mathbf x)){-1}
+&=b'^{-1}(g^{-1}(\mathbf x^\top \boldsymbol\beta)):=h(\mathbf x^\top\boldsymbol\beta)
 \end{align}
 $$
-We have $$h=(g\circ b')^{-1}$$. And in fact, according to (*) in canonical link section, $$h=identity$$.  
+We have $$h=(g\circ b')^{-1}$$. If we have canonical link, $$h=identity$$, according to (*) in the canonical link section.
+
+Since we're dealing with data, it's more appropriate to label $\mathbf x^\top\boldsymbol\beta$ as $\mathbf x_i^\top\boldsymbol\beta$. Think that we're on the processing of infering the correct $\boldsymbol\beta$. This leads to $\theta$ is also per $\mathbf x_i$:
+$$
+\theta_i=h(\mathbf x_i^\top \boldsymbol\beta)
+$$
+And therefore
+$$
+Y_i\sim\mathrm{Exp\ Family(\theta_i)\Leftrightarrow}Y_i\sim\mathrm{Exp\ Family}(h(\mathbf x_i^\top \boldsymbol \beta))
+$$
+
+### Log likelihood
+
+Then we can express the log likelihood as 
+$$
+\begin{align}
+\ell(\theta;\mathcal D)&=\log\prod_{(\mathbf x_i,y_i)\in\mathcal D}p_{\theta_i}(y_i)\\
+&=\sum_{(\mathbf x_i,y_i)\in\mathcal D}(\frac{y_i\theta_i-b(\theta_i)}{\phi}+c(y_i,\phi))\\
+(\ell(\beta;\mathcal D))&=\sum_{(\mathbf x_i,y_i)\in\mathcal D}(\frac{y_ih(\mathbf x_i^\top\boldsymbol\beta)-b(h(\mathbf x_i^\top\boldsymbol\beta))}{\phi}+c(y_i,\phi))
+\end{align}
+$$
+If we have canonical link, $h(·)$ is identity:
+$$
+\begin{align}
+\ell(\beta;\mathcal D)&=\sum_{(\mathbf x_i,y_i)\in\mathcal D}(\frac{y_i\mathbf x_i^\top\boldsymbol\beta-b(\mathbf x_i^\top\boldsymbol\beta)}{\phi}+c(y_i,\phi))
+\end{align}
+$$
+Taking the derivative w.r.t. $\beta$ we can eliminate $$c(y_i,\phi)$$. What's left it's a constant $$\phi$$, and two terms related to $$\beta$$. The log likelihood does not have analytical solution. So we care about if the function is concave (or negative convex) so we have a theoretical guarantee a sequential approximation method can converge. W.r.t $\beta$ , $y_i\mathbf x_i^\top\boldsymbol\beta$ is linear. What about $b(·)$? We already know that $b''(\theta)\phi=\mathbb V(x)$. Thus as long as $\phi>0$, $b$ will be strictly convex. Then a negative convex function will lead to concave. So the whole function $\ell(\beta,\mathcal D)$ is <u>concave</u>.
+
+## Methods for $\boldsymbol\beta$
+
+Newton adfsklo;

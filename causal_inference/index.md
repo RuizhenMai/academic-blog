@@ -43,6 +43,7 @@ Some notations for things that are never observed:
 Things that we want: (the expectations below, if not specified, are all approximated by i.i.d)
 
 <u>Average treatment/causal effect</u>:
+
 $$
 \begin{align}
 \overline\tau&=\frac{1}{n}\sum_i^n\tau_i\\

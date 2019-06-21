@@ -14,17 +14,17 @@ title: Differential Equations
 
 ## O: Unanalytic Methods 
 
-1. [Geometric Methods](UnitI/geometric_methods)
+1. ~~[Geometric Methods](UnitI/geometric_methods)~~
 
-2. [Numerical Methods](UnitI/numerical_methods)
+2. ~~[Numerical Methods](UnitI/numerical_methods)~~
    
    ## I: First Order Differential Equations
 
 3. [First Order Linear ODE's](UnitI/3_first_order_linear_odes)
 
-4. [First-order Substitution Methods: Bernouilli and Homogeneous ODE's.](UnitI/first_order_substitution_methods)
+4. ~~[First-order Substitution Methods: Bernouilli and Homogeneous ODE's.](UnitI/first_order_substitution_methods)~~
 
-5. [First-order Autonomous ODE's: Qualitative Methods](UnitI/autonomous_ode)
+5. ~~[First-order Autonomous ODE's: Qualitative Methods](UnitI/autonomous_ode)~~
 
 6. [Complex Numbers and Complex Exponentials](UnitI/complex_numbers_and_complex_exponentials)
 
@@ -42,24 +42,26 @@ title: Differential Equations
 
 12. [Theory for Nonhomogeneous ODE's](UnitI/12_theory_inhomogeneous)
 
-13. [Particular Solution](UnitI/13_particular_solutions)
+13. [Methods for Particular Solution](UnitI/13_particular_solutions)
 
 14. [Application: Resonance](UnitI/14_Resonance)
     
-    ## III: Fourier Series
+    ## III: Fourier Series and Laplace Transform
 
 15. [Introduction to Fourier Series](UnitIII/15_intro_to_fourier_series)
 
 16. [Fourier Series w/ General Periods](UnitIII/16_fourier_general_period)
 
 17. [Finding Particular Solutions via Fourier Series](UnitIII/17_particular_sol_via_fs)
+
+18. [Introduction to Laplace Transform](UnitIII//18_intro_to_laplace_transform)
     
     ## IV: First Order Systems
 
-18. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
+19. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
 
-19. [First-order Systems continued](UnitIV/25_first_order_system_continued)
+20. [First-order Systems continued](UnitIV/25_first_order_system_continued)
 
-20. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
+21. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
 
-21. [Sketching for first order system](UnitIV/27_sketch.md)
+22. [Sketching for first order system](UnitIV/27_sketch.md)

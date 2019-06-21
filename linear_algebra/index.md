@@ -37,7 +37,7 @@ title: Linear Algebra Study Notes
 
 10. [The Four Fundamental Subspaces](UnitI/The_four_fundamental_subspaces): For some vectors b the equation Ax = b has solutions and for others it does not. Some vectors x are solutions to the equation Ax = 0 and some are not. To understand these equations we study the column space, nullspace, row space and left nullspace of the matrix A.
 
-11. [Matrix Spaces; Rank 1; Small World Graphs](UnitI/matrix_spaces): As we learned last session, vectors don't have to be lists of numbers. In this session we explore important new vector spaces while practicing the skills we learned in the old ones. Then we begin the application of matrices to the study of networks.
+11. [Matrix Spaces; Rank 1 ~~; Small World Graphs~~](UnitI/matrix_spaces): As we learned last session, vectors don't have to be lists of numbers. In this session we explore important new vector spaces while practicing the skills we learned in the old ones. Then we begin the application of matrices to the study of networks.
 
 12. [Graphs, Networks, Incidence Matrices](UnitI/graphs_networks_incidence_matrices):This session explores the linear algebra of electrical networks and the Internet, and sheds light on important results in graph theory.
 
@@ -55,15 +55,15 @@ title: Linear Algebra Study Notes
 
 18. [Properties of Determinants](UnitII/18_properties_of_determinants): The determinant of a matrix is a single number which encodes a lot of information about the matrix. Three simple properties completely describe the determinant. In this lecture we also list seven more properties like detAB = (detA)(detB) that can be derived from the first three.
 
-19. [Determinant Formulas and Cofactors](UnitII/19_determinant_formulas_and_cofactors): One way to compute the determinant is by elimination. In this lecture we derive two related formulas for the determinant using the properties from last lecture. 
+19. ~~[Determinant Formulas and Cofactors](UnitII/19_determinant_formulas_and_cofactors): One way to compute the determinant is by elimination. In this lecture we derive two related formulas for the determinant using the properties from last lecture.~~ 
 
-20. [Cramer's Rule, Inverse Matrix and Volume](UnitII/20_cramers_rule_inverse_matrix_and_volume): Now we start to use the determinant. Understanding the cofactor formula allows us to show that A-1 = (1/detA)CT, where C is the matrix of cofactors of A. Combining this formula with the equation x = A-1b gives us Cramer's rule for solving Ax = b. Also, the absolute value of the determinant gives the volume of a box.
+20. ~~[Cramer's Rule, Inverse Matrix and Volume](UnitII/20_cramers_rule_inverse_matrix_and_volume): Now we start to use the determinant. Understanding the cofactor formula allows us to show that A-1 = (1/detA)CT, where C is the matrix of cofactors of A. Combining this formula with the equation x = A-1b gives us Cramer's rule for solving Ax = b. Also, the absolute value of the determinant gives the volume of a box.~~
 
 21. [Eigenvalues and Eigenvectors](UnitII/21_eigenvalues_and_eigenvectors): If the product Ax points in the same direction as the vector x, we say that x is an eigenvector of A. Eigenvalues and eigenvectors describe what happens when a matrix is multiplied by a vector. In this session we learn how to find the eigenvalues and eigenvectors of a matrix.
 
 22. [Diagonalization and Powers of A](UnitII/22_diagonalization): If A has n independent eigenvectors, we can write A = SΛS−1, where Λ is a diagonal matrix containing the eigenvalues of A. This allows us to easily compute powers of A which in turn allows us to solve difference equations uk+1 = Auk. 
 
-23. [Differential Equations and exp(At)](UnitII/23_differential_equations): We can copy Taylor's series for ex to define eAt for a matrix A. If A is diagonalizable, we can use Λ to find the exact value of eAt. This allows us to solve systems of differential equations du / dt = Au the same way we solved equations like dy / dt = ky.
+23. ~~[Differential Equations and exp(At)](UnitII/23_differential_equations): We can copy Taylor's series for ex to define eAt for a matrix A. If A is diagonalizable, we can use Λ to find the exact value of eAt. This allows us to solve systems of differential equations du / dt = Au the same way we solved equations like dy / dt = ky.~~
 
 24. [Markov Matrices; Fourier Series](UnitII/24_markov_matrices_fourier_series): Like differential equations, Markov matrices describe changes over time. Once again, the eigenvalues and eigenvectors describe the long term behavior of the system. In this session we also learn about Fourier series, which describe periodic functions as points in an infinite dimensional vector space.
     
@@ -71,11 +71,11 @@ title: Linear Algebra Study Notes
 
 25. [Symmetric Matrices and Positive Definiteness](UnitIII/25_symmetric_matrices_and_positive_definiteness)
 
-26. [Complex Matrices; Fast Fourier Transform (FFT)](UnitIII/26_complex_matrices_fft)
+26. ~~[Complex Matrices; Fast Fourier Transform (FFT)](UnitIII/26_complex_matrices_fft)~~
 
 27. [Positive Definite Matrices and Minima](UnitIII/27_positive_definite_matrices_and_minima)
 
-28. [Similar Matrices and Jordan Form](UnitIII/28_similar_matrices_and_jordan_form) 
+28. [Similar Matrices ~~and Jordan Form~~](UnitIII/28_similar_matrices_and_jordan_form) 
 
 29. [Singular Value Decomposition](UnitIII/29_svd) 
 

@@ -149,7 +149,7 @@ x&=e^{-2t}(\cos t+2\sin t)\\
 \end{align}\tag{7}
 $$
 
-Here for the cosine function we have <u>Amplitude</u> $$C=\sqrt 5$$, <u>Circular frequency</u> $$\omega=1$$ and <u>Phase lag</u> $$\alpha=\tan^{-1}2$$. Amplitude is how wide the cosine curve will be, and phase lag is how much the curve will shift to the right, or how delayed it cosine will start equal 1. $$\displaystyle T=\frac{2\pi}{\omega}$$ is the period/time required for the object to complete one full oscillation. $$\delta=\displaystyle\frac{\alpha}{\omega}$$ is the time lag. 
+Here for the cosine function we have <u>Amplitude</u> $$C=\sqrt 5$$, <u>Circular frequency</u> $$\omega=1$$ and <u>Phase lag</u> $$\alpha=\tan^{-1}2$$. Amplitude is how wide the cosine curve will be, and phase lag is how much the curve will shift to the right, or how delayed it cosine will start equal 1. $$\displaystyle T=\frac{2\pi}{\omega}$$ is the period/time required for the object to complete one full oscillation. $$\delta=\displaystyle\frac{\alpha}{\omega}$$ is the <u>time lag</u>. 
 
 Multiplying  $$e^{-2t}$$ means we have <u>time-varying</u> amplitude. Since $$\cos\in[-1,1]$$. Then  (7) will never exceed $$\sqrt5e^{-2t}$$. 
 
@@ -208,44 +208,53 @@ $$
 where $$2p=\displaystyle\frac{c}{m},\:\omega_0^2=\frac{k}{m}$$. By quadratic formula, we express the roots as
 
 $$
-r=\frac{2p\pm\sqrt{4p^2-4\omega_0^2}}{2}=p\pm\sqrt{p^2-\omega_0^2}\tag{10}
+r=\frac{-2p\pm\sqrt{4p^2-4\omega_0^2}}{2}=-p\pm\sqrt{p^2-\omega_0^2}\tag{10}
 $$
+
+
+
+### Over damp
+
+For the case of overly damped, we still need to solve $r=-p\pm\sqrt{p^2-\omega_0^2}$ to get explicit $r_1$ and $r_2$
+
+### Critical damp
+
+Examine $r=-p\pm\sqrt{p^2-\omega_0^2}$, if $p=\omega_0$, then we have $p$ left and the solution will be 
+$$
+x=e^{-pt}(c_1+c_2t)\tag{11}
+$$
+
+
+### Underdamp - Oscillations
+
+Examining $$r=-p\pm\sqrt{p^2-\omega_0^2}$$ , we get oscillations if and only if 
+$$
+p<\omega_0
+$$
+And since $$p$$ is the real coefficients, if there's oscillations, the bound will be 
+$$
+Ce^{-pt}
+$$
+corresponding to figure 3. Recall that a complex root $$r=a\pm bi$$, $$b$$ will become the circular frequency, from [last note](./9_second_order_ode_constant_coefficients). What's $$b$$ here?
+$$
+\omega_1=b=\sqrt{\omega_0^2-p^2}\tag{12}
+$$
+to save the coefficients ($$bi=\sqrt{\omega_0^2-p^2}$$ b/c $$p<\omega_0$$) . And the full solution is 
+$$
+\begin{align}
+x&=e^{-pt}(c_1\cos\omega_1t+c_2\sin\omega_1 t)\\
+&=Ce^{-pt}\cos(\omega_1t-\phi)
+\end{align}\tag{13}
+$$
+where $$C,\phi$$ deepening on the *initial conditions* and $$\omega_1,p$$ depending only on the ODE. As figure 3 illustrates, period $T=\displaystyle\frac{2\pi}{\omega_1}$, time lag $\delta=\displaystyle \frac{\phi}{\omega_1}$. 
 
 ### Undamped
 
 No surprise is if we write the DE as (9), then if $$p=0$$, meaning no dashpot at all, $$\omega$$ is the circular frequency and the solution is 
 
 $$
-x=c_1\cos\omega_0 t+c_2\sin \omega_0 t\\
+x=c_1\cos\omega_0 t+c_2\sin \omega_0 t\tag{14}\\
 $$
 
-### Oscillations
 
-Examining $$r=p\pm\sqrt{p^2-\omega_0^2}$$ , we get oscillations if and only if 
 
-$$
-p<\omega_0
-$$
-
-And since $$p$$ is the real coefficients, if there's oscillations, the bound will be 
-
-$$
-Ce^{-pt}
-$$
-
-corresponding to figure 3. Recall that a complex root $$r=a\pm bi$$, $$b$$ will become the circular frequency, from [last note](./9_second_order_ode_constant_coefficients). What's $$b$$ here?
-
-$$
-\omega_1=b=\sqrt{\omega_0^2-p^2}
-$$
-
-to save the coefficients ($$bi=\sqrt{\omega_0^2-p^2}$$ b/c $$p<\omega_0$$) . And the full solution is 
-
-$$
-\begin{align}
-x&=e^{-pt}(c_1\cos\omega_1t+c_2\sin\omega_1 t)\\
-&=Ce^{-pt}\cos(\omega_1t-\phi)
-\end{align}\tag{11}
-$$
-
-where $$C,\phi$$ deepening on the *initial conditions* and $$\omega_1,p$$ depending only on the ODE.  

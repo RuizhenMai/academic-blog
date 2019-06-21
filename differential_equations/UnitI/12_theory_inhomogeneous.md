@@ -35,5 +35,3 @@ thus adding $$y_c$$ does not affect the equation and $$Y$$ is the general soluti
 
 
 
-## Variation of Parameters
-

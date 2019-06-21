@@ -488,12 +488,13 @@ td.gutter {
   padding-top: 3px;
 }
 
-p > a{
+p > a, li > a{
   transition:0.18s;
 }
-p > a:hover{
+p > a:hover, li > a:hover{
   color:#c15d1b;
 }
+
 
 h4 {
   font-size:1.5rem;

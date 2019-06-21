@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finding Particular Solutions to Inhomogeneous ODEs
+title: Finding Particular Solutions to Nonhomogeneous ODEs
 date: 2019-6-10
 ---
 

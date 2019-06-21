@@ -114,6 +114,6 @@ $$
 We can write this $n$ into natural number and rename it into $k$ which I think look better:
 
 $$
-f(t)=\frac{4}{\pi}\sum_{k=1}\frac{\sin (2k-1)t}{2k-1}
+f(t)=\frac{4}{\pi}\sum_{k=1}^N\frac{\sin ((2k-1)t)}{2k-1}
 $$
 

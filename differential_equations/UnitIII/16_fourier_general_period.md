@@ -134,3 +134,4 @@ $$
 ## Extension # 2 
 
 If $f(t)$ is on $[0, L]$, we can do odd extension which make $[-L,0]$ is defined with $-f(t)$ or even extension with $f(-t)$. 
+

@@ -10,6 +10,7 @@ These notes do not tend to be read in order (Causal Inference is just not a fiel
 Randomized trials are experiments we design and conduct. They can be expensive. If people know it's randomized they will refuse to participate because they just don't won't to be bothered. And it can take a lot of time to wait for the data.
 
 [Matching](./matching)
+[Propensity Score](./propensity_score)
 
 ## Notations and General Definitions
 
@@ -106,7 +107,7 @@ The following are generally called causal assumptions (those not explained here 
 - Stable Unit Treatment Value Assumptions (SUTVA)
 - Consistency: what you observed (under one of the treatment) is equal to the true underlying potentials $$Y_i=Y_i^{W_i}$$ 
 - Ignorability
-- Positivity:  $$P(W_i=w\rvert \mathbf Z=\mathbf z)>0$$ for all $$\mathbf z,\ w=\{0,1\}$$, because if some group is never treated, $$P=0$$, then we cannot learn the effect
+- Positivity:  $$P(W_i=w\rvert \mathbf X=\mathbf x)>0$$ for all covariates $$\mathbf x,\ w=\{0,1\}$$, because if some group is never treated, $$P=0$$, then we cannot learn the effect
 
 Assumptions can be about observed outcome $$Y_i$$, observed treatment $$W_i$$, and covariates $$Z$$.  
 
@@ -129,7 +130,7 @@ $$
 \mathbf Z=[Z_1,Z_2,...,Z_n]
 $$
 
-They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of $$\mathbf Z=\mathbf z$$, we can think of treatment $$W_i$$ are randomly are assigned.</u>  The following example helps:
+They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of </u>$$\mathbf Z=\mathbf z$$, <u>we can think of treatment </u>$$W_i$$ <u>are randomly are assigned.</u>  The following example helps:
 
 <figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph10.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Ignorability</figcaption>
@@ -164,7 +165,7 @@ This is called *standardization* in causal inference. But in practice, it's very
 
 ## Other Causal Effects
 
-- $$\displaystyle \mathbb E[\frac{Y^1_i}{Y^0_i}]$$: causal relative risk/ratio. This would be more probable if $$Y_i$$ is a binary outcome
+- $$\displaystyle \mathbb E\left[\frac{Y^1_i}{Y^0_i}\right]$$: causal relative risk/ratio. This would be more probable if $$Y_i$$ is a binary outcome
 - $$\mathbb E[Y_i^1-Y^0_i\rvert W_i=1]$$: causal effect on the treated. We might be interested in this when we only care about the effect among the treated. 
 
 ## Confounder

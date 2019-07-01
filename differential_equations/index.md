@@ -4,6 +4,8 @@ title: Differential Equations
 ---
 <span class="newthought">These notes</span> are under construction
 
+[Topics in Multivariate Calculus](../calc3/)
+
 [Youtube Video Playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oTpyxCMLKt_JmB0WtSZfG)
 
 [Course Homepage](https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/index.htm)
@@ -54,14 +56,24 @@ title: Differential Equations
 
 17. [Finding Particular Solutions via Fourier Series](UnitIII/17_particular_sol_via_fs)
 
-18. [Introduction to Laplace Transform](UnitIII//18_intro_to_laplace_transform)
+18. Blank
+
+19. [Introduction to Laplace Transform](UnitIII//19_intro_to_laplace_transform)
+
+20. [Laplace of derivative](UnitIII/20_derivative_formulas)
+
+21. [Convolution](UnitIII/21_convolution)
+
+22. [Laplace Transform with jump discontinuities](UnitIII/22_jump_discontinuities)
+
+23. [Laplace Transform with impulse input](UnitIII/23_impulse)
     
     ## IV: First Order Systems
 
-19. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
+24. [Introduction to First-order Systems of ODEs](UnitIV/24_introduction_to_first_order_system)
 
-20. [First-order Systems continued](UnitIV/25_first_order_system_continued)
+25. [First-order Systems continued](UnitIV/25_first_order_system_continued)
 
-21. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
+26. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
 
-22. [Sketching for first order system](UnitIV/27_sketch.md)
+27. [Sketching for first order system](UnitIV/27_sketch.md)

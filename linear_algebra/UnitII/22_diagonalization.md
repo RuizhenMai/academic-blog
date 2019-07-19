@@ -85,10 +85,12 @@ And:
 $$
 \begin{align}
 u_k&=A^ku_0\\
-&=c_1\lambda_1\mathbf x_1+c_2\lambda_2\mathbf x_2+...+c_n\lambda_n\mathbf x_n\\
+&=c_1\lambda_1^k\mathbf x_1+c_2\lambda_2^k\mathbf x_2+...+c_n\lambda_n^k\mathbf x_n\\
 &=S\Lambda^k\mathbf c
 \end{align}
 $$
+
+In general, $c_1$ is essential to know about infinity, but other coefficients will pop up as we are solving (2). The scalar-form second equation is used more. 
 
 ## Fibonacci Sequence 
 

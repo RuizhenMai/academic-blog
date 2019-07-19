@@ -10,15 +10,28 @@ These notes do not tend to be read in order (Causal Inference is just not a fiel
 Randomized trials are experiments we design and conduct. They can be expensive. If people know it's randomized they will refuse to participate because they just don't won't to be bothered. And it can take a lot of time to wait for the data.
 
 [Matching](./matching)
+
 [Propensity Score](./propensity_score)
+
+[Inverse Probability Weighting](./ipw)
+
+[Instrumental Variable](./iv)
+
+Causal Inference is about understanding the "causality" between events.
+
+## Motivating Example
+
+...
+
+When causation is equal to association? 
 
 ## Notations and General Definitions
 
 Some notations for observed data:
 
 - $$W_i$$ (or $$T_i$$, $$Z_i$$) $$=1$$ treated, $$=0$$ if untreated or control; these are observed in the observational experiments setting; these are assigned in control experiment
-- $$Y_i$$: actual response
-- $$X_i$$: other covariates (that may affect the response) 
+- $$Y_i$$: observed response
+- $$\mathbf X_i$$: other covariates (that may affect the response) 
 
 Some notations for things that are never observed:
 
@@ -88,10 +101,10 @@ $$
 
 This is saying, the potential outcomes are independent of treatment received. More plainly, we shall assign, if possible, treatment randomly, or at least independent of potential outcomes{%include sidenote.html note='This does not mean the assignment probability shall be equal in each group, for e.g., 0.2 of assigning a treatment to one of the five groups. In fact, as long as these probabilities are not affected by the potentials, then our assumption holds, even we always have 0.9 probability of giving treatment to one group/invidual '%}. For example, the Federal Government consider allocating subsidies to fix water pollution to some states. Let the state's water quality be $$Y$$. Then the state shall give these money no matter the state's current water quality (this will become $$Y^0$$remain if untreated) is good or bad, and possible water quality improvement. 
 
-You probably think that's not possible, from the perspective of policy makers. What's more probably is there are some regions $$Z_i=z_1,…z_n$$  s.t. in a region of states with poor water quality, maybe $$z_1$$, the government gives them an (somewhat) equally high amount of subsidy. And for another region, say $$z_2$$, the government give them an equally low amount of subsidy. This is saying 
+You probably think that's not possible, from the perspective of policy makers. What's more probably is there are some regions $$\mathbf X_i=X_1,… X_n$$  s.t. in a region of states with poor water quality, maybe $$z_1$$, the government gives them an (somewhat) equally high amount of subsidy. And for another region, say $$z_2$$, the government give them an equally low amount of subsidy. This is saying 
 
 $$
-(Y_i^1,Y_i^0)\perp W_i\rvert Z_i\tag{2}
+(Y_i^1,Y_i^0)\perp W_i\rvert \mathbf X^{(i)}\tag{2}
 $$
 
 That is, in each group, the treatment assignment is random. These groups $$z_1,..,z_n$$ may or maybe observed. More often, these groups are called *covariate* because it affects the assignment and treatment, or *confounders*. 
@@ -124,36 +137,30 @@ SUTVA allows us to write potential outcome for the ith person in terms of only t
 
 ### Ignorability
 
-This is (2). I will elaborate it more intuitively here. The notation $$Z$$ is a bit confusing. First off, it should be a vector
-
-$$
-\mathbf Z=[Z_1,Z_2,...,Z_n]
-$$
-
-They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of </u>$$\mathbf Z=\mathbf z$$, <u>we can think of treatment </u>$$W_i$$ <u>are randomly are assigned.</u>  The following example helps:
+This is (2). I will elaborate it more intuitively here. They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of </u>$$\mathbf X=\mathbf x$$, <u>we can think of treatment </u>$$W_i$$ <u>are randomly are assigned.</u>  The following example helps:
 
 <figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph10.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Ignorability</figcaption>
 </figure>
 
 
-And we need to figure it out what $$\mathbf Z$$ we need to collect in order to make that assumption satisfied. 
+And we need to figure it out what $$\mathbf X$$ we need to collect in order to make that assumption satisfied. 
 
 So we can more formally define the following:
 
 $$
 \begin{align}
-\mathbb E[Y_i|W_i=w, \mathbf Z=\mathbf z]&=\mathbb E[Y_i^w|W_i=w, \mathbf Z=\mathbf z](by\ consistancy)\\
-&=\mathbb E[Y_i^w|\mathbf Z=\mathbf z](by\ ignorability)
+\mathbb E[Y_i|W_i=w, \mathbf X=\mathbf x]&=\mathbb E[Y_i^w|W_i=w, \mathbf X=\mathbf x](by\ consistancy)\\
+&=\mathbb E[Y_i^w|\mathbf X=\mathbf x](by\ ignorability)
 \end{align}
 $$
 
-If we want *marginal causal effect*, we can average over all $$\mathbf Z=\mathbf z$$, 
+If we want *marginal causal effect*, we can average over all $$\mathbf X=\mathbf x$$, 
 
 $$
 \begin{align}
-\mathbb E[Y_i^w]&=\mathbb E_{\mathbf z}[\mathbb E[Y_i^w|\mathbf Z=\mathbf z]]\\
-&=\sum_\mathbf z\mathbb E[Y_i^w|\mathbf Z=\mathbf z]P(\mathbf Z=\mathbf z)\\
+\mathbb E[Y_i^w]&=\mathbb E_{\mathbf x}[\mathbb E[Y_i^w|\mathbf X=\mathbf x]]\\
+&=\sum_i\mathbb E[Y_i^w|\mathbf X=\mathbf x]P(\mathbf X=\mathbf x^{(i)})\\
 \end{align}
 $$
 

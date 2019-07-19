@@ -179,7 +179,7 @@ $$
 In short, from a second order DE, with coefficient matrix as:
 
 $$
-A=\begin{bmatrix}
+A(t)=\begin{bmatrix}
 a & b\\
 c & d
 \end{bmatrix}

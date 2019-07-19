@@ -11,7 +11,8 @@ This lecture brings the whole course together.
 One way introduced last time, is to check if a symmetric matrix has all positive eigenvalues. Another way is to check if all the determinants of all leading upper-left sub-matrices are positive, that is, given matrix $$A=\begin{bmatrix}
 a & b\\
 c & d
-\end{bmatrix}$$, see if 1. $$a>0$$ and 2. $$ad-b^2>0$$. Similar patterns go on with larger matrices. The third way is to check if the pivots are all positive. The most important test we're going to look at is the following 
+\end{bmatrix}$$, see if 1. $$a>0$$ and 2. $$ad-b^2>0$$. Similar patterns go on with larger matrices. The third way is to check if the pivots are all positive. The fourth, most important test we're going to look at is the following 
+
 $$
 \mathbf x^\top A\mathbf x>0
 $$

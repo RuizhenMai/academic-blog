@@ -77,3 +77,11 @@ title: Differential Equations
 26. [First-order Systems w/ Repeated or Complex roots](UnitIV/26_first_order_system_repeated_complex_roots)
 
 27. [Sketching for first order system](UnitIV/27_sketch.md)
+
+28. [Theories for Nonhomogeneous Systems](UnitIV/28_theory_for_nonhomogeneous_system)
+
+29. [Matrix Exponentials for complementary solutions](UnitIV/29_matrix_exponentials)
+
+30. [Decoupling](UnitIV/30_decoupling)
+
+31. [Autonomous Systems](UnitIV/31_autonomous)

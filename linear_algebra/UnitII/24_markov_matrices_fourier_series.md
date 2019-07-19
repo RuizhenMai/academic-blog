@@ -48,7 +48,7 @@ $$
 \end{bmatrix}
 $$
 
-So their *rows* are dependent. And $$[1,1,1]$$ is in the left null space $$N(A^\top)$$. Thus the dimension of $$N(A^\top)$$ is not zero, and we must have at least one eigenvector $$\mathbf x_1$$ corresponds to $$\lambda_1=1$$. 
+So their *rows* are dependent. And $$[1,1,1]$$ is in the left null space $$N((A-1I)^\top)$$. Therefore $\det(A-I)=0$, and we can conclude that there exists an eigenvalue $\lambda_1=1$.  
 
 ### Eigenvalues of $A$ same as Eigenvalues of  $A^\top$
 

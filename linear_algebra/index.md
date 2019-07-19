@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Algebra Study Notes
+title: Linear Algebra
 ---
 
 <span class="newthought">These notes</span>  are taken along with my review on linear algebra by MIT's online course. As I began my journey on Machine Learning, the problem of my unsturdy understanding of Linear Algbera and Matrices arised. Many of important concepts in Machine Learning require a solid comprehension of these knowledge, like column spaces, eigenvector and etc. There can be typos and misclear explanation. If you find any typos or want to contribute{% include sidenote.html note='The notes are still **under construction**!'%}, please let me know by sending an email to mairuizhen1998@gmail.com including a [linear algebra] in the subject, or just submit a pull request with your fixes to the [GitHub repository](https://github.com/RuizhenMai/academic-blog) I really hope the notes can help out more people who find linear algbera boring or hard to grasp. {% include marginnote.html note=" Thanks for Stanford's CS228 notes on probabilistic models. They are very concise and insightful. And thanks for the modification on Tufte's template. If the usage of this template violates the copyright, please let me know and I will delete this template. "%} 

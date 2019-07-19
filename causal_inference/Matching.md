@@ -11,7 +11,7 @@ But note that there will be cases that there's *no* overlaps between these distr
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Matching</figcaption>
 </figure>
 
-Note when we are doing matching we are matching one part of the population to another part. For example, we often match control group's covariate to treated group because there're often *more* control group people than treated group people. Then in this case we are in fact trying to get the causal effect on the *treated* because we make the distributions of covariates look like that in the treated population.
+Note when we are doing matching we are matching one part of the population to another part. For example, we often match control group's covariate to treated group because there're often *more* control group people than treated group people. <u>Then in this case we are in fact trying to get the causal effect on the treated because we make the distributions of covariates look like that in the treated population</u>.
 
 <u>Fine balance</u>: unlike the balance we've talked about above, if we cannot find exact matches, then a match that can generate same distribution of covariates maybe enough. 
 
@@ -61,9 +61,11 @@ Apparently greedy matching is not optimal. 1 million treatment-control pair (for
 ## Assessing Balance
 
 Assessing balance means to assess whether the matching was successful. The standardized difference (not depending on sample size) is 
+
 $$
 smd=\frac{\overline X_{treatment}-\overline X_{control}}{\sqrt{(s^2_{treatment}-s^2_{control})/2}}
 $$
+
 The rule of thumb is (absolute value)
 
 - Value <0.1 is good

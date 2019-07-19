@@ -5,17 +5,27 @@ title: Akuna Capital Quant Trader 面经
 
 1. Given three points in two-dimensional plane, determine if they exist on one line
    ```python
-   def colinear(x1, y1, x2, y2, x3, y3):
-    '''
-    calculate the area of the triangle(or parallelagram) 
-    composed by these three points by forming vectors, 
-    and see the area is zero 
-    '''
-    area = (x2-x1)*(y3-y1)-(x3-x1)*(y2-y1)
-    if area == 0:
+    def slope(x1,y1,x2,y2):
+        if (x2-x1) == 0:
+            return float('inf')
+        return (y2-y1) / (x2-x1)
+
+    # in n points check if there're three points lie on a straight line 
+    def nColinear(pts):
+        '''
+        pts (array of tuples) - an array of sized-2 tuples for coordinates of the point
+        '''
+        for i in range(len(pts)):
+            slopes = defaultdict(int)
+            for j in range(i+1,len(pts)): 
+                slopes[slope(*pts[i],*pts[j])] += 1
+            for count in slopes.values():
+                if count >= 2: # 2 same slopes mean there're 3 points on same line
+                    return True
+
         return False
-    else:
-        return True
+
+    print(nColinear([(1,2),(2,4),(3,5),(3,7)])) # expect false
     ```
 
 2. Given a n by n matrix, find all local minima. A local minima is where it is smaller than its neighbors(left, right, above, bottom)
@@ -390,3 +400,294 @@ title: Akuna Capital Quant Trader 面经
     print(line_intersect_sphere(1,4,0,4,1,2,3,2,2,1))
 
     ```
+10. Given a number `x`, see if it can be represented as a sum of `n` unique Fibonacci numbers.
+    My thought is every odd position $F_i$ can be decomposed into maximum $(i+1)/2$ fib numbers and even $i$ is $i/2$. If a number is not a fib number, but composed by several, then we expand each of its composing $F_i$'s. 
+    ```python
+    def nearestSmallerFib(x):
+        # in the case of small x, no need to use closed form solution?
+        fn = 1 # f1
+        fnplus1 = 1 #f2
+        fnplus2 = 2 #f3
+        idx = 3 # ith fib number
+        while fnplus2 <= x:
+            fn = fnplus1
+            fnplus1 = fnplus2
+            fnplus2 = fn + fnplus1
+            idx += 1
+
+        return fnplus1, idx-1
+
+    def nFibRepresentation(x, n):
+        xx = x
+        nums = []
+        while x > 0:
+            f,loc = nearestSmallerFib(x)
+            x = x - f
+            nums.append((f,loc))
+        
+        print("greedy result is:",nums)
+        if len(nums) > n:
+            return False
+        
+        if len(nums) == n:
+            return True
+        
+        # find the maximum possible n fib nums that can compose this number
+        count = 0
+        for i in range(len(nums)):
+            summand = 0
+            if nums[i][1] % 2 == 0: # even ith fib location
+                summand = nums[i][1] / 2
+            else: #  odd 
+                summand = (nums[i][1]+1) / 2 - 1 # minus 1 is because the question does not allow f1 =1 f2=1 at the same time
+
+            count += summand
+
+            if i > 0:
+                if nums[i-1][1] % 2 == nums[i][1] % 2:
+                    count -= summand
+                else:
+                    count -= 1
+        
+        print("max fib nums of",xx,"can be decomposed into:",count)
+        if count > n:
+            return True
+        else:
+            return False
+        
+    x, n = 110, 3
+    # print("Fibonacci Representation of",x,"is")
+    print(nFibRepresentation(x,n)) # expect true and stdout 8 fib numbers
+    ```
+11. Find a point with integer coordinate inside a triangle(or on the boundary) that minimize the distance to three vertices 
+    ```python
+    def triangleArea(x1,y1,x2,y2,x3,y3):
+        return abs((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1))/2
+
+    def isInTriangle(x,y,x1,y1,x2,y2,x3,y3):
+        A = triangleArea(x1,y1,x2,y2,x3,y3)
+        A1 = triangleArea(x,y,x2,y2,x3,y3)
+        A2 = triangleArea(x1,y1,x,y,x3,y3)
+        A3 = triangleArea(x1,y1,x2,y2,x,y)
+
+        # print(x,y,A,A1,A2,A3)
+
+
+        if A != (A1+A2+A3):
+            return False
+        
+
+        return True
+
+    def sqDistance2ThreeVertices(x,y,x1,y1,x2,y2,x3,y3):
+        return (x-x1)**2+(y-y1)**2+(x-x2)**2+(y-y2)**2+(x-x3)**2+(y-y3)**2
+
+    def ptrMinDistance(x1,y1,x2,y2,x3,y3):
+        llim = min(x1,x2,x3)
+        rlim = max(x1,x2,x3)
+        ulim = max(y1,y2,y3) # upper
+        blim = min(y1,y2,y3) # bottom
+
+        distances = []
+        for i in range(llim, rlim+1):
+            for j in range(blim, ulim+1):
+                if isInTriangle(i,j,x1,y1,x2,y2,x3,y3):
+                    distances.append((sqDistance2ThreeVertices(i,j,x1,y1,x2,y2,x3,y3),(i,j)))
+
+
+        print(sorted(distances, key = lambda tup: tup[0]))
+
+    ptrMinDistance(0,0,1,0,1,1) # expect [(2, (1, 0)), (3, (0, 0)), (3, (1, 1))]
+    ```
+12. Two users are assigned to three cards valued 0-9. Three of kinds > Pair > High Card 
+    ```python
+    def hasThreeOfKind(cards):
+        return True if cards[0] == cards[1] == cards[2] else False
+
+    def hasPair(cards):
+        return True if cards[0] == cards[1] or cards[1] == cards[2] or cards[0] == cards[2] else False
+
+    def pokerGame(p1,p2):
+        '''
+        p1 (array) - three cards from 0-9 assigend to p1
+        p2 (array) - assigned to p2
+        '''
+        p1.sort(reverse = True)
+        p2.sort(reverse = True)
+
+        rankp1 = 0 
+        rankp2 = 0
+        
+        if hasPair(p1):
+            rankp1 = 1
+        
+        if hasPair(p2):
+            rankp2 = 1
+
+        if hasThreeOfKind(p1):
+            rankp1 = 2
+        
+        if hasThreeOfKind(p2):
+            rankp2 = 2
+        
+
+        if rankp1 == rankp2 == 1:
+            flag1 = 0 if p1[0] == p1[1] else 1
+            flag2 = 0 if p2[0] == p2[1] else 1
+
+            if p1[flag1] == p2[flag2]:
+                flag1 = flag1 + 2 if flag1 == 0 else flag1 - 1
+                flag2 = flag2 + 2 if flag2 == 0 else flag2 - 1
+
+            return 1 if p1[flag1] > p2[flag2] else 2
+
+        elif rankp1 == rankp2: # 0 or 2 rank
+            i = 0
+            while p1[i] == p2[i]:
+                i+=1
+            
+            if i==len(p1): # all same cards, draw new card
+                pass 
+            
+            return 1 if p1[i] > p2[i] else 2
+
+        return 1 if rankp1 > rankp2 else 2
+
+    print('Player')
+    print(pokerGame([1,2,3],[0,2,3])) # expect player 1 win
+    print('win')
+
+    ```
+13. Given a list of words and a list of directed edge from `tup[0]` to `tup[1]` representing if char `tup[0]` to char `tup[1]` can be phrased , return whether the words can be represented 
+    ```python
+    def char2int(c):
+        return ord(c) - ord('a')
+
+    def constructAdjMatrix(edges):
+        '''
+        param:
+            edges (array of tuples) - consist of a list of directed edges from i[0] to i[1]
+        return:
+            adjacency matrix (array of array) - [i][j] is edge from i to j
+        '''
+        res = [[None]*26 for i in range(26)]
+        for edge in edges:
+            res[char2int(edge[0])][char2int(edge[1])] = 1
+
+        return res
+
+    def spellTheWord(words, edges):
+        adjMatrix = constructAdjMatrix(edges)
+        res = []
+        for w in words:
+            for i in range(len(w)-1):
+                # print(i,char2int(w[i]),char2int(w[i+1]),adjMatrix[char2int(w[i])][char2int(w[i+1])])
+                if adjMatrix[char2int(w[i])][char2int(w[i+1])] != 1:
+                    res.append(0)
+                    break
+            # finished looping all chars in a word
+            if len(res) == 0 or res[-1] != 0: # did not append 0 in the for loop
+                res.append(1)
+        return res
+
+    # print(spellTheWord(['a','b','ab','ba'],[('a','b')])) # expect [1,1,1,0]
+    print(spellTheWord(['what','who','where'],[('w','h'),('h','a'),('h','o'),('a','t'),('h','e')])) 
+
+    ```
+
+14. escape the lake
+15. chess game. Minimum steps for TWO knight to reach and need all possible meeting points 
+    ```python
+    from collections import defaultdict
+    class cell:
+        # a cell on the chess board
+        def __init__(self, x, y, step = 0, parent = None):
+            self.x = x
+            self.y = y
+            self.step = step # minimum steps to reach this position
+            self.parent = parent 
+        
+    def isInside(x,y,N):
+        return True if x>=0 and x<N and y>=0 and y<N else False
+
+    def minStepToTargetByKnight(N, white_knight, black_knight, white_do_capture):
+        # by BFS
+        dx = [-1, -2, -2, -1, 1, 2, 2, 1] # From lower left counterclockwise
+        dy = [-2, -1, 1, 2, 2, 1, -1, -2]
+        
+        queue = [cell(*white_knight)]
+
+        visited_white = [[False]*N for i in range(N)]
+        visited_white[white_knight[0]][white_knight[1]] = True
+
+        res = defaultdict(int) # storing all meet points 
+        steps = 0
+        while len(queue) > 0:
+            c = queue.pop(0)
+            visited_white[c.x][c.y] = True
+
+            # reach destination
+            if c.x == black_knight[0] and c.y == black_knight[1]:
+                steps = c.step 
+                break
+
+            #BFS
+            for i in range(8):
+                nx = c.x + dx[i]
+                ny = c.y + dy[i]
+
+                if isInside(nx,ny,N) and not visited_white[nx][ny]:
+                    queue.append(cell(nx,ny,c.step+1, c)) # add one more step from old cell 
+                
+
+        # Two knights can only meet by odd or even steps at given positions
+        # Given positions, it's impossible for them to meet by both odd and even steps
+        # at the same time
+        if steps % 2 == 0 and white_do_capture == 1:
+            return (-1,-1)
+        elif steps % 2 == 1 and white_do_capture == 0:
+            return (-1,-1)
+
+        # BFS on black knight
+        queue = [cell(*black_knight)]
+        visited_black = [[False]*N for i in range(N)]
+        visited_black[black_knight[0]][black_knight[1]] = True
+
+        
+        while len(queue) > 0:
+            c = queue.pop(0)
+            visited_black[c.x][c.y] = True        
+
+            if visited_white[c.x][c.y] == 1:
+                if steps % 2 == 0 and c.step == steps / 2:
+                    res[(c.x,c.y)] += 1
+                elif steps % 2 == 1 and c.step == (steps - 1) / 2:
+                    res[(c.x,c.y)] += 1
+            # last round
+            if c.step > steps // 2: # right now c.step is black's move
+                break
+
+            for i in range(8):
+                nx = c.x + dx[i]
+                ny = c.y + dy[i]
+
+                if isInside(nx,ny,N) and not visited_black[nx][ny]:
+                    queue.append(cell(nx,ny,c.step+1, c)) # add one more step from old cell 
+            
+        
+        if len(res) > 0:
+            print(res)
+            return (steps,len(res.keys()))
+
+        print('Too small')
+        return (-1,-1) # this probably only happens when it's really small like 3*3 one in corner one in middle
+
+    # print(minStepToTargetByKnight(8,(7,2),(0,1),False)) # expect (4,5)
+    # print(minStepToTargetByKnight(8,(7,2),(0,1),True)) # expect (-1,-1)
+    # print(minStepToTargetByKnight(8,(0,0),(1,2),True)) # expect (1,1)
+    # print(minStepToTargetByKnight(3,(0,0),(1,1),True)) # expect (-1,-1) 
+    # print(minStepToTargetByKnight(3,(0,0),(1,1),False)) # expect (-1,-1) two impossible to reach
+
+    ```
+16. ranked election
+17. 灭灯？

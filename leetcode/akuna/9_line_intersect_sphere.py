@@ -42,5 +42,5 @@ def line_intersect_sphere(cx,cy,cz,radius,x1,y1,z1,x2,y2,z2):
 
     return sorted([distance1,distance2])
 
-# print(line_intersect_sphere(1,4,0,4,1,2,3,2,2,1))
+print(line_intersect_sphere(1,4,0,4,1,2,3,2,2,1))
 # print(line_intersect_sphere(0,0,0,1.52,3,4,3,1,1,1))

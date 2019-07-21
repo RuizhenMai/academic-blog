@@ -3,11 +3,15 @@ layout: post
 title: Causal Inference
 ---
 
-These notes do not tend to be read in order (Causal Inference is just not a field that they manage to order the concepts step by step to be taught easily). But they are in order under its own section. 
+<span class="newthought">These notes</span>  are taken along with the video series [Causal Infernece](https://www.youtube.com/playlist?list=PL_onPhFCkVQimvhuSAFrC8VWLEyNygQR5). The series of lectures are given by [Jason Roy](https://www.med.upenn.edu/apps/faculty/index.php/g275/p8366265), the professor of Epidemiology and Biostatistics department in Upenn. Some examples used in the videos are medical, but in general they are not hard to understand. The series is very good for introduction. Although some concepts are not explained well, they often can be easily better understood by googling. One that is not clear, as I remember, is marginal structure model. 
 
-[Directed Acyclic Graphs](./directed_graph)
+As usual, crossover links mean the notes there can be missing or incomplete. 
 
-Randomized trials are experiments we design and conduct. They can be expensive. If people know it's randomized they will refuse to participate because they just don't won't to be bothered. And it can take a lot of time to wait for the data.
+[Confounders and Unconfoundedness](./confounder)
+
+[Causal Assumptions](./assumptions)
+
+~~[Directed Acyclic Graphs](./directed_graph)~~
 
 [Matching](./matching)
 
@@ -17,185 +21,29 @@ Randomized trials are experiments we design and conduct. They can be expensive. 
 
 [Instrumental Variable](./iv)
 
-Causal Inference is about understanding the "causality" between events.
+
 
 ## Motivating Example
 
-...
+Causal Inference is about understanding the "causality" between events. By "causality", we refer to one things cause another to *happen*. In general, the *association* that we establish such as $y=kx$, does not mean $x$ causes $y$ to increase. It just means $x$ associates with $y$'s increase. 
 
-When causation is equal to association? 
-
-## Notations and General Definitions
-
-Some notations for observed data:
-
-- $$W_i$$ (or $$T_i$$, $$Z_i$$) $$=1$$ treated, $$=0$$ if untreated or control; these are observed in the observational experiments setting; these are assigned in control experiment
-- $$Y_i$$: observed response
-- $$\mathbf X_i$$: other covariates (that may affect the response) 
-
-Some notations for things that are never observed:
-
-- $$Y_i^{W_i=0,1}$$: individual "actual" response; in reality we only know one; that is, 
-  
-  $$
-  \begin{align}
-  Y_i=\begin{cases}
-  Y_i^1\ \ \mathrm{if}\ W_i=1\\
-  Y_i^0\ \ \mathrm{if}\ W_i=0\\
-  \end{cases}
-  \end{align}
-  $$
-  
-  Or the way I prefer, more concisely,
-  
-  $$
-  Y_i=W_iY_i^1+(1-W_i)Y_i^0
-  $$
-  
-- $$\tau_i=Y_i^1-Y_i^0$$ : individual treatment effect;
-
-Things that we want: (the expectations below, if not specified, are all approximated by i.i.d)
-
-<u>Average treatment/causal effect</u>:
-
+To research on causality, modern causality research will refer to Rubin's model. For instance, we're probably interested in if medicine A is effective on curing fever. Our subject $i$ here is a person (which often is). And let $Y_i$ represents one's heat. If medicine A is effective, we would expect persons taking medicine A have a decrease of $Y_i$. Let $W_i=1$ denotes person $i$ takes medicine A, and $W_i=0$ for not take. And let $Y_i^1$ represent the temperature of person $i$ having taken the medicine, $Y^0_i$ not taken. We're interested in 
 $$
-\begin{align}
-\overline\tau&=\frac{1}{n}\sum_i^n\tau_i\\
-&=\mathbb E[\tau_i]\\
-&=\mathbb E[Y_i^1-Y_i^0]\\
-&=\mathbb E[Y_i^1]-\mathbb E[Y_i^0]\\
-\end{align}
+\tau_i= Y_i^1-Y_i^0
 $$
+If the medicine is effective, we would expect <u>individual treatment effect</u> (ITE) $\tau_i$ to be negative. But in reality, at the same timestamp, it's impossible for us to know one's temperature with taking medicine A and not taking it, unless there're two persons' medical status is extremely similar (that's why twins are often involved in this kind of studies). Maybe person $i$ will recover after some period of time even he or she does not take the pill. We never know. 
 
-Things we have:
+Estimating the treatment effect is the central problem of causal inference. In general, ITE is not known. But we still can estimate the <u>average treatment effect</u> (ATE) as long as some assumptions are met. 
 
-$$
-\begin{align}
-\mathbb E[Y_i\rvert W_i=1]&=\mathbb E[W_iY_i^1+(1-W_i)Y_i^0\rvert W_i=1]\\
-&=\mathbb E[W_iY_i^1\rvert W_i=1]\\
-&=\mathbb E[Y_i^1\rvert W_i=1]\\
-\end{align}
-$$
+## Observational Studies
 
-Similarly, we have:
-
-$$
-\mathbb E[Y_i\rvert W_i=0]=\mathbb E[Y_i^0\rvert W_i=0]\\
-$$
-
-But they are actually different:
-
-$$
-\begin{align}
-\mathbb E[Y_i\rvert W_i=1]-\mathbb E[Y_i\rvert W_i=0]=\mathbb E[Y_i^1\rvert W_i=1]-\mathbb E[Y_i^0\rvert W_i=0]&\neq\mathbb E[Y_i^1]-\mathbb E[Y_i^0]
-\end{align}
-$$
-
-Intuitively speaking, they are different because conditioning on $$W_i=1$$ or the other way around is restricting to the population receives the treatment. But the population receiving the treatment are, possibly, *more likely* to have higher potentials. For example, people at higher risk for flu (outcome) are more likely to choose to get a flu shot (treatment, meant to reduce the risk for flu). Also, this is comparing two different populations of people, whereas the true ATE is on same population. 
-
-They are equal if and only if 
-
-$$
-(Y_i^1,Y_i^0)\perp W_i\tag{1}
-$$
-
-This is saying, the potential outcomes are independent of treatment received. More plainly, we shall assign, if possible, treatment randomly, or at least independent of potential outcomes{%include sidenote.html note='This does not mean the assignment probability shall be equal in each group, for e.g., 0.2 of assigning a treatment to one of the five groups. In fact, as long as these probabilities are not affected by the potentials, then our assumption holds, even we always have 0.9 probability of giving treatment to one group/invidual '%}. For example, the Federal Government consider allocating subsidies to fix water pollution to some states. Let the state's water quality be $$Y$$. Then the state shall give these money no matter the state's current water quality (this will become $$Y^0$$remain if untreated) is good or bad, and possible water quality improvement. 
-
-You probably think that's not possible, from the perspective of policy makers. What's more probably is there are some regions $$\mathbf X_i=X_1,… X_n$$  s.t. in a region of states with poor water quality, maybe $$z_1$$, the government gives them an (somewhat) equally high amount of subsidy. And for another region, say $$z_2$$, the government give them an equally low amount of subsidy. This is saying 
-
-$$
-(Y_i^1,Y_i^0)\perp W_i\rvert \mathbf X^{(i)}\tag{2}
-$$
-
-That is, in each group, the treatment assignment is random. These groups $$z_1,..,z_n$$ may or maybe observed. More often, these groups are called *covariate* because it affects the assignment and treatment, or *confounders*. 
-
-The condition (2) is often called *unconfoundedness*, no unmeasured confounders, or *ignorability* condition. 
-
-
-
-## Assumptions in Summary
-
-The following are generally called causal assumptions (those not explained here will be explained below):
-
-- Stable Unit Treatment Value Assumptions (SUTVA)
-- Consistency: what you observed (under one of the treatment) is equal to the true underlying potentials $$Y_i=Y_i^{W_i}$$ 
-- Ignorability
-- Positivity:  $$P(W_i=w\rvert \mathbf X=\mathbf x)>0$$ for all covariates $$\mathbf x,\ w=\{0,1\}$$, because if some group is never treated, $$P=0$$, then we cannot learn the effect
-
-Assumptions can be about observed outcome $$Y_i$$, observed treatment $$W_i$$, and covariates $$Z$$.  
-
-### Stable Unit Treatment Value Assumptions (SUTVA) 
-
-<u>No interference</u>: units of interest do not interfere with each other. In most settings units are people. Situations that these are violated: 
-
-- Contagion: The sickness of one people affect the other; or Vaccine 
-- Behavioral Study: when people's behaviors are interacting with others 
-
-<u>One version of treatment</u>
-
-SUTVA allows us to write potential outcome for the ith person in terms of only that person's treatment. This simplifies the problem. 
-
-### Ignorability
-
-This is (2). I will elaborate it more intuitively here. They can be ages, gender, places living in, as long as they affect both the treatment and outcomes. And this assumptions is saying: <u>Among people with the same values of </u>$$\mathbf X=\mathbf x$$, <u>we can think of treatment </u>$$W_i$$ <u>are randomly are assigned.</u>  The following example helps:
-
-<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph10.png">
-  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Exmaple of Ignorability</figcaption>
-</figure>
-
-
-And we need to figure it out what $$\mathbf X$$ we need to collect in order to make that assumption satisfied. 
-
-So we can more formally define the following:
-
-$$
-\begin{align}
-\mathbb E[Y_i|W_i=w, \mathbf X=\mathbf x]&=\mathbb E[Y_i^w|W_i=w, \mathbf X=\mathbf x](by\ consistancy)\\
-&=\mathbb E[Y_i^w|\mathbf X=\mathbf x](by\ ignorability)
-\end{align}
-$$
-
-If we want *marginal causal effect*, we can average over all $$\mathbf X=\mathbf x$$, 
-
-$$
-\begin{align}
-\mathbb E[Y_i^w]&=\mathbb E_{\mathbf x}[\mathbb E[Y_i^w|\mathbf X=\mathbf x]]\\
-&=\sum_i\mathbb E[Y_i^w|\mathbf X=\mathbf x]P(\mathbf X=\mathbf x^{(i)})\\
-\end{align}
-$$
-
-This is called *standardization* in causal inference. But in practice, it's very probable that we have some combinations of $$\mathbf z$$ that we do not have data. For instance, ??!!!…!!! So  we need an alternative to this. Common ones are mating, inverse probability weighting and propensity scores.
+Randomized trials are experiments we design and conduct. When we're the conductors of  experiments, we can make it whatever we want. But these can be expensive, we need to plan for it, recruit volunteers, record data and etc. Observational studies generally refer to studies that have been completed by others, and data are available. Since the purpose of other people's studies are different, some variables do not need be randomized, we need to adjust our methods for these studies. This will become clear in the specific section. 
 
 
 
 
 
-## Other Causal Effects
 
-- $$\displaystyle \mathbb E\left[\frac{Y^1_i}{Y^0_i}\right]$$: causal relative risk/ratio. This would be more probable if $$Y_i$$ is a binary outcome
-- $$\mathbb E[Y_i^1-Y^0_i\rvert W_i=1]$$: causal effect on the treated. We might be interested in this when we only care about the effect among the treated. 
-
-## Confounder
-
-Confounders are defined as variables that affect treatment and *at the same time* directly affect the outcome. Below are examples not the confounder:
-
-- We assign treatment based on coin flip(biased or not), but the result of coin flip does not affect treatment
-- People with a family history cancer are more likely to develop cancer(the outcome), but (as long as) family history is not affecting the treatment decision, then family history is not a confounder
-
-In turns let's have a confounder example:
-
-- If older people are at higher risk of cardiovascular(the outcome) and are more likely to receive statins(the treatment), then *age* is a confounder
-
-Note that a set of confounders should *not* include any descendants of treatment. That is, it shall not block the front door path. A set of variables X is sufficient to control for confounding if:
-
-- It blocks all backdoor paths from treatment to the outcome
-- It does not block the front door paths 
-
-Also this set of variables is not necessarily unique. For example: 
-
-<figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph11.png">
-  <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 2. Exmaple of backdoor path</figcaption>
-</figure>
 
 
 

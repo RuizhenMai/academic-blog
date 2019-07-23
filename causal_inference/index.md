@@ -21,6 +21,8 @@ As usual, crossover links mean the notes there can be missing or incomplete.
 
 [Instrumental Variable](./iv)
 
+~~[Heterogeneity in Treatment Effect](./heter)~~ (TODO)
+
 
 
 ## Motivating Example

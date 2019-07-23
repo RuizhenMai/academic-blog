@@ -35,4 +35,5 @@ Search 作为基本功，虽然一般不是最优解，而且是exponential time
 - DP
 - Graph
 - ...
+- [Linked List](./linkedList)
 - [Akuna](./akuna)

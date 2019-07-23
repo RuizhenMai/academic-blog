@@ -4,15 +4,13 @@ title: Differential Equations
 ---
 <span class="newthought">These notes</span> are under construction
 
-[Topics in Multivariate Calculus](../calc3/)
+<!-- [Youtube Video Playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oTpyxCMLKt_JmB0WtSZfG) -->
 
-[Youtube Video Playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oTpyxCMLKt_JmB0WtSZfG)
+<!-- [Course Homepage](https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/index.htm) -->
 
-[Course Homepage](https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/index.htm)
+[Course 18.03](https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/index.htm)
 
-[Formal Course 18.03](https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/index.htm)
-
-[Formal Course Video Playlist](https://www.youtube.com/playlist?list=PLEC88901EBADDD980)
+[Course Video Playlist](https://www.youtube.com/playlist?list=PLEC88901EBADDD980)
 
 ## O: Unanalytic Methods 
 

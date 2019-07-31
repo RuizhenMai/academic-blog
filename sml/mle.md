@@ -7,15 +7,15 @@ Let $E$ be the sample space and $\mathbb P_\theta$ be the statical model associa
 
 ## Total Variation
 
-The <u>total variation</u> distance between two probability measures, often our predicted model $\mathbb P_{\hat\theta}$ and the true model $\mathbb P_{\theta^*}$ is 
+The <u>total variation</u> distance between two probability measures, often between our predicted model $\mathbb P_{\hat\theta}$ and the true model $\mathbb P_{\theta^*}$ is 
 
 $$
 TV(\mathbb P_\theta,\mathbb P_{\theta'})=\max_{A\subset E}\vert\mathbb P_\theta(A)-\mathbb P_{\theta'}(A)\vert
 $$
 
-This is saying that the total variation between two probability is the event $A$ that can create the largest difference between these two. For example, if $$TV(\mathbb P_{\hat\theta}, \mathbb P_{\theta^*})=0.1$$, this is saying $\mathbb P_{\hat\theta}(A)\in[\mathbb P_{\theta^*}(A)\pm 0.1]$ the estimated probability of $A$ will always be off from the true probability by 0.1. 
+This is saying that the total variation between two probability is the event $A$ that can create the largest difference between these two distributions. For example, if $$TV(\mathbb P_{\hat\theta}, \mathbb P_{\theta^*})=0.1$$, this is saying $\mathbb P_{\hat\theta}(A)\in[\mathbb P_{\theta^*}(A)\pm 0.1]$, the estimated probability of $A$ will always be off from the true probability by 0.1. 
 
-While it is hard to find *every* subset of the sample space $A\subset E$, there's an identity which I don't know how to prove (I will prove a bit below) that can help us. If the sample space $E$ is discrete, then $X$ has a PMF s.t. $\mathbb P_\theta(X=x)=p_\theta(x)$, and 
+While it is hard to find *every* subset of the sample space $A\subset E$, there's an identity whose proof can be found online that can help us. If the sample space $E$ is discrete, then $X$ has a PMF s.t. $\mathbb P_\theta(X=x)=p_\theta(x)$, and 
 
 $$
 TV(\mathbb P_\theta,\mathbb P_{\theta'})=\frac{1}{2}\sum_{x\in E}\vert p_{\theta}(x)-p_{\theta'}(x)\vert
@@ -100,7 +100,7 @@ With these we can check the concavity of the function $h(·)$ by checking the ma
 
 ## Fisher Information
 
-Intuitively, the Fisher information measures how easy a parameter $\theta$ in a model $\mathbb P_\theta$ can be approximated (given this parameter's value). In figure 1, both graphs are KL-divergence graphs (or negative likelihood) w.r.t. a parameter $\theta$. In (a), we see a sharp curve will lead a sharp estimate, this leads the estimated parameter $\hat\theta$ regardless of sample closer to the true one. In (b), when the graph is flatter, it's harder to get a good estimate to the KL-divergence and thus $\hat\theta$ will likely to far off. 
+Intuitively, the Fisher information measures how easy a parameter $\theta$ in a model $\mathbb P_\theta$ can be approximated (this is determined by which parameter of a distribution is, like $\mu$ or $\sigma$ in Gaussian, and the value of the parameter). In figure 1, both graphs are KL-divergence graphs (or negative likelihood) w.r.t. a parameter $\theta$. In (a), we see a sharp curve will lead a sharp estimate, this leads the estimated parameter $\hat\theta$ regardless of sample closer to the true one. In (b), when the graph is flatter, it's harder to get a good estimate to the KL-divergence and thus $\hat\theta$ will likely to far off. 
 
  <figure><img style="align-content: center; margin-left: auto; margin-right: auto; display: block;" src="../assets/graph29.png">
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. 'sharp' curve vs 'flat' curve </figcaption>
@@ -153,5 +153,5 @@ $$
 \mathcal I(\theta)=\mathbb E[\nabla \log f \nabla\log f^\top]=-\mathbb E[\nabla^2\log f]
 $$
 
-the Hessian matrix of log likelihood. An extra tip (with certain assumptions and by central limit theorem) is that $\mathcal I(\theta)$ represents the inverse variance. When curvature is higher, the variance is smaller (which is a good thing).  
+the Hessian matrix of log likelihood. An extra tip (with certain assumptions and by central limit theorem) is that $\mathcal I(\theta)$ represents the inverse of variance. When curvature is higher, the variance is smaller (which is a good thing).  
 

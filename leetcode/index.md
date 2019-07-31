@@ -31,9 +31,9 @@ Search 作为基本功，虽然一般不是最优解，而且是exponential time
 
 花花酱题目分类：[https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158)
 
-- Search
-- DP
-- Graph
-- ...
 - [Linked List](./linkedList)
+- [Graph](./graph)
+- [Search](./search)
+- DP
+- ...
 - [Akuna](./akuna)

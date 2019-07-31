@@ -8,5 +8,5 @@ title: Statistical Machine Learning
 
 1. Inequality and Convergence of Random Variable
 2. [Not Maximum Likelihood](./mle): Total Variation, KL-divergence, and Fisher Information
-3. [Generalized Linear Model](./glm)
-4. [EM and Little's test on data missingness](./em)
+3. [Method of Moments](./mm)
+4. [Generalized Linear Model](./glm)

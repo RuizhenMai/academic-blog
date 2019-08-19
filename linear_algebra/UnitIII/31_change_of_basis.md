@@ -36,5 +36,5 @@ $$
 \vert & ... & \vert\\
 v_1&…&v_n\\
 \vert&…&\vert\\
-\end{bmatrix}$$. <u>Therefore</u> $$Av_1$$ <u>is equal to the first column of $$A$$ multiplying</u> $$v_1$$. Thus $$a_{11}…a_{m1}$$ satisfy $$a_{11}w_1+…a_{m1}w_m=T(v_1)$$ (just the $$a$$ the coefficients matters, $$w_i$$ are unknowns). 
+\end{bmatrix}$$. <u>Therefore</u> $$Av_1$$ <u>is equal to the first column of </u>$A$ <u>multiplying</u> $$v_1$$. Thus $$a_{11}…a_{m1}$$ satisfy $$a_{11}w_1+…a_{m1}w_m=T(v_1)$$ (just the $$a$$ the coefficients matters, $$w_i$$ are unknowns). 
 

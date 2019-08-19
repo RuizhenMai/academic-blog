@@ -2,7 +2,7 @@
 layout: post
 title: Search
 ---
-<span class = "newthought">This page</span> contains question about searchinterview quesions
+<span class = "newthought">This page</span> contains question about search, combination, permutation
 
 1. 17-Letter Combinations of a Phone Number
 2. 39-Combination Sum (video has a summary of permutation and combination)* unknown time Complexity
@@ -19,3 +19,5 @@ title: Search
 13. 51-Nqueens * unknown time complexity 
 14. 37-Sudoku Solver * unknown time complexity
 15. 79-Word Search
+16. 127-Word Ladder
+17. 126-Word LadderII

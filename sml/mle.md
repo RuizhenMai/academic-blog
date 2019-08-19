@@ -94,7 +94,7 @@ For a function $h:\theta\subset\mathbb R^d\rightarrow\mathbb R$ (that would most
 - Gradient vector: $$\nabla h(\theta)=\begin{bmatrix}\frac{\partial h}{\partial \theta_1}(\theta)\\ \vdots\\\frac{\partial h}{\partial \theta_d}(\theta) \end{bmatrix}$$
 - Hessian matrix: $$\nabla^2h(\theta)=\begin{bmatrix}\frac{\partial h}{\partial \theta_1 \theta_1}(\theta) &…&\frac{\partial h}{\partial \theta_1 \theta_d}(\theta)  \\\vdots&\times&\vdots\\\frac{\partial h}{\partial \theta_d\theta_1}(\theta)&…&\frac{\partial h}{\partial \theta_d\theta_d}(\theta)  \end{bmatrix}$$
 
-With these we can check the concavity of the function $h(·)$ by checking the matrix's definiteness. If the matrix $\nabla^2h(\theta)$ is negative definite, this means the function $h(\theta)$ is strictly concave. To test its negative definiteness, we see if $\mathbf x^\top \nabla^2h(\theta)\mathbf x<0,\forall\mathbf x\in\mathbb R^d\backslash \{0\}$ .
+With these we can check the concavity of the function $h(·)$ by checking the matrix's definiteness. If the matrix $\nabla^2h(\theta)$ is negative definite, this means the function $h(\theta)$ is strictly concave. And it implies the MLE can find a global maximum (rather than a local one). To test if the Hessian matrix evaluated at $\theta =\hat \theta$ is negative definiteness, we see if $\mathbf x^\top \nabla^2h(\hat \theta)\mathbf x<0,\forall\mathbf x\in\mathbb R^d\backslash \{0\}$ . 
 
 
 

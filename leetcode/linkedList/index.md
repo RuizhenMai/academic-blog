@@ -2,7 +2,7 @@
 layout: post
 title: Linked List
 ---
-<span class = "newthought">This page</span> contains question about the linked list interview quesions
+<span class = "newthought">This page</span> contains question about the linked list
 
 ```python
 def array2List(arr):

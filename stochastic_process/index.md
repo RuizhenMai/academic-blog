@@ -13,3 +13,4 @@ title: Stochastic Process
 
 1. [Bernoulli Process](./bernoulli)
 2. [Poisson Process](./poisson)
+3. [Intro and Review](./1_intro)

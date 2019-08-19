@@ -87,7 +87,7 @@ $$
 \end{align}
 $$
 
-Since the equation is unsolvable, the only possible situation is that we solve the solvable ones, where $$\mathbf y$$ is projected into $$C(\mathbf X)$$. When $$\mathbf y$$ is projected into $$C(\mathbf X)$$: 
+Since the equation is unsolvable, the only possible situation is that we solve the solvable ones, where $$\mathbf y$$ is projected into the column space of X, $C(\mathbf X)$. When $$\mathbf y$$ is projected into $$C(\mathbf X)$$: 
 
 $$
 \begin{align}
@@ -95,13 +95,13 @@ $$
 \end{align}
 $$
 
-For $$\boldsymbol{\hat \beta}$$ is some random numbers and $$\mathbf X\boldsymbol{\hat \beta}$$ is just linear combinations of the columns of $$\mathbf X$$. Then the error is, similar to before, original subtracting the projected, 
+For $$\boldsymbol{\hat \beta}$$ is some random numbers and $$\mathbf X\boldsymbol{\hat \beta}$$ is just linear combinations of the columns of $$\mathbf X$$. Then the error is, similar to before, the unprojected ($\mathbf y$) subtracting the projected, 
 
 $$
 \mathbf e=\mathbf y-\mathbf X\boldsymbol{\hat\beta}
 $$
 
-The error is minimized when $$\mathbf p=\mathbf X\boldsymbol{\hat \beta}\\$$ is a vertical projection of $$\mathbf y$$. This matches exactly (if you don't know it's ok) the square error statistician trying to solve:
+The error is minimized when $\mathbf p=\mathbf X\boldsymbol{\hat \beta}$ is a vertical projection (refer to note 15 figure 1, p is the vertical projection of b) of $$\mathbf y$$. This matches exactly (if you don't know it's ok) the square error statistician trying to solve:
 
 $$
 \begin{align}
@@ -109,7 +109,7 @@ $$
 \end{align}
 $$
 
-Now let's solve for $$\mathbf p$$, i.e., $$\boldsymbol{\hat \beta}$$:
+Now let's solve for the $$\boldsymbol{\hat \beta}$$ that can give us a vertical projection:
 
 $$
 \begin{align}

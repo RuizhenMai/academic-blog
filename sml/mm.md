@@ -19,7 +19,7 @@ $$
 \int h(x)f_\theta(x)\:dx=\int h(x)f_{\theta^*}(x)\:dx
 $$
 
-for all bounded continuous (I actually don't know why bounded continuous is enough) functions $h(·)$, then $\theta=\theta^*$. Keep in mind that our ultimate goal is to find an estimator $\hat \theta$ that can actually do this equality for all bounded continuous $h(\cdot)$. Now we don't know $\int h(x)f_{\theta^*}(x)\:dx$, given the samples we have, we can replace it with averages:
+for all bounded continuous (I actually don't know why bounded continuous is enough) functions $h(·)$, then $$\theta=\theta^*$$. Keep in mind that our ultimate goal is to find an estimator $\hat \theta$ that can actually do this equality for all bounded continuous $h(\cdot)$. Now we don't know $\int h(x)f_{\theta^*}(x)\:dx$, given the samples we have, we can replace it with averages:
 
 $$
 \int h(x)f_{\hat\theta}(x)\:dx=\frac{1}{n}\sum_{i=1}^nh(X_i)
@@ -133,4 +133,36 @@ It can be easily that, since empirical moments are consistent to the population 
 
 ## Generalized Method of Moments
 
-No need of exact likelihood, i.e., no need to specify the distribution 
+@todo No need of exact likelihood, i.e., no need to specify the distribution 
+
+
+
+## Moment Generating Functions
+
+Finding arbitrary moments from a known distribution can be painful. Thus moment generating function is often used. It is defined as 
+$$
+M(t)=E[e^{tX}]=\cases{
+\begin{align}
+&\sum_x e^{tx}p(x)\\
+&\int_{-\infty}^\infty e^{tx}f(x)dx
+\end{align}
+}
+$$
+If we know $M(t)$, then 
+$$
+\begin{align}
+M'(t)=\frac{d}{dt}E[e^{tX}]=E[Xe^{tX}]\Rightarrow M'(0)=E[X]\\
+M''(t)=\frac{d^2}{dt^2}E[e^{tX}]=E[X^2e^{tX}]\Rightarrow M'(0)=E[X^2]\\
+M^3(t)=\frac{d^3}{dt^3}E[e^{tX}]=E[X^3e^{tX}]\Rightarrow M'(0)=E[X^3]
+\end{align}
+$$
+For normal distribution $X$, its moment generating function is
+$$
+M(t)=\int_{-\infty}^\infty e^{tx}\frac{1}{\sqrt{2\pi\sigma^2}}\exp(-(x-\mu)^2/2\sigma^2)\:dx=e^{\mu t}e^{\frac{1}{2}\sigma^2t^2}
+$$
+
+
+
+
+
+

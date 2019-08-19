@@ -6,10 +6,10 @@ date: 2019-6-9
 
 ## A=$$S^{-1}\Lambda S$$
 
-Diagonalize a matrix is, (or the other way around)
+Diagonalize a matrix is
 
 $$
-\Lambda=S^{-1}AS\tag{1}
+A=S\Lambda S^{-1}\tag{1}
 $$
 
 Suppose we have $$n$$ independent eigenvectors, and we put them into the columns matrix $$S$$. So let's just call this matrix the <u>eigenvector matrix</u>. What happen we do $$AS$$? ($$\lambda$$ is the eigenvalue)
@@ -42,7 +42,7 @@ $$
 
 Still, it's possible that there're some small number of matrices that do not have independent eigenvalues, as mentioned in the end of the [last note](./21_eigenvalues_and_eigenvectors.md). 
 
-
+The sufficient and necessary condition (if and only if) for matrix $A$ to be diagonalizable is it has $n$ linearly independent eigenvectors ($n$ is just A's size). 
 
 ### Square eigenvalues
 
@@ -61,8 +61,6 @@ $$
 This is true for any kth power. 
 
 Right now we can say $$A$$ is sure to be diagonalizable if it has all the $$\lambda$$'s different. But same $$\lambda$$ does not mean the matrix is not diagonalizable. 
-
-
 
 ### Difference Equation $$u_{k+1}=Au_k$$
 

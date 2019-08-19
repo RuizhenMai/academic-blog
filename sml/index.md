@@ -9,4 +9,6 @@ title: Statistical Machine Learning
 1. Inequality and Convergence of Random Variable
 2. [Not Maximum Likelihood](./mle): Total Variation, KL-divergence, and Fisher Information
 3. [Method of Moments](./mm)
-4. [Generalized Linear Model](./glm)
+4. [Linear Regression: Assumptions and Inference](./linear_regression)
+5. [Bayesian Linear Regression](./blinear_regression)
+6. [Generalized Linear Model](./glm)

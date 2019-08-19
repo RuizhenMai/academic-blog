@@ -43,11 +43,13 @@ Exponential (special case of erlang). <u>Note that these distribution are all go
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 2. Exponential pdf </figcaption>
 </figure>
 
+One takeaway from the expected inter-arrival time $E[Y_1]=\frac{1}{\lambda}$ is if it's given by a question, then we can tell the arrival rate parameter $\lambda$, i.e., the expected number of arrivals by that. For instance, if a question tell you a bus's expected arrival time is 10 mins, then from that we know $\lambda=0.1bus/mins$. 
+
 ## Expected number of trials to reach the kth arrival
 
 Erlang, which is also a special case of Gamma distribution 
 
-- $P(Y_1=y;k)=\displaystyle \frac{\lambda^ky^{k-1}e^{-\lambda y}}{(k-1)!}$ 
+- $P(Y_k=y;k)=\displaystyle \frac{\lambda^ky^{k-1}e^{-\lambda y}}{(k-1)!}$ 
 
 
 

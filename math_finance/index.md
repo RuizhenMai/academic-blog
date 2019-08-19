@@ -11,3 +11,7 @@ title: Mathematics of Finance
 <a href="https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm">MIT 18.S096</a>
 <br>
 <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR">Youtube Video Playlist</a>
+
+1. [Preparation for Quant Interview](./interview_prep)
+2. [Behavioral Prep](./interview_prep_behavioral)
+3. [Time Series](./time_series)

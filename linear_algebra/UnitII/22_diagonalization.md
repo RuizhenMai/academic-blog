@@ -4,7 +4,7 @@ title: Diagonalization and Powers of A
 date: 2019-6-9
 ---
 
-## A=$$S^{-1}\Lambda S$$
+## A=$$S\Lambda S^{-1}$$
 
 Diagonalize a matrix is
 
@@ -88,7 +88,7 @@ u_k&=A^ku_0\\
 \end{align}
 $$
 
-In general, $c_1$ is essential to know about infinity, but other coefficients will pop up as we are solving (2). The scalar-form second equation is used more. 
+In general, there're two types of questions. One is solve the Markov chain matrices to find the steady state ([note 24](./24_markov_matrices_fourier_series.md)), where we need to solve $\pi=P\pi$; in this setting, the transition matrix $P:=A$ is only to the 1st power (i.e. no exponential), we can just find the eigenvalues and then eigenvectors of $A$, and using the eigenvectors to find the coefficients $c_1,c_2,...$. The other type is we have $A^k$ difference equations. This is similar, we also just need to be find the eigenvalues of $A$ (not $A^k$) and then take it to the kth power. 
 
 ## Fibonacci Sequence 
 

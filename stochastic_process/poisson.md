@@ -61,3 +61,9 @@ We have continuous time:
   <figcaption style="text-align: center; font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw; font-size: 1.1rem;">Figure 1. Continuous Time </figcaption>
 </figure>
 
+## Merging of Poisson
+
+Others are left out. One important thing to remember is that merging two poisson process with $\lambda_1$ and $\lambda_2$, the merged process has rate of arrival $\lambda_1+\lambda_2$; and for *every* arrival (including the *first*), the probability the arrival is from the first poisson process is $\lambda_1/(\lambda_1+\lambda_2)$. 
+
+Say there're two exponential random variables $Y$, $Z$ with $\lambda_1$ and $\lambda_2$ as the parameter. We're interested in $P(Y<Z)$. We can view $Y,Z$ as the first arrival time of two poisson process. Let's merge this two independent process. To have $Y<Z$, we must have the first arrival of the merged process comes from $Y$, thus $P(Y<Z)=\lambda_1/(\lambda_1+\lambda_2)$. 
+

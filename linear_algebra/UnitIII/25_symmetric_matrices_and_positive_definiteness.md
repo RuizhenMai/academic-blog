@@ -13,13 +13,15 @@ A real symmetric (square) matrix $$A=A^\top$$
 
 
 
-And a symmetric matrix $$A$$ can be factored into
+Then a symmetric matrix $$A$$ can be factored into
 
 $$
 A=Q\Lambda Q^{-1}=Q\Lambda Q^\top
 $$
 
 where $$Q$$ is an orthogonal (orthonormal if A is not square) matrix. 
+
+(Book p234, p338)
 
 ### Real Eigenvalues
 
@@ -78,6 +80,9 @@ $$
 \mathrm{number\ of\ free\ variables=number\ of\ zero\ eigenvalues}
 $$
 
+### Orthogonal Eigenvalues
+
+Since $A$ is symmetric, then $A=A^\top$. Given it's symmetric, it's square, if it's diagonalizable(doesn't have to), then we can write $A=X\Lambda X^{-1}$, and $A^\top=X^{-1\top}\Lambda X^\top$. Since they two are equal, on the rightmost term, we can have $X^{-1}=X^\top$. The $X$ is the eigenvector matrix. $X^{-1}=X^\top\Rightarrow X^{-1}X=I=X^{\top}X$. Therefore the eigenvector matrix can be orthogonal(by the definition of orthogonal matrix and orthonormal vectors). Therefore we can write $X$ as $Q$ to amplify it's an orthogonal matrix. And thus $A=Q\Lambda Q^\top$. 
 
 ## Positive Definite Matrices
 

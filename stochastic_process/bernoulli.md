@@ -12,8 +12,8 @@ For <u>an independent trial</u> $X_i$, we know, at each trial:
 
 The success rate $p$ does not vary with time. It will remain constant throughout the trials. <u>This property is essential throughout the discussion of the process</u>. Often time we use the term <u>arrival</u> as success. We also know:
 
-- $\mathbb E[X_i]=p\cdot 1+(1-p)\cdot 0=p$<u></u>
-- $\mathbb V[X_i]=p(1-p)$<u></u>
+- $\mathbb E[X_i]=p\cdot 1+(1-p)\cdot 0=p$
+- $\mathbb V[X_i]=p(1-p)$
 
 In general, we are more interested in <u>a collection of trials</u>. That's what makes it a *process*. Important questions of a process are:
 
@@ -34,7 +34,7 @@ This is a very familiar random variable. The random variable $N_n$ is in fact a 
    k
   \end{pmatrix}p^k(1-p)^k$ <u></u>
 - $\mathbb E[N_n]=\mathbb E[X_1+…+X_n]=np$ <u></u>
-- $\mathbb V(N_n)=np(1-p)$ <u></u>
+- $\mathbb V(N_n)=Var(X_1+...+X_n)=nVar(X_1)=np(1-p)$ <u></u>
 
 
 
@@ -128,4 +128,6 @@ Similar trick can be applied to variance because each of the random variables ar
 
 ## Merging and Splitting of Bernoulli Process
 
-This will be updated in the future. 
+Let's talk about merging for now. In general, the question to ask about merging Bernoulli process is, what's the probability that either one process(event) happens? Say we have two Bernoulli process A and B, the key is to find out either one happen. That's obvious, given that each event is a Bernoulli random variable with $p$ and $q$ probability, either one happens it's just $p+q-pq$. 
+
+(But in Poisson Process, maybe due to taking the limit, $pq$ disappear)

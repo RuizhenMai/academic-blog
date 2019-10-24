@@ -12,6 +12,7 @@ title: Mathematics of Finance
 <br>
 <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR">Youtube Video Playlist</a>
 
-1. [Preparation for Quant Interview](./interview_prep)
-2. [Behavioral Prep](./interview_prep_behavioral)
-3. [Time Series](./time_series)
+1. [Preparation for Quant Interview Tech](./interview_prep)
+2. [Prep Behavioral](./interview_prep_behavioral)
+3. [Probability Tips](./probability)
+4. [Time Series](./time_series)

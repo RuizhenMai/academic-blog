@@ -110,7 +110,7 @@ Fisher information is used to measure this. It is the variance of a "score", the
 
 $$
 \begin{align}
-\mathbb E_{X\sim f(X;\theta^*)}\left[\left.\frac{\partial}{\partial \theta}\log f(X;\theta)\right\vert\theta=\theta^*\right]&=\int f(X;\theta^*)\frac{1}{\log f(X;\theta^*)}\frac{\partial f(X;\theta^*)}{\partial \theta^*}\:dx\\
+\mathbb E_{X\sim f(X;\theta^*)}\left[\left.\frac{\partial}{\partial \theta}\log f(X;\theta)\right\vert\theta=\theta^*\right]&=\int f(X;\theta^*)\frac{1}{ f(X;\theta^*)}\frac{\partial f(X;\theta^*)}{\partial \theta^*}\:dx\\
 &=\frac{\partial}{\partial \theta^*}\int f(X;\theta^*)\:dx\\
 &=\frac{\partial}{\partial\theta^*}1=0
 \end{align}
@@ -126,10 +126,11 @@ When the log likelihood is twice differentiable:
 
 $$
 \begin{aligned}
-\frac{\partial ^{2}}{\partial \theta ^{2}}\log f(X;\theta ) & =\frac{\partial }{\partial \theta }\left(\frac{1}{f(X;\theta )} f'\right)\\
- & =\frac{\partial }{\partial \theta }\left( -\frac{f'}{( f (X;\theta ))^{2}} f'+\frac{1}{f(X;\theta )} f''\right)\\
- & =\frac{\partial }{\partial \theta }\left(\frac{1}{f(X;\theta )} f''-\left[\frac{f'}{f (X;\theta )}\right]^{2}\right)\\
- & =\frac{\partial }{\partial \theta }\left(\frac{1}{f(X;\theta )} f''-\left[\frac{\partial }{\partial \theta }\log f( X;\theta )\right]^{2}\right)
+\frac{\partial ^{2}}{\partial \theta ^{2}}\log f(X;\theta ) 
+ & =\frac{\partial}{\partial\theta}\left(\frac{1}{f(X;\theta )} f'\right)\\
+ & =-\frac{f'}{( f (X;\theta ))^{2}} f'+\frac{1}{f(X;\theta )} f''\\
+ & =\frac{1}{f(X;\theta )} f''-\left[\frac{f'}{f (X;\theta )}\right]^{2}\\
+ & =\frac{1}{f(X;\theta )} f''-\left[\frac{\partial }{\partial \theta }\log f( X;\theta )\right]^{2}
 \end{aligned}
 $$
 

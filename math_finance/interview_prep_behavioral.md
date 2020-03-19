@@ -12,7 +12,7 @@ I'm a junior in New York University double majoring in Computer Science and Math
 
 So far I have several experiences in machine learning and statistics. One I'm currently working on is to be an undergrad researcher with Prof. Loftus. During this work I've been conducting research on how to fill in missing data more properly, specifically I've looked into the details on MICE and EM. Another job I'm working on is also to be a research assistant for Tommaso Bondi, during which I have done a lot of data science work, for example, I've been collecting and cleaning 100K book reviews data, looking for correct indicator for the problems he want to tackle, and built a convolutional neural network to classify sentiments of book reviews. 
 
-Based on my previous experience, I am good at synthesizing information, handling data and leveraging up-to-date knowledge to solve real-life problem. 
+Based on my previous experience, I am good at synthesizing information, handling data and leveraging up-to-date knowledge to solve real-life problems. 
 
 Parallel computing 
 
